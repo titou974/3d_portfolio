@@ -1,7 +1,21 @@
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import { ComputersCanvas } from './canvas';
+import Typed from "typed.js";
+import { useEffect, useRef } from "react";
 
+const el = useRef(null);
+
+
+useEffect(() => {
+  const typed = new Typed(el.current, {
+    strings: ["Bienvenue sur mon Portfolio !", "Je suis développeur fullstack, avec une préférence pour le back-end", "Découvrez cette page et ses différentes animations, et n'hésitez pas à me contacter pour la moindre question!"],
+    startDelay: 300,
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 100
+  })
+})
 const Hero = () => {
   return (
     <section className="relative w-full h-screen">
@@ -12,8 +26,8 @@ const Hero = () => {
         </div>
         <div>
           <h1 className={`${styles.heroHeadText}`}>Bonjour, je suis <span className="text-[#5877FA]">Titouan</span></h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            Je développe des applications Web, Mobiles <br className="sm:block hidden"/>et je suis passionné de back-end.
+          <p className={`${styles.heroSubText} mt-2 text-white-100`} ref={el}>
+            {/* Je développe des applications Web, Mobiles <br className="sm:block hidden"/>et je suis passionné de back-end. */}
           </p>
         </div>
       </div>
