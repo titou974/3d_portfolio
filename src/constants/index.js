@@ -24,6 +24,7 @@ import {
   reactnative,
   codecademy,
   lewagon,
+  postgresql,
 } from "../assets";
 
 export const navLinks = [
@@ -70,28 +71,12 @@ const technologies = [
     icon: javascript,
   },
   {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
     name: "React JS",
     icon: reactjs,
   },
   {
-    name: "React Native",
-    icon: reactnative,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
     name: "Tailwind CSS",
     icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
   },
   {
     name: "Three JS",
@@ -109,6 +94,10 @@ const technologies = [
     name: "rails",
     icon: rails,
   },
+  {
+    name: "postgresql",
+    icon: postgresql
+  }
 ];
 
 const experiences = [
