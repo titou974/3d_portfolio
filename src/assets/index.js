@@ -32,6 +32,7 @@ import lewagon from "./company/lewagon.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import videoLoader from "./videoloader.mp4";
 
 export {
   logo,
@@ -65,5 +66,6 @@ export {
   jobit,
   tripguide,
   codecademy,
-  lewagon
+  lewagon,
+  videoLoader
 };

@@ -3,54 +3,60 @@ import { styles } from '../styles';
 import { ComputersCanvas } from './canvas';
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";
+import Preloader  from "./Preloader";
 
-const el = useRef(null);
 
-
-useEffect(() => {
-  const typed = new Typed(el.current, {
-    strings: ["Bienvenue sur mon Portfolio !", "Je suis développeur fullstack, avec une préférence pour le back-end", "Découvrez cette page et ses différentes animations, et n'hésitez pas à me contacter pour la moindre question!"],
-    startDelay: 300,
-    typeSpeed: 100,
-    backSpeed: 100,
-    backDelay: 100
-  })
-})
 const Hero = () => {
-  return (
-    <section className="relative w-full h-screen">
-      <div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
-        <div className="flex flex-col justify-center items-center mt-5">
-          <div className="w-5 h-5 rounded-full bg-[#5877FA]"/>
-          <div className="w-1 sm:h-80 h-40 bg-gradient-to-b from-[#5877FA] to-violet"/>
-        </div>
-        <div>
-          <h1 className={`${styles.heroHeadText}`}>Bonjour, je suis <span className="text-[#5877FA]">Titouan</span></h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`} ref={el}>
-            {/* Je développe des applications Web, Mobiles <br className="sm:block hidden"/>et je suis passionné de back-end. */}
-          </p>
-        </div>
-      </div>
-      <ComputersCanvas />
 
-      <div class="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
-        <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary hover:border-white flex justify-center items-start p-2">
-            <motion.dev
-              animate={{
-                y: [0, 24, 0]
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: 'loop'
-              }}
-              className="w-3 h-3 rounded-full bg-secondary mb-1"
-              />
+  const el = useRef(null);
+  useEffect(() => {
+    setTimeout(() => {
+        const typed = new Typed(el.current, {
+        strings: ["Bienvenue sur mon Portfolio !", "Je suis développeur fullstack, avec une préférence pour le back-end", "Surtout ! N'hésitez pas à me contacter pour la moindre question..."],
+        startDelay: 300,
+        typeSpeed: 50,
+        backSpeed: 30,
+        showCursor: false
+        })
+    }, 9000)
+  })
+
+  return (
+    <>
+      <Preloader />
+      <section className="relative w-full h-screen">
+        <div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
+          <div className="flex flex-col justify-center items-center mt-5">
+            <div className="w-5 h-5 rounded-full bg-[#5877FA]"/>
+            <div className="w-1 sm:h-80 h-40 bg-gradient-to-b from-[#5877FA] to-violet"/>
           </div>
-        </a>
-      </div>
-    </section>
+          <div>
+            <h1 className={`${styles.heroHeadText}`}>Bonjour, je suis <span className="text-[#5877FA]">Titouan</span></h1>
+            <p className={`${styles.heroSubText} mt-2 text-white-100`} ref={el}>
+            </p>
+          </div>
+        </div>
+        <ComputersCanvas />
+
+        <div class="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
+          <a href="#about">
+            <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary hover:border-white flex justify-center items-start p-2">
+              <motion.dev
+                animate={{
+                  y: [0, 24, 0]
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  repeatType: 'loop'
+                }}
+                className="w-3 h-3 rounded-full bg-secondary mb-1"
+                />
+            </div>
+          </a>
+        </div>
+      </section>
+    </>
   )
 }
 
