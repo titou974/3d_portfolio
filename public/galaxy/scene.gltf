@@ -1,99 +1,148 @@
 {
   "accessors": [
     {
-      "bufferView": 0,
+      "bufferView": 2,
       "componentType": 5126,
-      "count": 50000,
+      "count": 3223,
       "max": [
-        288.8330078125,
-        313.2330017089844,
-        225.4040069580078
+        0.999999463558197,
+        0.9999982118606567,
+        1.0
       ],
       "min": [
-        -58.488800048828125,
-        -81.83899688720703,
-        -15.739500045776367
+        -0.9999986290931702,
+        -0.999998927116394,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 38676,
+      "componentType": 5126,
+      "count": 3223,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
       ],
       "type": "VEC3"
     },
     {
       "bufferView": 1,
       "componentType": 5126,
-      "count": 50000,
+      "count": 3223,
       "max": [
-        1.0,
-        1.0,
         1.0,
         1.0
       ],
       "min": [
-        0.6745098233222961,
         0.0,
-        0.0,
-        1.0
+        0.0
       ],
-      "type": "VEC4"
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 17664,
+      "type": "SCALAR"
     }
   ],
   "asset": {
     "extras": {
-      "author": "Loïc Norgeot (https://sketchfab.com/norgeotloic)",
+      "author": "Akshat (https://sketchfab.com/shooter24994)",
       "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
-      "source": "https://sketchfab.com/3d-models/need-some-space-d6521362b37b48e3a82bce4911409303",
-      "title": "Need some space?"
+      "source": "https://sketchfab.com/3d-models/moon-4db2273f6dd943b8ad7fa5e3b1b2431a",
+      "title": "Moon"
     },
-    "generator": "Sketchfab-12.63.0",
+    "generator": "Sketchfab-12.65.0",
     "version": "2.0"
   },
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 600000,
-      "byteStride": 12,
+      "byteLength": 70656,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 25784,
+      "byteOffset": 70656,
+      "byteStride": 8,
       "name": "floatBufferViews",
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 800000,
-      "byteOffset": 600000,
-      "byteStride": 16,
+      "byteLength": 77352,
+      "byteOffset": 96440,
+      "byteStride": 12,
       "name": "floatBufferViews",
       "target": 34962
     }
   ],
   "buffers": [
     {
-      "byteLength": 1400000,
+      "byteLength": 173792,
       "uri": "scene.bin"
     }
   ],
+  "extensionsRequired": [
+    "KHR_materials_pbrSpecularGlossiness"
+  ],
   "extensionsUsed": [
-    "KHR_materials_unlit"
+    "KHR_materials_pbrSpecularGlossiness"
+  ],
+  "images": [
+    {
+      "uri": "textures/Material.002_diffuse.jpeg"
+    }
   ],
   "materials": [
     {
       "doubleSided": true,
       "extensions": {
-        "KHR_materials_unlit": {}
+        "KHR_materials_pbrSpecularGlossiness": {
+          "diffuseFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "diffuseTexture": {
+            "index": 0
+          },
+          "glossinessFactor": 0.19595917942265426,
+          "specularFactor": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
       },
-      "name": "Scene_-_Root",
-      "pbrMetallicRoughness": {
-        "metallicFactor": 0.0
-      }
+      "name": "Material.002"
     }
   ],
   "meshes": [
     {
-      "name": "Object_0",
+      "name": "Sphere_Material.002_0",
       "primitives": [
         {
           "attributes": {
-            "COLOR_0": 1,
-            "POSITION": 0
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
           },
+          "indices": 3,
           "material": 0,
-          "mode": 0
+          "mode": 4
         }
       ]
     }
@@ -104,17 +153,17 @@
         1
       ],
       "matrix": [
-        0.012779689393937588,
+        1.0,
         0.0,
         0.0,
         0.0,
         0.0,
-        2.8376610825414845e-18,
-        -0.012779689393937588,
+        2.220446049250313e-16,
+        -1.0,
         0.0,
         0.0,
-        0.012779689393937588,
-        2.8376610825414845e-18,
+        1.0,
+        2.220446049250313e-16,
         0.0,
         0.0,
         0.0,
@@ -127,11 +176,67 @@
       "children": [
         2
       ],
-      "name": "Geode"
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "4e326c5f7a3b4af4aecde4d916ae94c5.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        100.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.629206793918314e-05,
+        -99.99999999999868,
+        0.0,
+        0.0,
+        99.99999999999868,
+        -1.629206793918314e-05,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sphere"
     },
     {
       "mesh": 0,
-      "name": "Object_2"
+      "name": "Sphere_Material.002_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
     }
   ],
   "scene": 0,
@@ -141,6 +246,12 @@
       "nodes": [
         0
       ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
     }
   ]
 }
