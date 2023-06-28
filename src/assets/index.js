@@ -34,6 +34,9 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import videoLoader from "./videoloader.mp4";
+import logolight from "./tviolet.png";
+import menulight from "./menulight.svg";
+import closelight from "./closelight.svg";
 
 
 export {
@@ -70,5 +73,8 @@ export {
   codecademy,
   lewagon,
   videoLoader,
-  postgresql
+  postgresql,
+  logolight,
+  menulight,
+  closelight,
 };

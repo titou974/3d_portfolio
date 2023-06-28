@@ -4,6 +4,7 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx}"],
   mode: "jit",
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
@@ -22,6 +23,7 @@ module.exports = {
       },
       backgroundImage: {
         "hero-pattern": "url('/src/assets/herobg.png')",
+        "hero-pattern-light": "url('/src/assets/hero-bg-light.jpg')",
       },
     },
   },

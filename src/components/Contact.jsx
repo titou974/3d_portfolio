@@ -5,9 +5,6 @@ import { styles } from '../styles';
 import { GalaxyCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
-// f6XWpoT9iN-IdbY17
-// template_6hxjsjc
-// service_uggrfxv
 
 const Contact = () => {
   const formRef = useRef();
@@ -22,7 +19,34 @@ const Contact = () => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value })
   }
-  const handleSubmit = (e) => {}
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    emailjs.send(
+      'service_uggrfxv',
+      'template_6hxjsjc',
+      {
+        from_name: form.name,
+        to_name: 'Titouan',
+        from_email: form.email,
+        to_email: 'titouanhirsch@gmail.com',
+        message: form.message,
+      },
+      'f6XWpoT9iN-IdbY17',
+      )
+      .then(() => {
+        setLoading(false, alert('Merci, je reviens vers vous au plus vite.'))
+        setForm({
+          name: '',
+          email: '',
+          message: '',
+        })
+      }, (error) => {
+        setLoading(false)
+        console.log(error);
+        alert("Oups... L'envoi n'a pas fonctionné.")
+      })
+  }
 
 
   return (
