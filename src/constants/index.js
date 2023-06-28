@@ -25,6 +25,8 @@ import {
   codecademy,
   lewagon,
   postgresql,
+  referralsafe,
+  inprocess,
 } from "../assets";
 
 export const navLinks = [
@@ -138,97 +140,72 @@ const experiences = [
   },
 ];
 
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-];
-
 const projects = [
   {
-    name: "Car Rent",
+    name: "Referral Safe",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Certificateur d'expériences professionnelles où les employés peuvent valider leurs expériences antérieures et compétences acquises par le biais de leurs employeurs.",
     tags: [
       {
-        name: "react",
+        name: "rails",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "postgresql",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "stimulusjs",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: referralsafe,
+    source_code_link: "https://github.com/titou974/referral-safe",
   },
   {
-    name: "Job IT",
+    name: "Task Completor",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Une application web basé sur l'API de Open AI GPT 3. On rentre un sujet quelconque et on obtient un rapport complet avec un nombre de pages définies et un design à la carte",
     tags: [
       {
-        name: "react",
+        name: "reactjs",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "nodejs",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "openaiapi",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: inprocess,
+    inprocess: true,
+    source_code_link: "https://github.com/titou974",
   },
   {
-    name: "Trip Guide",
+    name: "Island App",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Réseau social ultramarin dédié à mon île d'origine, La Réunion, où tout le monde peut partager des lieux d'intérêts et son lifestyle réunionnais.",
     tags: [
       {
-        name: "nextjs",
+        name: "reactnative",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "expo",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "firebase",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: inprocess,
+    inprocess: true,
+    source_code_link: "https://github.com/titou974",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, projects };

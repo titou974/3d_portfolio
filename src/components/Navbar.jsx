@@ -5,7 +5,7 @@ import { navLinks } from '../constants';
 import { logo, logolight, menu, close, menulight, closelight } from '../assets';
 
 const Navbar = () => {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
   const [navbar, setNavbar] = useState(false);
 
   useEffect(() => {

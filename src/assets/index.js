@@ -38,6 +38,8 @@ import logolight from "./tviolet.png";
 import menulight from "./menulight.svg";
 import closelight from "./closelight.svg";
 import swipe from "./swipe.gif";
+import referralsafe from "./referralsafe.png";
+import inprocess from "./inprocess.png"
 
 
 export {
@@ -79,4 +81,6 @@ export {
   menulight,
   closelight,
   swipe,
+  referralsafe,
+  inprocess,
 };
