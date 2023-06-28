@@ -5,7 +5,8 @@ import { navLinks } from '../constants';
 import { logo, logolight, menu, close, menulight, closelight } from '../assets';
 
 const Navbar = () => {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
+  const [navbar, setNavbar] = useState(false);
 
   useEffect(() => {
     if (theme === "dark") {
@@ -15,14 +16,30 @@ const Navbar = () => {
     }
   })
 
+  const changeNavbar = () => {
+    if (window.scrollY >= 66) {
+      setNavbar(true)
+    } else {
+      setNavbar(false)
+    }
+  }
+
+  useEffect(() => {
+    changeNavbar()
+    window.addEventListener("scroll", changeNavbar)
+  })
+
+
+
   const handleThemeSwitch = () => {
     setTheme(theme === "dark" ? "light" : "dark")
   }
 
+
   const [active, setActive] = useState('');
   const [toggle, setToggle] = useState(false);
   return (
-    <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary dark:bg-transparent`}>
+    <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 ${navbar ? "bg-primary dark:bg-stone-200" : "bg-transparent"} `}>
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link to="/" className="flex items-center gap-2" onClick={() => {
           setActive("");

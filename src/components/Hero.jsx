@@ -2,15 +2,17 @@ import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import { ComputersCanvas } from './canvas';
 import Typed from "typed.js";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Preloader  from "./Preloader";
+import { swipe } from "../assets"
 
 
 const Hero = () => {
 
+  const [show, setShow] = useState(false)
   const el = useRef(null);
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
         const typed = new Typed(el.current, {
         strings: ["Bienvenue sur mon Portfolio !", "Je suis développeur fullstack, avec une préférence pour le back-end", "Surtout ! N'hésitez pas à me contacter pour la moindre question..."],
         startDelay: 300,
@@ -18,7 +20,19 @@ const Hero = () => {
         backSpeed: 30,
         showCursor: false
         })
-    }, 9000)
+    }, 9000);
+    return () => clearTimeout(timer);
+  })
+
+  useEffect(() => {
+    const timoutOne = setTimeout(() => {
+      setShow(true)
+      const timoutTwo = setTimeout(() => {
+        setShow(false)
+      }, 10000);
+      return () => clearTimeout(timoutTwo);
+    }, 56000);
+    return () => clearTimeout(timoutOne);
   })
 
 
@@ -37,12 +51,14 @@ const Hero = () => {
             </p>
           </div>
         </div>
-        <ComputersCanvas />
-
+        <ComputersCanvas/>
+        <div className="absolute bottom-60 w-full flex items-center justify-center">
+          <img src={swipe} alt="model 3d" className={`${!show && "hidden"} md:hidden`}/>
+        </div>
         <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
           <a href="#about">
-            <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary dark:border-[#915eff] hover:border-white flex justify-center items-start p-2">
-              <motion.dev
+            <div className="w-[35px] h-[64px] rounded-3xl border-4 border-[#5877FA] dark:border-[#915eff] hover:border-white flex justify-center items-start p-2">
+              <motion.div
                 animate={{
                   y: [0, 24, 0]
                 }}
@@ -51,7 +67,7 @@ const Hero = () => {
                   repeat: Infinity,
                   repeatType: 'loop'
                 }}
-                className="w-3 h-3 rounded-full bg-secondary dark:bg-[#915eff] mb-1"
+                className="w-3 h-3 rounded-full bg-[#5877FA] dark:bg-[#915eff] mb-1"
                 />
             </div>
           </a>

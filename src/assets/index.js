@@ -37,6 +37,7 @@ import videoLoader from "./videoloader.mp4";
 import logolight from "./tviolet.png";
 import menulight from "./menulight.svg";
 import closelight from "./closelight.svg";
+import swipe from "./swipe.gif";
 
 
 export {
@@ -77,4 +78,5 @@ export {
   logolight,
   menulight,
   closelight,
+  swipe,
 };
