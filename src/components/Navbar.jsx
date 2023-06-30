@@ -9,12 +9,21 @@ const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
   const [active, setActive] = useState('');
   const [toggle, setToggle] = useState(false);
+  const [disable3d, setDisable3d] = useState(false);
 
   useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark")
     } else {
       document.documentElement.classList.remove("dark")
+    }
+  })
+
+  useEffect(() => {
+    if (disable3d === true) {
+      document.documentElement.classList.add("hide3d")
+    } else {
+      document.documentElement.classList.remove("hide3d")
     }
   })
 
@@ -37,6 +46,10 @@ const Navbar = () => {
     setTheme(theme === "dark" ? "light" : "dark")
   }
 
+  const handleDisable3dSwitch = () => {
+    setDisable3d(disable3d ? false : true)
+  };
+
 
   return (
     <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 ${navbar ? "bg-primary dark:bg-stone-200" : "bg-transparent"} `}>
@@ -52,6 +65,12 @@ const Navbar = () => {
             <i className= {`text-[#5877FA] dark:text-stone-500 fa-solid fa-moon dark:hover:text-black mr-3 ms-1 xs: fa-xl sm`}></i>
             <input className="container_toggle" type="checkbox" id="switch" name="mode" onChange={handleThemeSwitch} />
             <label for="switch" className="switch-mode md:mx-0">Toggle</label>
+            <i className= {`fa-solid fa-sun text-secondary dark:text-[#1d1836] ms-3 xs: fa-xl`}></i>
+        </div>
+        <div className='hidden justify-center items-center mx-3 md:flex md:w-1/2 md:ms-0 md:me-0 '>
+            <i className= {`text-[#5877FA] dark:text-stone-500 fa-solid fa-moon dark:hover:text-black mr-3 ms-1 xs: fa-xl sm`}></i>
+            <input className="container_toggle_3d" type="checkbox" id="switch" name="mode" onChange={handleDisable3dSwitch} />
+            <label for="switch" className="switch-mode-3d md:mx-0">Toggle</label>
             <i className= {`fa-solid fa-sun text-secondary dark:text-[#1d1836] ms-3 xs: fa-xl`}></i>
         </div>
         <ul className="list-none hidden sm:flex flex-row gap-10">

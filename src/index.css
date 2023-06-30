@@ -329,3 +329,7 @@
     left: 4px;
   }
 }
+
+.hide3d .hide-anim {
+  display: none;
+}
