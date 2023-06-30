@@ -61,17 +61,17 @@ const Navbar = () => {
           <img src={ theme !== "dark" ? logo : logolight } alt="logo" className="w-9 h-9 object-contain"/>
           <p className="text-white dark:text-stone-700 text-[18px] font-bold cursor-pointer flex">Titouan Hirsch</p>
         </Link>
-        <div className='justify-center items-center mx-3 flex xs:flex-1 xs:ms-16 xs:w-full md:w-1/2 md:ms-0 md:me-0 '>
-            <i className= {`text-[#5877FA] dark:text-stone-500 fa-solid fa-moon dark:hover:text-black mr-3 ms-1 xs: fa-xl sm`}></i>
+        <div className='justify-center md:justify-end items-center mx-3 flex xs:flex-1 xs:ms-16 xs:w-full md:w-1/2 md:ms-0 md:me-0 me-8'>
+            <i className= {`text-[#5877FA] dark:text-stone-500 fa-solid fa-moon dark:hover:text-black mr-3 ms-1 xs: fa-xl`}></i>
             <input className="container_toggle" type="checkbox" id="switch" name="mode" onChange={handleThemeSwitch} />
             <label for="switch" className="switch-mode md:mx-0">Toggle</label>
             <i className= {`fa-solid fa-sun text-secondary dark:text-[#1d1836] ms-3 xs: fa-xl`}></i>
         </div>
-        <div className='hidden justify-center items-center mx-3 md:flex md:w-1/2 md:ms-0 md:me-0 '>
-            <i className= {`text-[#5877FA] dark:text-stone-500 fa-solid fa-moon dark:hover:text-black mr-3 ms-1 xs: fa-xl sm`}></i>
-            <input className="container_toggle_3d" type="checkbox" id="switch" name="mode" onChange={handleDisable3dSwitch} />
-            <label for="switch" className="switch-mode-3d md:mx-0">Toggle</label>
-            <i className= {`fa-solid fa-sun text-secondary dark:text-[#1d1836] ms-3 xs: fa-xl`}></i>
+        <div className='hidden justify-start items-center flex-1 md:flex ms-8'>
+            <p className='text-secondary font-bold dark:text-stone-500 dark:text-[#1d1836] me-3'>3D</p>
+            <input className="container_toggle_3d" type="checkbox" id="switch-3d" name="mode-3d" onChange={handleDisable3dSwitch} />
+            <label for="switch-3d" className="switch-mode-3d md:mx-0">Toggle 3d</label>
+            <i class="text-secondary dark:text-stone-500 fa-solid fa-power-off dark:hover:text-black ms-3 ms-1 xs: fa-xl"></i>
         </div>
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((link) => (
