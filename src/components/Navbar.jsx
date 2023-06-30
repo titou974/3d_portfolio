@@ -7,6 +7,8 @@ import { logo, logolight, menu, close, menulight, closelight } from '../assets';
 const Navbar = () => {
   const [theme, setTheme] = useState("light");
   const [navbar, setNavbar] = useState(false);
+  const [active, setActive] = useState('');
+  const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
     if (theme === "dark") {
@@ -36,8 +38,6 @@ const Navbar = () => {
   }
 
 
-  const [active, setActive] = useState('');
-  const [toggle, setToggle] = useState(false);
   return (
     <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 ${navbar ? "bg-primary dark:bg-stone-200" : "bg-transparent"} `}>
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
@@ -48,7 +48,12 @@ const Navbar = () => {
           <img src={ theme !== "dark" ? logo : logolight } alt="logo" className="w-9 h-9 object-contain"/>
           <p className="text-white dark:text-stone-700 text-[18px] font-bold cursor-pointer flex">Titouan Hirsch</p>
         </Link>
-        <i className= {`fa-solid ${ theme === "dark" ? "fa-moon" : "fa-sun" } hidden sm:block fa-xl text-secondary dark:text-stone-500 hover:text-white dark:hover:text-black`} onClick={handleThemeSwitch}></i>
+        <div className='hidden md:flex justify-center items-center mx-3'>
+          <i className= {`text-[#5877FA] dark:text-stone-500 fa-solid fa-moon fa-xl dark:hover:text-black me-3`}></i>
+          <input className="container_toggle" type="checkbox" id="switch" name="mode" onChange={handleThemeSwitch}/>
+          <label for="switch" className="switch-mode">Toggle</label>
+          <i className= {`fa-solid fa-sun fa-xl text-secondary dark:text-[#1d1836] ms-3`}></i>
+        </div>
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((link) => (
             <li key={link.id} className={`text-secondary dark:text-stone-500 hover:text-white dark:hover:text-black text-[18px] font-medium cursor-pointer`} onClick={() => setActive(link.title)}>
@@ -57,7 +62,12 @@ const Navbar = () => {
           ))}
         </ul>
         <div className="sm:hidden flex flex-1 justify-end items-center">
-          <i className= {`fa-solid ${ theme === "dark" ? "fa-moon" : "fa-sun" } fa-xl text-secondary dark:text-stone-500 hover:text-white dark:hover:text-black mr-12`} onClick={handleThemeSwitch}></i>
+          <div className='flex justify-evenly items-center mr-10'>
+            <i className= {`text-[#5877FA] dark:text-stone-500 fa-solid fa-moon fa-xl dark:hover:text-black mr-3`}></i>
+            <input className="container_toggle" type="checkbox" id="switch" name="mode" onChange={handleThemeSwitch}/>
+            <label for="switch" className="switch-mode">Toggle</label>
+            <i className= {`fa-solid fa-sun fa-xl text-secondary dark:text-[#1d1836] ms-3`}></i>
+          </div>
           {theme !== "dark" && (
             <img src={toggle ? close : menu} alt="menu" className="w-[28px] h-[28px] object-contain cursor-pointer dark:text-stone-700" onClick={() => setToggle(!toggle)}/>
           )}
