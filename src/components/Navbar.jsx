@@ -68,10 +68,10 @@ const Navbar = () => {
             <i className= {`fa-solid fa-sun text-secondary dark:text-[#1d1836] ms-3 xs: fa-xl`}></i>
         </div>
         <div className='hidden justify-start items-center flex-1 md:flex ms-8'>
-            <p className='text-secondary font-bold dark:text-stone-500 dark:text-[#1d1836] me-3'>3D</p>
+            <p className={`${ !disable3d ? "text-[#5877FA] dark:text-[#1d1836]" : "text-secondary dark:text-stone-500"} font-bold me-3`}>3D</p>
             <input className="container_toggle_3d" type="checkbox" id="switch-3d" name="mode-3d" onChange={handleDisable3dSwitch} />
             <label for="switch-3d" className="switch-mode-3d md:mx-0">Toggle 3d</label>
-            <i class="text-secondary dark:text-stone-500 fa-solid fa-power-off dark:hover:text-black ms-3 ms-1 xs: fa-xl"></i>
+            <i className={`${disable3d ? "text-[#5877FA] dark:text-[#1d1836]" : "text-secondary dark:text-stone-500"} fa-solid fa-power-off ms-3 ms-1 xs: fa-xl`}></i>
         </div>
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((link) => (

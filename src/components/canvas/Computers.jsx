@@ -43,7 +43,7 @@ const ComputersCanvas = () => {
 
   }, []);
   return (
-    <motion.div className="hide-anim h-full">
+    <motion.div className="hide-anim h-full dark:hidden">
       <Canvas frameloop='demand' shadows camera={{ position: [20, 3, 5], fov: 25 }} gl={{ preserveDrawingBuffer: true }} >
         <Suspense fallback={null}>
           <OrbitControls

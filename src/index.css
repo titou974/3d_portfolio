@@ -323,7 +323,11 @@
 }
 
 .container_toggle_3d:checked + .switch-mode-3d {
-  background: #FFBD07;
+  background: #5877FA;
+}
+
+.dark .container_toggle_3d:checked + .switch-mode-3d {
+  background: #1d1836;
 }
 
 .container_toggle_3d:checked + .switch-mode-3d:after {
@@ -399,11 +403,11 @@
 }
 
 
-  .hide3d .anim-disabled {
-    width: 50%;
-  }
+.hide3d .anim-disabled {
+  width: 50%;
+}
 
-  .hide3d .center {
-    justify-content: center;
-    align-items: center;
-  }
+.hide3d .center {
+  justify-content: center;
+  align-items: center;
+}
