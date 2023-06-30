@@ -237,11 +237,6 @@
   background-color:#1d1836 ;
 }
 
-
-.hidden-anim canvas {
-  display: none;
-}
-
 .container_toggle {
   height: 0;
   width: 0;
@@ -251,8 +246,8 @@
 .switch-mode {
   cursor: pointer;
   text-indent: -9999px;
-  width: 55px;
-  height: 30px;
+  width: 40px;
+  height: 20px;
   background: #5877FA;
   margin: 0 auto;
   display: flex;
@@ -267,8 +262,8 @@
 .switch-mode:after {
   content: '';
   background: #fff;
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -289,4 +284,48 @@
   -ms-transform: translateX(-100%);
   -o-transform: translateX(-100%);
   transform: translateX(-100%);
+}
+
+
+@media (min-width: 450px) {
+  .switch-mode {
+    width: 60px;
+    height: 30px;
+  }
+
+  .switch-mode:after {
+    width: 22px;
+    height: 22px;
+    top: 4px;
+    left: 4px;
+  }
+
+}
+
+@media (min-width: 450px) {
+  .switch-mode {
+    width: 60px;
+    height: 30px;
+  }
+
+  .switch-mode:after {
+    width: 22px;
+    height: 22px;
+    top: 3.6px;
+    left: 4px;
+  }
+}
+
+@media (min-width: 768px) {
+  .switch-mode {
+    width: 60px;
+    height: 30px;
+  }
+
+  .switch-mode:after {
+    width: 22px;
+    height: 22px;
+    top: 4px;
+    left: 4px;
+  }
 }

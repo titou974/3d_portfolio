@@ -5,33 +5,13 @@ import Typed from "typed.js";
 import { useEffect, useRef, useState } from "react";
 import Preloader  from "./Preloader";
 import { swipe } from "../assets";
+import { Typewriter } from 'react-simple-typewriter';
 
 
 const Hero = () => {
 
   const [show, setShow] = useState(false)
   const el = useRef(null);
-  useEffect(() => {
-        const typed = new Typed(el.current, {
-        strings: ["Bienvenue sur mon Portfolio !", "Je suis développeur fullstack, avec une préférence pour le back-end", "Surtout ! N'hésitez pas à me contacter pour la moindre question..."],
-        startDelay: 300,
-        typeSpeed: 50,
-        backSpeed: 30,
-        showCursor: false
-        })
-  })
-
-  // useEffect(() => {
-  //   const timoutOne = setTimeout(() => {
-  //     setShow(true)
-  //     const timoutTwo = setTimeout(() => {
-  //       setShow(false)
-  //     }, 10000);
-  //     return () => clearTimeout(timoutTwo);
-  //   }, 56000);
-  //   return () => clearTimeout(timoutOne);
-  // })
-
 
   return (
     <>
@@ -44,8 +24,16 @@ const Hero = () => {
           </div>
           <div>
             <h1 className={`${styles.heroHeadText} dark:text-stone-700`}>Bonjour, je suis <span className="text-[#5877FA] dark:text-[#1d1836]">Titouan</span></h1>
-            <p className={`${styles.heroSubText} mt-2 dark:text-stone-500`} ref={el}>
-            </p>
+            <span className={`${styles.heroSubText} mt-2 dark:text-stone-500`}>
+            <Typewriter
+              words={["const Hero = () => { const [show, setShow] = useState(false) const el = useRef(null); return ( <> <Preloader />","Cher voyageur, bienvenue sur mon portfolio!", "Prenez le temps de découvrir chaque détail de ce site fait avec le coeur. En somme !...","Je créer des applications mobiles et des sites internets."]}
+              cursor
+              cursorStyle='_'
+              typeSpeed={70}
+              deleteSpeed={30}
+              delaySpeed={1000}
+            />
+            </span>
           </div>
         </div>
         <ComputersCanvas />
@@ -53,7 +41,7 @@ const Hero = () => {
           <img src={swipe} alt="model 3d" className={`${!show && "hidden"} md:hidden`}/>
         </div>
         <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
-          <a href="#about">
+          <a href="#work">
             <div className="w-[35px] h-[64px] rounded-3xl border-4 border-[#5877FA] dark:border-[#1d1836] hover:border-white flex justify-center items-start p-2">
               <motion.div
                 animate={{

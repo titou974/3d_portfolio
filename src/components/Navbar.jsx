@@ -48,11 +48,11 @@ const Navbar = () => {
           <img src={ theme !== "dark" ? logo : logolight } alt="logo" className="w-9 h-9 object-contain"/>
           <p className="text-white dark:text-stone-700 text-[18px] font-bold cursor-pointer flex">Titouan Hirsch</p>
         </Link>
-        <div className='hidden md:flex justify-center items-center mx-3'>
-          <i className= {`text-[#5877FA] dark:text-stone-500 fa-solid fa-moon fa-xl dark:hover:text-black me-3`}></i>
-          <input className="container_toggle" type="checkbox" id="switch" name="mode" onChange={handleThemeSwitch}/>
-          <label for="switch" className="switch-mode">Toggle</label>
-          <i className= {`fa-solid fa-sun fa-xl text-secondary dark:text-[#1d1836] ms-3`}></i>
+        <div className='justify-center items-center mx-3 flex xs:flex-1 xs:ms-16 xs:w-full md:w-1/2 md:ms-0 md:me-0 '>
+            <i className= {`text-[#5877FA] dark:text-stone-500 fa-solid fa-moon dark:hover:text-black mr-3 ms-1 xs: fa-xl sm`}></i>
+            <input className="container_toggle" type="checkbox" id="switch" name="mode" onChange={handleThemeSwitch} />
+            <label for="switch" className="switch-mode md:mx-0">Toggle</label>
+            <i className= {`fa-solid fa-sun text-secondary dark:text-[#1d1836] ms-3 xs: fa-xl`}></i>
         </div>
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((link) => (
@@ -62,12 +62,6 @@ const Navbar = () => {
           ))}
         </ul>
         <div className="sm:hidden flex flex-1 justify-end items-center">
-          <div className='flex justify-evenly items-center mr-10'>
-            <i className= {`text-[#5877FA] dark:text-stone-500 fa-solid fa-moon fa-xl dark:hover:text-black mr-3`}></i>
-            <input className="container_toggle" type="checkbox" id="switch" name="mode" onChange={handleThemeSwitch}/>
-            <label for="switch" className="switch-mode">Toggle</label>
-            <i className= {`fa-solid fa-sun fa-xl text-secondary dark:text-[#1d1836] ms-3`}></i>
-          </div>
           {theme !== "dark" && (
             <img src={toggle ? close : menu} alt="menu" className="w-[28px] h-[28px] object-contain cursor-pointer dark:text-stone-700" onClick={() => setToggle(!toggle)}/>
           )}

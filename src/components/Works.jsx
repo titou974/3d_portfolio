@@ -55,12 +55,12 @@ const Works = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} dark:text-stone-500`}>Mes travaux</p>
+        <p className={`${styles.sectionSubText} dark:text-stone-500`}>Voici mes</p>
         <h2 className={`${styles.sectionHeadText} dark:text-stone-700`}>Projets.</h2>
       </motion.div>
       <div className='w-full flex'>
         <motion.p variants={fadeIn("", "", 0.1, 1)} className="mt-3 text-secondary dark:text-stone-500">
-          Chacun de ces projets représente une étape importante de ma progression en tant que développeur, mettant en évidence mes compétences et mon engagement envers l'apprentissage continu. Les projets réalisés lors de mes formations démontrent ma capacité à appliquer les concepts et les compétences acquises dans des environnements structurés, tandis que mes projets personnels mettent en valeur ma créativité et ma passion pour l'exploration de nouvelles idées.
+          Chacun de ces projets représente une étape importante de ma progression en tant que développeur full-stack, mettant en évidence mes compétences et mon engagement envers l'apprentissage continu. Les projets réalisés lors de mes formations démontrent ma capacité à appliquer les concepts et les compétences acquises dans des environnements structurés, tandis que mes projets personnels mettent en valeur ma créativité et ma passion pour l'exploration de nouvelles idées.
         </motion.p>
       </div>
 
