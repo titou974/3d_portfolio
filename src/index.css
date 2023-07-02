@@ -286,89 +286,7 @@
   transform: translateX(-100%);
 }
 
-.container_toggle_3d {
-  height: 0;
-  width: 0;
-  visibility: hidden;
-}
 
-.switch-mode-3d {
-  cursor: pointer;
-  text-indent: -9999px;
-  width: 40px;
-  height: 20px;
-  background: #aaa6c3;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  border-radius: 100px;
-  position: relative;
-}
-
-.switch-mode-3d:after {
-  content: '';
-  background: #fff;
-  width: 10px;
-  height: 10px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  position: absolute;
-  top: 5px;
-  left: 4px;
-  transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 320ms;
-}
-
-.container_toggle_3d:checked + .switch-mode-3d {
-  background: #5877FA;
-}
-
-.dark .container_toggle_3d:checked + .switch-mode-3d {
-  background: #1d1836;
-}
-
-.container_toggle_3d:checked + .switch-mode-3d:after {
-  left: calc(100% - 5px);
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  -o-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-@media (min-width: 768px) {
-  .switch-mode-3d {
-    width: 60px;
-    height: 30px;
-  }
-
-  .switch-mode-3d:after {
-    width: 22px;
-    height: 22px;
-    top: 4px;
-    left: 4px;
-  }
-}
-
-
-
-@media (min-width: 450px) {
-  .switch-mode {
-    width: 60px;
-    height: 30px;
-  }
-
-  .switch-mode:after {
-    width: 22px;
-    height: 22px;
-    top: 4px;
-    left: 4px;
-  }
-
-}
 
 @media (min-width: 450px) {
   .switch-mode {
@@ -384,6 +302,20 @@
   }
 }
 
+@media (min-width: 640px) {
+  .switch-mode {
+    width: 40px;
+    height: 20px;
+  }
+
+  .switch-mode:after {
+    width: 10px;
+    height: 10px;
+    top: 5px;
+    left: 4px;
+  }
+}
+
 @media (min-width: 768px) {
   .switch-mode {
     width: 60px;
@@ -398,7 +330,7 @@
   }
 }
 
-.hide3d .hide-anim {
+.hide-anim {
   display: none;
 }
 
@@ -407,7 +339,23 @@
   width: 50%;
 }
 
-.hide3d .center {
+.center {
   justify-content: center;
   align-items: center;
+}
+
+.css-afyhf7 {
+  display: none;
+}
+
+.css-a678aw {
+  display: none;
+}
+
+.alert-success .css-afyhf7 {
+  display: flex;
+}
+
+.alert-warning .css-a678aw {
+  display: flex;
 }

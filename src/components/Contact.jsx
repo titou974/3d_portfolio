@@ -5,6 +5,12 @@ import { styles } from '../styles';
 import { GalaxyCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
+import {
+  Alert,
+  AlertIcon,
+  AlertTitle,
+  AlertDescription,
+} from '@chakra-ui/react'
 
 const Contact = () => {
   const formRef = useRef();
@@ -14,6 +20,7 @@ const Contact = () => {
     message: '',
   })
   const [loading, setLoading] = useState(false);
+  const [alert, setAlert] = useState('')
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -35,7 +42,8 @@ const Contact = () => {
       'f6XWpoT9iN-IdbY17',
       )
       .then(() => {
-        setLoading(false, alert('Merci, je reviens vers vous au plus vite.'))
+        setLoading(false)
+        formRef.classList.add('alert-success')
         setForm({
           name: '',
           email: '',
@@ -43,6 +51,7 @@ const Contact = () => {
         })
       }, (error) => {
         setLoading(false)
+        formRef.classList.add('alert-warning')
         console.log(error);
         alert("Oups... L'envoi n'a pas fonctionné.")
       })
@@ -50,8 +59,8 @@ const Contact = () => {
 
 
   return (
-    <div className='xl:mt-12 xl:flex-row flex-col-reverse flex overflow-hidden gap-10 center'>
-      <motion.div variants={slideIn('left', 'tween', 0.2, 1)} className="flex-[0.75] bg-black-100 p-8 rounded-2xl anim-disabled">
+    <div className='overflow-hidden center'>
+      <motion.div variants={slideIn('left', 'tween', 0.2, 1)} className="bg-black-100 p-8 rounded-2xl anim-disabled md:w-8/12 mx-auto">
         <p className={styles.sectionSubText}>
           Laissez-moi un message
         </p>
@@ -74,10 +83,15 @@ const Contact = () => {
           <button type="submit" className='bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl'>
             {loading ? "Envoi..." : 'Envoyer'}
           </button>
+          <Alert status='success' variant='solid' className={`rounded-md`}>
+            <AlertIcon />
+              Message envoyé ! Je reviens vers vous au plus vite.
+          </Alert>
+          <Alert status='warning' variant='solid' className={`rounded-md`}>
+            <AlertIcon />
+              Oups... L'envoi n'a pas fonctionné.
+          </Alert>
         </form>
-      </motion.div>
-      <motion.div variants={slideIn('right', "tween", 0.2, 1)} className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px] hide-anim">
-        <GalaxyCanvas />
       </motion.div>
     </div>
   )

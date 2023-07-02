@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
-import { ComputersCanvas } from './canvas';
 import Typed from "typed.js";
 import { useEffect, useRef, useState } from "react";
 import Preloader  from "./Preloader";
@@ -36,7 +35,9 @@ const Hero = () => {
             </span>
           </div>
         </div>
-        <ComputersCanvas />
+        <div className='h-full hidden'>
+
+        </div>
         <div className="absolute bottom-60 w-full flex items-center justify-center">
           <img src={swipe} alt="model 3d" className={`${!show && "hidden"} md:hidden`}/>
         </div>

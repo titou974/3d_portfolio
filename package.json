@@ -10,10 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.7.1",
     "@emailjs/browser": "^3.11.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "@react-three/drei": "^9.77.0",
     "@react-three/fiber": "^8.13.3",
-    "framer-motion": "^10.12.16",
+    "framer-motion": "^10.12.18",
     "gsap": "^3.12.1",
     "lord-icon-element": "^4.1.1",
     "lottie-web": "^5.12.2",
