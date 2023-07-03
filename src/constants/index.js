@@ -3,30 +3,20 @@ import {
   backend,
   web,
   javascript,
-  typescript,
   html,
   css,
   reactjs,
-  redux,
   tailwind,
-  nodejs,
   git,
   figma,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
   threejs,
   rails,
-  reactnative,
   codecademy,
   lewagon,
   postgresql,
   referralsafe,
   inprocess,
+  agency,
 } from "../assets";
 
 export const navLinks = [
@@ -110,7 +100,7 @@ const experiences = [
     iconBg: "#000000",
     date: "Juin 2022- Avril 2023",
     points: [
-      "Apprentissage des languages de programmation classique : HTML, CSS, Vanilla JS",
+      "Apprentissage des languages de programmation : HTML, CSS, Vanilla JS",
       "Développement d'applications utilisant les dernières technologies React et Node JS",
       "Apprentissage du Python et des modèles de bases en Machine Learning",
     ],
@@ -122,19 +112,20 @@ const experiences = [
     iconBg: "#E50F05",
     date: "Avril 2023 - Juin 2023",
     points: [
-      "Formation intensive de 400 heures pour apprendre à développer tout type d'applications web de A à Z",
-      "Après avoir pitché l'idée de 'Referral Safe' devant mon groupe, création d'un 'certificateur d'expériences professionnelles' en 2 semaines chrono, puis présentation du projet sur Twitch",
-      "Apprentissage de Ruby on Rails, JS stimulus et Git (outil pour collaborer sur des projets)",
+      "Formation intensive de 400 heures pour apprendre à développer tout type d'application web de A à Z",
+      "Après avoir pitché l'idée de 'Referral Safe' devant mon groupe, création d'un 'certificateur d'expérience professionnelle' en 2 semaines chrono, puis présentation du projet sur Twitch",
+      "Apprentissage de Ruby on Rails, JS stimulus et Git",
     ],
   },
   {
     title: "Web Developer",
-    company_name: "Agence Web",
-    iconBg: "#383E56",
+    company_name: "Agence de Communication",
+    icon: agency,
+    iconBg: "#70B7E0",
     date: "Juin 2023 - Aujourd'hui",
     points: [
-      "Co-fondateur d'une agence de communication.",
-      "Développement d'applications web/mobile sur les frameworks Rails et React JS, coding sur la partie back-end des applications.",
+      "Co-fondateur",
+      "Développement d'applications webs/mobiles sur les frameworks Rails et React JS",
       "Design sur Figma : partage entre les besoins du client, l'identité visuel demandée, et notre savoir-faire dans l'expérience utilisateur",
     ],
   },
@@ -144,7 +135,7 @@ const projects = [
   {
     name: "Referral Safe",
     description:
-      "Certificateur d'expériences professionnelles où les employés peuvent valider leurs expériences antérieures et compétences acquises par le biais de leurs employeurs.",
+      "Certificateur d'expérience professionnelle où les employés peuvent valider leurs expériences antérieures et compétences acquises par le biais de leurs employeurs.",
     tags: [
       {
         name: "rails",

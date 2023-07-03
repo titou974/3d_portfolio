@@ -17,7 +17,7 @@ const About = () => {
         <h2 className={`${styles.sectionHeadText} dark:text-stone-700`}>À Propos.</h2>
       </motion.div>
       <motion.p variants={fadeIn("", "", 0.1, 1)} className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] dark:text-stone-500">
-        Je suis un passionné de codage qui a commencé à explorer ce domaine en 2021 avec mon école. Ma soif d'apprendre m'a rapidement conduit à me plonger dans l'auto-apprentissage du codage. Après avoir suivi avec succès une formation de 2 mois chez Le Wagon, j'ai solidifié mes compétences en Rails, ce qui m'a donné une base solide dans le développement web. Récemment, j'ai élargi mes connaissances en acquérant des bases en React JS, et désormais, je suis déterminé à me spécialiser dans le développement mobile.
+        Je suis un passionné de programmation web, qui a commencé à explorer ce domaine en 2021 avec mon école. Ma soif d'apprendre m'a rapidement conduit à me plonger dans l'auto-apprentissage de la programmation. Après avoir suivi avec succès une formation de 2 mois avec <a href='https://www.lewagon.com/fr' className='text-[#5877FA] dark:text-[#1d1836] hover:underline' target='_blank' rel="noopener noreferrer">Le Wagon</a>, j'ai solidifié mes compétences en Rails, ce qui m'a donné une base solide dans le développement web. Récemment, j'ai élargi mes connaissances en acquérant des bases en React JS, et désormais, je suis déterminé à rajouter le développement mobile à mon arc de compétences.
       </motion.p>
       <div className="mt-20 flex justify-center flex-wrap gap-10">
         <Tilt className="xs:w-[250px] w-full">

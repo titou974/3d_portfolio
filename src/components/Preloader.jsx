@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { videoLoader } from "../assets";
 import { preLoaderAnim } from "../utils/loaderanim";
 
 const Preloader = () => {
@@ -12,12 +11,20 @@ const Preloader = () => {
 
   return (
     <div className="preloader">
-      <div className="texts-container text-lg">
+      <div className="texts-container items-center text-lg hidden sm:flex">
         <span>En route </span> <span>vers le Portfolio </span> <span>de Titouan...</span>
       </div>
-      <video autoPlay loop muted className="w-7/12 md:w-2/5 lg:w-1/5">
-          <source src={videoLoader}/>
-      </video>
+      <div className="texts-container flex items-center text-lg sm:hidden">
+        <span>Bienvenue. </span> <span>Welcome. </span> <span>ようこそ.</span>
+      </div>
+      <div className="spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
   )
 }

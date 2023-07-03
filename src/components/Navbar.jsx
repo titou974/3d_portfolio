@@ -54,17 +54,17 @@ const Navbar = () => {
   return (
     <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 ${navbar ? "bg-primary dark:bg-stone-200" : "bg-transparent"} `}>
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <Link to="/" className="flex items-center gap-2" onClick={() => {
+        <Link to="/" className="flex-1 xs:flex-none flex items-center gap-2" onClick={() => {
           setActive("");
           window.scrollTo(0, 0);
         }}>
           <img src={ theme !== "dark" ? logo : logolight } alt="logo" className="w-9 h-9 object-contain"/>
-          <p className="text-white dark:text-stone-700 text-[18px] sm:text-[12px] md:text-[18px] font-bold cursor-pointer flex">Titouan Hirsch</p>
+          <p className="hidden xs:block text-white dark:text-stone-700 text-[18px] sm:text-[12px] md:text-[18px] font-bold cursor-pointer flex">Titouan Hirsch</p>
         </Link>
         <div className='justify-center items-center mx-3 flex xs:flex-1 xs:ms-16 xs:w-full md:w-1/2 sm:ms-0 sm:me-0 '>
             <i className= {`text-[#5877FA] dark:text-stone-500 fa-solid fa-moon dark:hover:text-black mr-3 ms-1 xs: fa-lg sm:fa-xl`}></i>
             <input className="container_toggle" type="checkbox" id="switch" name="mode" onChange={handleThemeSwitch} />
-            <label for="switch" className="switch-mode sm:mx-0">Toggle</label>
+            <label htmlFor="switch" className="switch-mode sm:mx-0">Toggle</label>
             <i className= {`fa-solid fa-sun text-secondary dark:text-[#1d1836] ms-3 xs: fa-lg sm:fa-xl`}></i>
         </div>
         <ul className="list-none hidden sm:flex flex-row gap-10">

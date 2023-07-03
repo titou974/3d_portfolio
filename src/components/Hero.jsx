@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
-import Typed from "typed.js";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Preloader  from "./Preloader";
 import { swipe } from "../assets";
 import { Typewriter } from 'react-simple-typewriter';
@@ -29,8 +28,8 @@ const Hero = () => {
               cursor
               cursorStyle='_'
               typeSpeed={70}
-              deleteSpeed={30}
-              delaySpeed={1000}
+              deleteSpeed={5}
+              delaySpeed={2000}
             />
             </span>
           </div>

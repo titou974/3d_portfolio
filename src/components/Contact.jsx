@@ -2,15 +2,9 @@ import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import { styles } from '../styles';
-import { GalaxyCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
-import {
-  Alert,
-  AlertIcon,
-  AlertTitle,
-  AlertDescription,
-} from '@chakra-ui/react'
+
 
 const Contact = () => {
   const formRef = useRef();
@@ -43,7 +37,7 @@ const Contact = () => {
       )
       .then(() => {
         setLoading(false)
-        formRef.classList.add('alert-success')
+        setAlert('success')
         setForm({
           name: '',
           email: '',
@@ -51,7 +45,7 @@ const Contact = () => {
         })
       }, (error) => {
         setLoading(false)
-        formRef.classList.add('alert-warning')
+        setAlert('warning')
         console.log(error);
         alert("Oups... L'envoi n'a pas fonctionné.")
       })
@@ -62,7 +56,7 @@ const Contact = () => {
     <div className='overflow-hidden center'>
       <motion.div variants={slideIn('left', 'tween', 0.2, 1)} className="bg-black-100 p-8 rounded-2xl anim-disabled md:w-8/12 mx-auto">
         <p className={styles.sectionSubText}>
-          Laissez-moi un message
+          Application, site, ou autre 
         </p>
         <h3 className={styles.sectionHeadText}>
           Contact.
@@ -83,14 +77,14 @@ const Contact = () => {
           <button type="submit" className='bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl'>
             {loading ? "Envoi..." : 'Envoyer'}
           </button>
-          <Alert status='success' variant='solid' className={`rounded-md`}>
-            <AlertIcon />
-              Message envoyé ! Je reviens vers vous au plus vite.
-          </Alert>
-          <Alert status='warning' variant='solid' className={`rounded-md`}>
-            <AlertIcon />
-              Oups... L'envoi n'a pas fonctionné.
-          </Alert>
+          <div className={`${alert === 'success' ? '' : 'hidden'} text-white flex items-center bg-[#38a169] py-3 px-2 rounded-md`}>
+            <i className="fa-solid fa-circle-check fa-lg"></i>
+            <p className='ms-3'>Message envoyé ! Je reviens vers vous au plus vite.</p>
+          </div>
+          <div className={`${alert === 'warning' ? '' : 'hidden'} text-white flex items-center bg-[#dd6b20] py-3 px-2 rounded-md`}>
+            <i className="fa-solid fa-circle-exclamation fa-lg"></i>
+            <p className='ms-3'>Oups... L'envoi n'a pas fonctionné.</p>
+          </div>
         </form>
       </motion.div>
     </div>
