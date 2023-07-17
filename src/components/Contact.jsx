@@ -56,7 +56,7 @@ const Contact = () => {
     <div className='overflow-hidden center'>
       <motion.div variants={slideIn('left', 'tween', 0.2, 1)} className="bg-black-100 p-8 rounded-2xl anim-disabled md:w-8/12 mx-auto">
         <p className={styles.sectionSubText}>
-          Application, site, ou autre 
+          Application, site, ou autre
         </p>
         <h3 className={styles.sectionHeadText}>
           Contact.

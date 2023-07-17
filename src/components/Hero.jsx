@@ -9,7 +9,7 @@ import { Typewriter } from 'react-simple-typewriter';
 const Hero = () => {
 
   const [show, setShow] = useState(false)
-  const el = useRef(null);
+  const el = useRef(null)
 
   return (
     <>
