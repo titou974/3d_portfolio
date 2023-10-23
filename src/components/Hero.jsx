@@ -24,7 +24,12 @@ const Hero = () => {
             <h1 className={`${styles.heroHeadText} dark:text-stone-700`}>Bonjour, je suis <span className="text-[#5877FA] dark:text-[#1d1836]">Titouan</span></h1>
             <span className={`${styles.heroSubText} mt-2 dark:text-stone-500`}>
             <Typewriter
-              words={["const Hero = () => { const [show, setShow] = useState(false) const el = useRef","Cher voyageur, bienvenue sur mon portfolio!", "Prenez le temps de découvrir chaque détail de ce site fait avec le coeur. En somme !...","Je créer des applications mobiles et des sites internets."]}
+              words={[
+                "const Hero = () => { const [show, setShow] = useState(false); const el = useRef();",
+                "Cher voyageur, bienvenue sur mon portfolio!",
+                "Prenez le temps de découvrir chaque détail de ce site fait avec le cœur. En somme !...",
+                "Je crée des applications mobiles et des sites internet."
+              ]}
               cursor
               cursorStyle='_'
               typeSpeed={70}
