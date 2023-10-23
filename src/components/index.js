@@ -6,6 +6,7 @@ import Experience from './Experience';
 import Works from './Works';
 import Contact from './Contact';
 import Preloader from './Preloader';
+import Video from './video';
 
 export {
   Hero,
@@ -15,5 +16,6 @@ export {
   Works,
   Contact,
   StarsCanvas,
-  Preloader
+  Preloader,
+  Video
 }

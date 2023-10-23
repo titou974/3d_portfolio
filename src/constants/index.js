@@ -17,6 +17,8 @@ import {
   referralsafe,
   inprocess,
   agency,
+  taskcompletor,
+  nestorapp
 } from "../assets";
 
 export const navLinks = [
@@ -118,15 +120,14 @@ const experiences = [
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Agence de Communication",
+    title: "Freelance Developer",
+    company_name: "Auto-Entrepreneur",
     icon: agency,
     iconBg: "#70B7E0",
     date: "Juin 2023 - Aujourd'hui",
     points: [
-      "Co-fondateur",
-      "Développement d'applications webs/mobiles sur les frameworks Rails et React JS",
-      "Design sur Figma : partage entre les besoins du client, l'identité visuel demandée, et notre savoir-faire dans l'expérience utilisateur",
+      "Travaux sur Task Completor pour se former à Next JS et apprendre à intégrer l'IA dans des projets",
+      "Développement de Nestor App en projet entreprenarial, gestion de toute la partie informatique sur le projet start-up.",
     ],
   },
 ];
@@ -152,14 +153,15 @@ const projects = [
     ],
     image: referralsafe,
     source_code_link: "https://github.com/titou974/referral-safe",
+    website_link: "https://referralsafeapp-156a896d1d00.herokuapp.com/",
   },
   {
     name: "Task Completor",
     description:
-      "Une application web basé sur l'API de Open AI GPT 3. On rentre un sujet quelconque et on obtient un rapport complet avec un nombre de pages définies et un design à la carte",
+      "Une application web basé sur l'API de Open AI GPT 4. Outil baser sur l'IA pour compléter vos tâches du quotidien telles que des lettres de motivations, des présentations, des emails et des messages.",
     tags: [
       {
-        name: "reactjs",
+        name: "nextjs",
         color: "blue-text-gradient",
       },
       {
@@ -167,35 +169,37 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "openaiapi",
+        name: "gpt4api",
         color: "pink-text-gradient",
       },
     ],
-    image: inprocess,
-    inprocess: true,
-    source_code_link: "https://github.com/titou974",
+    image: taskcompletor,
+    inprocess: false,
+    source_code_link: "https://github.com/titou974/taskcompletor",
+    website_link: "https://www.taskcompletor.app/",
   },
   {
-    name: "Island App",
+    name: "Nestor App",
     description:
-      "Réseau social ultramarin dédié à mon île d'origine, La Réunion, où tout le monde peut partager des lieux d'intérêts et son lifestyle réunionnais.",
+      "Projet entreprenarial actuel. Application web pour les entreprises de voiturier qui leur permet de récolter des statistiques sur les performances de leurs travailleurs (temps, lieu..) et la création de tickets digitaux pour les clients ",
     tags: [
       {
-        name: "reactnative",
+        name: "nextjs",
         color: "blue-text-gradient",
       },
       {
-        name: "expo",
+        name: "nodejs",
         color: "green-text-gradient",
       },
       {
-        name: "firebase",
+        name: "supabase",
         color: "pink-text-gradient",
       },
     ],
-    image: inprocess,
+    image: nestorapp,
     inprocess: true,
-    source_code_link: "https://github.com/titou974",
+    source_code_link: "https://github.com/titou974/valetappv1",
+    website_link: "https://valetappv1.vercel.app/",
   },
 ];
 

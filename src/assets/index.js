@@ -32,7 +32,9 @@ import closelight from "./closelight.svg";
 import swipe from "./swipe.gif";
 import referralsafe from "./referralsafe.png";
 import inprocess from "./inprocess.png";
-import hacking from "./hacking.gif"
+import hacking from "./hacking.gif";
+import taskcompletor from "./taskcompletor.png"
+import nestorapp from "./nestorapp.png"
 
 
 export {
@@ -66,5 +68,7 @@ export {
   referralsafe,
   inprocess,
   agency,
-  hacking
+  hacking,
+  nestorapp,
+  taskcompletor,
 };

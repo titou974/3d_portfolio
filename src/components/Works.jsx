@@ -7,7 +7,7 @@ import { projects } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
 import { motion } from 'framer-motion';
 
-const ProjectCard = ({ index, name, description, tags, image, source_code_link, inprocess }) => {
+const ProjectCard = ({ index, name, description, tags, image, source_code_link, inprocess, website_link }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
@@ -20,7 +20,9 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
       >
         <div className="relative w-full h-[230px]">
           <img src={image} alt={name} className="w-full h-full object-cover rounded-2xl"/>
-
+            <a href={website_link} target="_blank" rel="noreferrer" className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-[#5877FA] p-4 rounded-md font-bold text-white bg-[#5877FA] transition-all hover:bg-white hover:text-[#5877FA]'>
+              <p>Voir le site</p>
+            </a>
           <div className="absolute bottom-44 inset-0 flex items-center justify-end m-3 card-img_hover">
             <p className={`${inprocess ? '' : 'hidden'} me-3 font-bold`}>En développement...</p>
             <div onClick={() => window.open(source_code_link, "_blank")}
