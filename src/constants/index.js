@@ -18,7 +18,9 @@ import {
   inprocess,
   agency,
   taskcompletor,
-  nestorapp
+  nestorapp,
+  innovans,
+  titouan,
 } from "../assets";
 
 export const navLinks = [
@@ -120,9 +122,22 @@ const experiences = [
     ],
   },
   {
+    title: "Stage de 3 mois - Développeur Full-Stack",
+    company_name: "Innovans",
+    icon: innovans,
+    iconBg: "white",
+    date: "Juillet 2023 - Octobre 2023",
+    points: [
+      "Développement et maintenance d'une application web utilisant les technologies HTML, CSS, JavaScript, PHP et MySQL",
+      "Collaboration étroite avec une équipe de développeurs pour assurer la livraison des fonctionnalités dans les délais impartis",
+      "Optimisation des performances de l'application en identifiant et en résolvant les problèmes de code et de base de données",
+      "Travaux sur 6 applications webs au total sur les 3 mois de stage"
+    ],
+  },
+  {
     title: "Freelance Developer",
     company_name: "Auto-Entrepreneur",
-    icon: agency,
+    icon: titouan,
     iconBg: "#70B7E0",
     date: "Juin 2023 - Aujourd'hui",
     points: [

@@ -19,13 +19,9 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 import postgresql from "./tech/postgresql.png"
-
-
 import codecademy from "./company/codecademy.png";
 import lewagon from "./company/lewagon.png";
 import agency from "./company/agency.png"
-
-
 import logolight from "./tviolet.png";
 import menulight from "./menulight.svg";
 import closelight from "./closelight.svg";
@@ -33,8 +29,10 @@ import swipe from "./swipe.gif";
 import referralsafe from "./referralsafe.png";
 import inprocess from "./inprocess.png";
 import hacking from "./hacking.gif";
-import taskcompletor from "./taskcompletor.png"
-import nestorapp from "./nestorapp.png"
+import taskcompletor from "./taskcompletor.png";
+import nestorapp from "./nestorapp.png";
+import innovans from "./innovans.png";
+import titouan from "./Titouan.png";
 
 
 export {
@@ -71,4 +69,6 @@ export {
   hacking,
   nestorapp,
   taskcompletor,
+  titouan,
+  innovans,
 };
