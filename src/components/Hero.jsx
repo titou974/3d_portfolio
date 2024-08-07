@@ -25,7 +25,7 @@ const Hero = () => {
             <span className={`${styles.heroSubText} mt-2 dark:text-stone-500`}>
             <Typewriter
               words={[
-                "const Hero = () => { const [show, setShow] = useState(false); const el = useRef();",
+                "Toc toc ! Qui va là ?",
                 "Cher voyageur, bienvenue sur mon portfolio!",
                 "Prenez le temps de découvrir chaque détail de ce site fait avec le cœur. En somme !...",
                 "Je crée des applications mobiles et des sites internet."

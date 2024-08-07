@@ -33,6 +33,9 @@ import taskcompletor from "./taskcompletor.png";
 import nestorapp from "./nestorapp.png";
 import innovans from "./innovans.png";
 import titouan from "./Titouan.png";
+import kessel from "./kessel.png";
+import kesselmedia from "./kesselmedia.png";
+import maltLogo from "./malt.png"
 
 
 export {
@@ -71,4 +74,7 @@ export {
   taskcompletor,
   titouan,
   innovans,
+  kessel,
+  kesselmedia,
+  maltLogo
 };

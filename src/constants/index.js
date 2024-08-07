@@ -11,7 +11,6 @@ import {
   figma,
   threejs,
   rails,
-  codecademy,
   lewagon,
   postgresql,
   referralsafe,
@@ -21,6 +20,9 @@ import {
   nestorapp,
   innovans,
   titouan,
+  kessel,
+  kesselmedia,
+  maltLogo
 } from "../assets";
 
 export const navLinks = [
@@ -40,7 +42,7 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Frontend Developer",
     icon: web,
   },
   {
@@ -99,18 +101,6 @@ const technologies = [
 const experiences = [
   {
     title: "Student Developer",
-    company_name: "Codecademy",
-    icon: codecademy,
-    iconBg: "#000000",
-    date: "Juin 2022- Avril 2023",
-    points: [
-      "Apprentissage des languages de programmation : HTML, CSS, Vanilla JS",
-      "Développement d'applications utilisant les dernières technologies React et Node JS",
-      "Apprentissage du Python et des modèles de bases en Machine Learning",
-    ],
-  },
-  {
-    title: "Student Developer",
     company_name: "Le Wagon",
     icon: lewagon,
     iconBg: "#E50F05",
@@ -135,40 +125,87 @@ const experiences = [
     ],
   },
   {
+    title: "Stage de 6 mois - Développeur Front-end",
+    company_name: "Kessel Media",
+    icon: kessel,
+    iconBg: "white",
+    date: "Novembre 2023 - Mai 2024",
+    points: [
+        "Apprentissage des bonnes pratiques pour construire une application scalable",
+        "Développement et maintenance d'une application web utilisée par plus de 500 000 utilisateurs",
+        "Maîtrise de Vue.js et du framework Nuxt 3"
+    ]
+  },
+  {
+      title: "Freelance Développeur Front-end",
+      company_name: "Auto-Entrepreneur",
+      icon: kessel,
+      iconBg: "white",
+      date: "Mai 2024 - Août 2024",
+      points: [
+          "Développement de la nouvelle version du parcours d'abonnement des utilisateurs",
+          "Refonte des pages articles",
+          "Maintenance du CMS et mise à jour du dashboard des auteurs"
+      ]
+  },
+  {
     title: "Freelance Developer",
     company_name: "Auto-Entrepreneur",
     icon: titouan,
-    iconBg: "#70B7E0",
-    date: "Juin 2023 - Aujourd'hui",
+    iconBg: "#5d78f9",
+    date: "Novembre 2023 - Aujourd'hui",
     points: [
-      "Travaux sur Task Completor pour se former à Next JS et apprendre à intégrer l'IA dans des projets",
-      "Développement de Nestor App en projet entreprenarial, gestion de toute la partie informatique sur le projet start-up.",
+      "Développement de Nestor App en projet entreprenarial dans le framework Next JS, gestion de toute la partie informatique sur le projet start-up.",
+      "Travaux sur Cityrent en Vanilla JS (application de location de véhicules) : développement de nouvelles fonctionnalités, maintenance et optimisation de l'application",
     ],
   },
 ];
 
 const projects = [
   {
-    name: "Referral Safe",
+    name: "Kessel Media",
     description:
-      "Projet Wagon réalisé en 2 semaines. Certificateur d'expérience professionnelle où les employés peuvent valider leurs expériences antérieures et compétences acquises par le biais de leurs employeurs{main}.",
+      "Surnommé le \"YouTube de la Newsletter\", c'est le média de la newsletter qui compte maintenant plus de 500 000 utilisateurs actifs. J'ai participé à la refonte de Kessel et à la mise en place d'une architecture de code scalable.",
     tags: [
       {
-        name: "rails",
+        name: "nuxt3/vuejs",
         color: "blue-text-gradient",
       },
       {
-        name: "postgresql",
+        name: "typescript",
         color: "green-text-gradient",
       },
       {
-        name: "stimulusjs",
+        name: "cms",
         color: "pink-text-gradient",
       },
     ],
-    image: referralsafe,
-    source_code_link: "https://github.com/titou974/referral-safe",
-    website_link: "https://referralsafeapp-156a896d1d00.herokuapp.com/",
+    image: kesselmedia,
+    inprocess: false,
+    website_link: "https://www.kessel.media/",
+  },
+  {
+    name: "Nestor App",
+    description:
+      "Projet entreprenarial actuel. Application web pour les entreprises de voiturier qui leur permet de récolter des statistiques sur les performances de leurs travailleurs (temps, lieu..) et la création de tickets digitaux pour les clients ",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "nodejs",
+        color: "green-text-gradient",
+      },
+      {
+        name: "supabase",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: nestorapp,
+    inprocess: false,
+    source_code_link: "https://github.com/titou974/valetappv1",
+    website_link: "https://valetappv1.vercel.app/",
   },
   {
     name: "Task Completor",
@@ -194,28 +231,40 @@ const projects = [
     website_link: "https://www.taskcompletor.app/",
   },
   {
-    name: "Nestor App",
+    name: "Referral Safe",
     description:
-      "Projet entreprenarial actuel. Application web pour les entreprises de voiturier qui leur permet de récolter des statistiques sur les performances de leurs travailleurs (temps, lieu..) et la création de tickets digitaux pour les clients ",
+      "Projet Wagon réalisé en 2 semaines. Certificateur d'expérience professionnelle où les employés peuvent valider leurs expériences antérieures et compétences acquises par le biais de leurs employeurs{main}.",
     tags: [
       {
-        name: "nextjs",
+        name: "rails",
         color: "blue-text-gradient",
       },
       {
-        name: "nodejs",
+        name: "postgresql",
         color: "green-text-gradient",
       },
       {
-        name: "supabase",
+        name: "stimulusjs",
         color: "pink-text-gradient",
       },
     ],
-    image: nestorapp,
-    inprocess: true,
-    source_code_link: "https://github.com/titou974/valetappv1",
-    website_link: "https://valetappv1.vercel.app/",
+    image: referralsafe,
+    source_code_link: "https://github.com/titou974/referral-safe",
+    website_link: "https://referralsafeapp-156a896d1d00.herokuapp.com/",
   },
+
 ];
 
-export { services, technologies, experiences, projects };
+const aboutSection = {
+  subtitle: "Et...",
+  title: "À Propos."
+};
+
+const malt = {
+  subtitle: "Embauchez-moi sur",
+  title: "Malt",
+  description: "Vous pouvez me proposez votre projet/mission sur Malt",
+  image: maltLogo
+}
+
+export { services, technologies, experiences, projects, aboutSection, malt };

@@ -1,9 +1,7 @@
-import { useState, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
-import { About, Contact, Experience, Hero, Navbar, Works, StarsCanvas, Video } from "./components";
+import { About, Contact, Experience, Hero, Navbar, Works, StarsCanvas, Video, Malt } from "./components";
 
 const App = () => {
-
   return (
     <BrowserRouter>
       <div className='relative z-0 bg-primary dark:bg-[#ECECEA]'>
@@ -14,6 +12,7 @@ const App = () => {
         <Works />
         <Video />
         <Experience />
+        <Malt />
         <About />
         <div className='relative z-0'>
           <Contact />

@@ -1,23 +1,21 @@
-import React from 'react';
 import Tilt from 'react-parallax-tilt';
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
-import { services } from '../constants/index';
+import { services, aboutSection } from '../constants/index';
 import { fadeIn, textVariant } from '../utils/motion';
 import { SectionWrapper } from '../hoc';
 
 
 
 const About = () => {
-  const body = document.documentElement;
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} dark:text-stone-500`}>Et...</p>
-        <h2 className={`${styles.sectionHeadText} dark:text-stone-700`}>À Propos.</h2>
+        <p className={`${styles.sectionSubText} dark:text-stone-500`}>{ aboutSection.subtitle }</p>
+        <h2 className={`${styles.sectionHeadText} dark:text-stone-700`}>{ aboutSection.title }</h2>
       </motion.div>
       <motion.p variants={fadeIn("", "", 0.1, 1)} className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] dark:text-stone-500">
-        Je suis un passionné de programmation web, qui a commencé à explorer ce domaine en 2021 avec mon école. Ma soif d'apprendre m'a rapidement conduit à me plonger dans l'auto-apprentissage de la programmation. Après avoir suivi avec succès une formation de 2 mois avec <a href='https://www.lewagon.com/fr' className='text-[#5877FA] dark:text-[#1d1836] hover:underline' target='_blank' rel="noopener noreferrer">Le Wagon</a>, j'ai solidifié mes compétences en Rails, ce qui m'a donné une base solide dans le développement web. Récemment, j'ai élargi mes connaissances en acquérant des bases en React JS, et désormais, je suis déterminé à rajouter le développement mobile à mon arc de compétences.
+        Maintenant 1 an que je suis développeur Fullstack, et 2 ans et demi que j'ai écris mes premières lignes de code. J'ai commencé en auto-didacte, enchainé avec une formation intensive <a href='https://www.lewagon.com/fr' className='text-[#5877FA] dark:text-[#1d1836] hover:underline' target='_blank' rel="noopener noreferrer">au Wagon</a>, co-fondé et développer entièrement le SAAS de voiturier <a href='https://nestorapp.app/' className='text-[#5877FA] dark:text-[#1d1836] hover:underline' target='_blank' rel="noopener noreferrer">Nestor</a>, et travaillé en freelance pour des entreprises comme <a href='https://www.kessel.media' className='text-[#5877FA] dark:text-[#1d1836] hover:underline' target='_blank' rel="noopener noreferrer">Kessel Media</a>. J'ai une forte passion et une satisfaction à donner vie aux app mobiles et sites web, et je suis toujours à la recherche de nouveaux projets pour lesquels je pourrais apporter mon expertise.
       </motion.p>
       <div className="mt-20 flex justify-center flex-wrap gap-10">
         <Tilt className="xs:w-[250px] w-full">

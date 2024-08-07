@@ -7,6 +7,7 @@ import Works from './Works';
 import Contact from './Contact';
 import Preloader from './Preloader';
 import Video from './video';
+import Malt from './Malt';
 
 export {
   Hero,
@@ -17,5 +18,6 @@ export {
   Contact,
   StarsCanvas,
   Preloader,
-  Video
+  Video,
+  Malt
 }
