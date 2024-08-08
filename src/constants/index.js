@@ -233,7 +233,7 @@ const projects = [
   {
     name: "Referral Safe",
     description:
-      "Projet Wagon réalisé en 2 semaines. Certificateur d'expérience professionnelle où les employés peuvent valider leurs expériences antérieures et compétences acquises par le biais de leurs employeurs{main}.",
+      "Projet Wagon réalisé en 2 semaines. Certificateur d'expérience professionnelle où les employés peuvent valider leurs expériences antérieures et compétences acquises par le biais de leurs employeurs.",
     tags: [
       {
         name: "rails",
