@@ -14,15 +14,15 @@ import {
   lewagon,
   postgresql,
   referralsafe,
-  inprocess,
-  agency,
   taskcompletor,
   nestorapp,
   innovans,
   titouan,
   kessel,
   kesselmedia,
-  maltLogo
+  maltLogo,
+  cherryWebsite,
+  wedivepreview,
 } from "../assets";
 
 export const navLinks = [
@@ -94,8 +94,8 @@ const technologies = [
   },
   {
     name: "postgresql",
-    icon: postgresql
-  }
+    icon: postgresql,
+  },
 ];
 
 const experiences = [
@@ -121,7 +121,7 @@ const experiences = [
       "Développement et maintenance d'une application web utilisant les technologies HTML, CSS, JavaScript, PHP et MySQL",
       "Collaboration étroite avec une équipe de développeurs pour assurer la livraison des fonctionnalités dans les délais impartis",
       "Optimisation des performances de l'application en identifiant et en résolvant les problèmes de code et de base de données",
-      "Travaux sur 6 applications webs au total sur les 3 mois de stage"
+      "Travaux sur 6 applications webs au total sur les 3 mois de stage",
     ],
   },
   {
@@ -131,22 +131,22 @@ const experiences = [
     iconBg: "white",
     date: "Novembre 2023 - Mai 2024",
     points: [
-        "Apprentissage des bonnes pratiques pour construire une application scalable",
-        "Développement et maintenance d'une application web utilisée par plus de 500 000 utilisateurs",
-        "Maîtrise de Vue.js et du framework Nuxt 3"
-    ]
+      "Apprentissage des bonnes pratiques pour construire une application scalable",
+      "Développement et maintenance d'une application web utilisée par plus de 500 000 utilisateurs",
+      "Maîtrise de Vue.js et du framework Nuxt 3",
+    ],
   },
   {
-      title: "Freelance Développeur Front-end",
-      company_name: "Auto-Entrepreneur",
-      icon: kessel,
-      iconBg: "white",
-      date: "Mai 2024 - Août 2024",
-      points: [
-          "Développement de la nouvelle version du parcours d'abonnement des utilisateurs",
-          "Refonte des pages articles",
-          "Maintenance du CMS et mise à jour du dashboard des auteurs"
-      ]
+    title: "Freelance Développeur Front-end",
+    company_name: "Auto-Entrepreneur",
+    icon: kessel,
+    iconBg: "white",
+    date: "Mai 2024 - Août 2024",
+    points: [
+      "Développement de la nouvelle version du parcours d'abonnement des utilisateurs",
+      "Refonte des pages articles",
+      "Maintenance du CMS et mise à jour du dashboard des auteurs",
+    ],
   },
   {
     title: "Freelance Developer",
@@ -162,6 +162,45 @@ const experiences = [
 ];
 
 const projects = [
+  {
+    name: "WeDive",
+    description:
+      "Une application mobile de partage de spots de plongée et de pêche, réunissant une communauté de passionnés de la mer. Enregistrez vos sessions de plongée et partagez les photos/vidéos de vos aventures. Le tout dans le respect de l’environnement et avec un engagement pour sa préservation.",
+    tags: [
+      {
+        name: "Flutter",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Firebase",
+        color: "green-text-gradient",
+      },
+    ],
+    image: wedivepreview,
+    inprocess: true,
+  },
+  {
+    name: "Cherry, le tinder du 🍑",
+    description:
+      "Cherry part d’un défi que mes amis m’ont lancé à l’été 2024 : créer un Tinder du 🍑. Construit de A à Z en fullstack, avec un frontend et un backend séparés, une intégration de paiement et un système d’abonnement, c’est mon premier réseau social abouti. Une partie des utilisateurs créés dessus sont virtuels et basés sur l’API d’OpenAI pour interagir avec l’utilisateur.",
+    tags: [
+      {
+        name: "Frontend Nextjs 15",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Backend Express js (Nodejs)",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Intégration de Paiement CCBill",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: cherryWebsite,
+    inprocess: false,
+    website_link: "https://www.cherryflirt.com",
+  },
   {
     name: "Kessel Media",
     description:
@@ -252,19 +291,18 @@ const projects = [
     source_code_link: "https://github.com/titou974/referral-safe",
     website_link: "https://referralsafeapp-156a896d1d00.herokuapp.com/",
   },
-
 ];
 
 const aboutSection = {
   subtitle: "Et...",
-  title: "À Propos."
+  title: "À Propos.",
 };
 
 const malt = {
   subtitle: "Embauchez-moi sur",
   title: "Malt",
   description: "Vous pouvez me proposez votre projet/mission sur Malt",
-  image: maltLogo
-}
+  image: maltLogo,
+};
 
 export { services, technologies, experiences, projects, aboutSection, malt };

@@ -18,10 +18,10 @@ import rails from "./tech/rails.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
-import postgresql from "./tech/postgresql.png"
+import postgresql from "./tech/postgresql.png";
 import codecademy from "./company/codecademy.png";
 import lewagon from "./company/lewagon.png";
-import agency from "./company/agency.png"
+import agency from "./company/agency.png";
 import logolight from "./tviolet.png";
 import menulight from "./menulight.svg";
 import closelight from "./closelight.svg";
@@ -35,8 +35,10 @@ import innovans from "./innovans.png";
 import titouan from "./Titouan.png";
 import kessel from "./kessel.png";
 import kesselmedia from "./kesselmedia.png";
-import maltLogo from "./malt.png"
-
+import maltLogo from "./malt.png";
+import cherry from "./cherry.png";
+import cherryWebsite from "./cherryWebsite.png";
+import wedivepreview from "./wedivepreview.png";
 
 export {
   logo,
@@ -76,5 +78,8 @@ export {
   innovans,
   kessel,
   kesselmedia,
-  maltLogo
+  maltLogo,
+  cherry,
+  cherryWebsite,
+  wedivepreview,
 };
