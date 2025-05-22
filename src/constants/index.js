@@ -165,7 +165,7 @@ const projects = [
   {
     name: "WeDive",
     description:
-      "Une application mobile de partage de spots de plongée et de pêche, réunissant une communauté de passionnés de la mer. Enregistrez vos sessions de plongée et partagez les photos/vidéos de vos aventures. Le tout dans le respect de l’environnement et avec un engagement pour sa préservation.",
+      "Cette idée vient du Coeur 🩵. Une application mobile de partage de spots de plongée et de pêche, réunissant une communauté de passionnés de la mer. Enregistrez vos sessions de plongée et partagez les photos/vidéos de vos aventures. Le tout dans le respect de l’environnement et avec un engagement pour sa préservation.",
     tags: [
       {
         name: "Flutter",
