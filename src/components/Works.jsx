@@ -36,14 +36,15 @@ const ProjectCard = ({
             href={website_link}
             target="_blank"
             rel="noreferrer"
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-[#5877FA] p-4 rounded-md font-bold text-white bg-[#5877FA] transition-all hover:bg-white hover:text-[#5877FA]"
+            className={`text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-[#5877FA] p-4 rounded-md font-bold text-white ${
+              inprocess
+                ? "bg-[#5877FA]/60"
+                : "bg-[#5877FA] hover:bg-white hover:text-[#5877FA]"
+            } transition-all`}
           >
-            <p>Voir le site</p>
+            {inprocess ? <p>En construction...</p> : <p>Voir le site</p>}
           </a>
           <div className="absolute bottom-44 inset-0 flex items-center justify-end m-3 card-img_hover">
-            <p className={`${inprocess ? "" : "hidden"} me-3 font-bold`}>
-              En développement...
-            </p>
             <div
               onClick={() => window.open(source_code_link, "_blank")}
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
