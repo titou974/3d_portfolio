@@ -99,8 +99,8 @@ const Works = () => {
           Chacun de ces projets représente une étape importante de ma
           progression en tant que développeur full-stack, mettant en évidence
           mes compétences et mon engagement envers l'apprentissage continu. Les
-          projets réalisés lors de mes formations démontrent ma capacité à
-          appliquer les concepts et les compétences acquises dans des
+          projets réalisés lors de ma formation ou mes missions démontrent ma
+          capacité à appliquer les concepts et les compétences acquises dans des
           environnements structurés, tandis que mes projets personnels mettent
           en valeur ma créativité et ma passion pour l'exploration de nouvelles
           idées.
