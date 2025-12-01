@@ -180,28 +180,6 @@ const projects = [
     inprocess: true,
   },
   {
-    name: "Cherry, le tinder du 🍑",
-    description:
-      "Cherry part d’un défi que mes amis m’ont lancé à l’été 2024 : créer un Tinder du 🍑. Construit de A à Z en fullstack, avec un frontend et un backend séparés, une intégration de paiement et un système d’abonnement, c’est mon premier réseau social abouti. Une partie des utilisateurs créés dessus sont virtuels et basés sur l’API d’OpenAI pour interagir avec l’utilisateur.",
-    tags: [
-      {
-        name: "Frontend Nextjs 15",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Backend Express js (Nodejs)",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Intégration de Paiement CCBill",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: cherryWebsite,
-    inprocess: false,
-    website_link: "https://www.cherryflirt.com",
-  },
-  {
     name: "Kessel Media",
     description:
       "Surnommé le \"YouTube de la Newsletter\", c'est le média de la newsletter qui compte maintenant plus de 500 000 utilisateurs actifs. J'ai participé à la refonte de Kessel et à la mise en place d'une architecture de code scalable.",
