@@ -1,90 +1,142 @@
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { styles } from '../styles';
-import { navLinks } from '../constants';
-import { logo, logolight, menu, close, menulight, closelight } from '../assets';
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { styles } from "../styles";
+import { navLinks } from "../constants";
+import { logo, logolight, menu, close, menulight, closelight } from "../assets";
 
 const Navbar = () => {
   const [theme, setTheme] = useState("light");
   const [navbar, setNavbar] = useState(false);
-  const [active, setActive] = useState('');
+  const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [disable3d, setDisable3d] = useState(false);
 
   useEffect(() => {
     if (theme === "dark") {
-      document.documentElement.classList.add("dark")
+      document.documentElement.classList.add("dark");
     } else {
-      document.documentElement.classList.remove("dark")
+      document.documentElement.classList.remove("dark");
     }
-  })
+  }, [theme]);
 
   useEffect(() => {
     if (disable3d === true) {
-      document.documentElement.classList.add("hide3d")
+      document.documentElement.classList.add("hide3d");
     } else {
-      document.documentElement.classList.remove("hide3d")
+      document.documentElement.classList.remove("hide3d");
     }
-  })
+  });
 
   const changeNavbar = () => {
     if (window.scrollY >= 66) {
-      setNavbar(true)
+      setNavbar(true);
     } else {
-      setNavbar(false)
+      setNavbar(false);
     }
-  }
-
-  useEffect(() => {
-    changeNavbar()
-    window.addEventListener("scroll", changeNavbar)
-  })
-
-
-
-  const handleThemeSwitch = () => {
-    setTheme(theme === "dark" ? "light" : "dark")
-  }
-
-  const handleDisable3dSwitch = () => {
-    setDisable3d(disable3d ? false : true)
   };
 
+  useEffect(() => {
+    changeNavbar();
+    window.addEventListener("scroll", changeNavbar);
+  });
+
+  const handleThemeSwitch = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+
+  const handleDisable3dSwitch = () => {
+    setDisable3d(disable3d ? false : true);
+  };
 
   return (
-    <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 ${navbar ? "bg-primary dark:bg-stone-200" : "bg-transparent"} `}>
+    <nav
+      className={`${
+        styles.paddingX
+      } w-full flex items-center py-5 fixed top-0 z-20 transitions-all transition-colors duration-500 ease-in-out ${
+        navbar ? "bg-background" : "bg-transparent"
+      }`}
+    >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <Link to="/" className="flex-1 xs:flex-none flex items-center gap-2" onClick={() => {
-          setActive("");
-          window.scrollTo(0, 0);
-        }}>
-          <img src={ theme !== "dark" ? logo : logolight } alt="logo" className="w-9 h-9 object-contain"/>
-          <p className="hidden xs:block text-white dark:text-stone-700 text-[18px] sm:text-[12px] md:text-[18px] font-bold cursor-pointer flex">Titouan Hirsch</p>
+        <Link
+          to="/"
+          className="flex-1 xs:flex-none flex items-center gap-2"
+          onClick={() => {
+            setActive("");
+            window.scrollTo(0, 0);
+          }}
+        >
+          <img
+            src={theme !== "dark" ? logo : logolight}
+            alt="logo"
+            className="w-9 h-9 object-contain"
+          />
+          <p className="hidden xs:block text-white dark:text-stone-700 text-[18px] sm:text-[12px] md:text-[18px] font-bold cursor-pointer flex">
+            Titouan Hirsch
+          </p>
         </Link>
-        <div className='justify-center items-center mx-3 flex xs:flex-1 xs:ms-16 xs:w-full md:w-1/2 sm:ms-0 sm:me-0 '>
-            <i className= {`text-[#5877FA] dark:text-stone-500 fa-solid fa-moon dark:hover:text-black mr-3 ms-1 xs: fa-lg sm:fa-xl`}></i>
-            <input className="container_toggle" type="checkbox" id="switch" name="mode" onChange={handleThemeSwitch} />
-            <label htmlFor="switch" className="switch-mode sm:mx-0">Toggle</label>
-            <i className= {`fa-solid fa-sun text-secondary dark:text-[#1d1836] ms-3 xs: fa-lg sm:fa-xl`}></i>
+        <div className="justify-center items-center mx-3 flex xs:flex-1 xs:ms-16 xs:w-full md:w-1/2 sm:ms-0 sm:me-0 ">
+          <i
+            className={`text-primary dark:text-stone-500 fa-solid fa-moon dark:hover:text-black mr-3 ms-1 xs: fa-lg sm:fa-xl`}
+          ></i>
+          <input
+            className="container_toggle"
+            type="checkbox"
+            id="switch"
+            name="mode"
+            onChange={handleThemeSwitch}
+          />
+          <label htmlFor="switch" className="switch-mode sm:mx-0">
+            Toggle
+          </label>
+          <i
+            className={`fa-solid fa-sun text-secondary dark:text-[#1d1836] ms-3 xs: fa-lg sm:fa-xl`}
+          ></i>
         </div>
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((link) => (
-            <li key={link.id} className={`text-secondary dark:text-stone-500 hover:text-white dark:hover:text-black sm:text-[12px] md:text-[18px] font-medium cursor-pointer`} onClick={() => setActive(link.title)}>
+            <li
+              key={link.id}
+              className={`text-secondary dark:text-stone-500 hover:text-white dark:hover:text-black sm:text-[12px] md:text-[18px] font-medium cursor-pointer`}
+              onClick={() => setActive(link.title)}
+            >
               <a href={`#${link.id}`}>{link.title}</a>
             </li>
           ))}
         </ul>
         <div className="sm:hidden flex flex-1 justify-end items-center">
           {theme !== "dark" && (
-            <img src={toggle ? close : menu} alt="menu" className="w-[28px] h-[28px] object-contain cursor-pointer dark:text-stone-700" onClick={() => setToggle(!toggle)}/>
+            <img
+              src={toggle ? close : menu}
+              alt="menu"
+              className="w-[28px] h-[28px] object-contain cursor-pointer dark:text-stone-700"
+              onClick={() => setToggle(!toggle)}
+            />
           )}
           {theme === "dark" && (
-            <img src={toggle ? closelight : menulight} alt="menu" className="w-[28px] h-[28px] object-contain cursor-pointer dark:text-stone-700" onClick={() => setToggle(!toggle)}/>
+            <img
+              src={toggle ? closelight : menulight}
+              alt="menu"
+              className="w-[28px] h-[28px] object-contain cursor-pointer dark:text-stone-700"
+              onClick={() => setToggle(!toggle)}
+            />
           )}
-          <div className={`${!toggle ? 'hidden' : 'flex'} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}>
+          <div
+            className={`${
+              !toggle ? "hidden" : "flex"
+            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+          >
             <ul className="list-none flex justify-end items-start flex-col gap-4">
               {navLinks.map((link) => (
-                <li key={link.id} className={`${ active === link.title ? "text-white" : "text-secondary"} font-poppins font-medium cursor-pointer text-[16px]`} onClick={() => {setActive(link.title); setToggle(!toggle) }}>
+                <li
+                  key={link.id}
+                  className={`${
+                    active === link.title ? "text-white" : "text-secondary"
+                  } font-poppins font-medium cursor-pointer text-[16px]`}
+                  onClick={() => {
+                    setActive(link.title);
+                    setToggle(!toggle);
+                  }}
+                >
                   <a href={`#${link.id}`}>{link.title}</a>
                 </li>
               ))}
@@ -93,7 +145,7 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

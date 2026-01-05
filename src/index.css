@@ -1,20 +1,19 @@
 /* eslint-env node */
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin './hero.ts';
+@source '../../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where(.dark, .dark *));
+@import "./utils/theme.css";
+@import "./utils/experience.css";
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
   color-scheme: dark;
 }
-
 
 .hash-span {
   margin-top: -100px;
@@ -48,8 +47,8 @@
 
 .green-pink-gradient {
   background: "#00cea8";
-  background: linear-gradient(90.13deg, #5877FA 1.9%, #bf61ff 97.5%);
-  background: -webkit-linear-gradient(-90.13deg, #5877FA 1.9%, #bf61ff 97.5%);
+  background: linear-gradient(90.13deg, #5877fa 1.9%, #bf61ff 97.5%);
+  background: -webkit-linear-gradient(-90.13deg, #5877fa 1.9%, #bf61ff 97.5%);
 }
 
 .orange-text-gradient {
@@ -234,7 +233,7 @@
 }
 
 .dark .vertical-timeline::before {
-  background-color:#1d1836 ;
+  background-color: #1d1836;
 }
 
 .container_toggle {
@@ -248,8 +247,8 @@
   text-indent: -9999px;
   width: 40px;
   height: 20px;
-  background: #5877FA;
-  margin: 0 auto;
+  background: #5877fa;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -260,7 +259,7 @@
 }
 
 .switch-mode:after {
-  content: '';
+  content: "";
   background: #fff;
   width: 10px;
   height: 10px;
@@ -274,7 +273,7 @@
 }
 
 .container_toggle:checked + .switch-mode {
-  background: #FFBD07;
+  background: #ffbd07;
 }
 
 .container_toggle:checked + .switch-mode:after {
@@ -285,8 +284,6 @@
   -o-transform: translateX(-100%);
   transform: translateX(-100%);
 }
-
-
 
 @media (min-width: 450px) {
   .switch-mode {
@@ -334,7 +331,6 @@
   display: none;
 }
 
-
 .hide3d .anim-disabled {
   width: 50%;
 }
@@ -352,7 +348,6 @@
   display: flex;
 }
 
-
 .spinner {
   width: 44px;
   height: 44px;
@@ -361,7 +356,7 @@
 }
 
 .spinner > div {
-  background-color: rgba(0,77,255,0.2);
+  background-color: rgba(0, 77, 255, 0.2);
   height: 100%;
   position: absolute;
   width: 100%;
@@ -398,18 +393,17 @@
 
 @keyframes spinner-y0fdc1 {
   0% {
-  transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
-}
+    transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+  }
 
-50% {
-  transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
-}
+  50% {
+    transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+  }
 
-100% {
-  transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+  100% {
+    transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+  }
 }
-}
-
 
 .main {
   display: flex;
@@ -440,8 +434,9 @@
   border: none;
   background: white;
   border-radius: 90px 5px 5px 5px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  transition: .2s ease-in-out;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.2s ease-in-out;
   position: relative;
 }
 
@@ -459,8 +454,9 @@
   border: none;
   background: white;
   border-radius: 5px 90px 5px 5px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  transition: .2s ease-in-out;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.2s ease-in-out;
   position: relative;
 }
 
@@ -468,7 +464,7 @@
   top: 40%;
   right: 40%;
   position: absolute;
-  fill: #F61C0D;
+  fill: #f61c0d;
 }
 
 .card3 {
@@ -478,8 +474,9 @@
   border: none;
   background: white;
   border-radius: 5px 5px 5px 90px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  transition: .2s ease-in-out;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.2s ease-in-out;
   position: relative;
 }
 
@@ -496,8 +493,9 @@
   border: none;
   background: white;
   border-radius: 5px 5px 90px 5px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  transition: .2s ease-in-out;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.2s ease-in-out;
   position: relative;
 }
 
@@ -521,7 +519,7 @@
 .card2:hover {
   cursor: pointer;
   scale: 1.1;
-  background-color: #F61C0D;
+  background-color: #f61c0d;
 }
 
 .card2:hover .youtube {

@@ -1,0 +1,16 @@
+@theme {
+  --color-primary: #5877fa;
+  --color-secondary: #aaa6c3;
+  --color-tertiary: #151030;
+  --color-background: #050816;
+  --color-foreground: #fff;
+}
+@layer base {
+  @variant dark {
+    --color-primary: #1d1836;
+    --color-secondary: #db2777;
+    --color-tertiary: #443c2c;
+    --color-background: #ececea;
+    --color-foreground: #fff;
+  }
+}

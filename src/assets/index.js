@@ -32,7 +32,7 @@ import hacking from "./hacking.gif";
 import taskcompletor from "./taskcompletor.png";
 import nestorapp from "./nestorapp.png";
 import innovans from "./innovans.png";
-import titouan from "./Titouan.png";
+import titouan from "./titoudark.jpeg";
 import kessel from "./kessel.png";
 import kesselmedia from "./kesselmedia.png";
 import maltLogo from "./malt.png";

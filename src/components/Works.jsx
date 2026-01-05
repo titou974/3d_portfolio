@@ -36,10 +36,10 @@ const ProjectCard = ({
             href={website_link}
             target="_blank"
             rel="noreferrer"
-            className={`text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-[#5877FA] p-4 rounded-md font-bold text-white ${
+            className={`text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-primary p-4 rounded-md font-bold text-white ${
               inprocess
-                ? "bg-[#5877FA]/60"
-                : "bg-[#5877FA] hover:bg-white hover:text-[#5877FA]"
+                ? "bg-primary/60"
+                : "bg-primary hover:bg-white hover:text-primary"
             } transition-all`}
           >
             {inprocess ? <p>En construction...</p> : <p>Voir le site</p>}
@@ -108,7 +108,7 @@ const Works = () => {
         </motion.p>
       </div>
 
-      <div className="mt-20 flex flex-wrap gap-7 justify-center">
+      <div className="mt-8 flex flex-wrap gap-7 justify-center">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} {...project} />
         ))}

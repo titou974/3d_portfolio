@@ -99,64 +99,90 @@ const technologies = [
 ];
 
 const experiences = [
+  // {
+  //   id: 1,
+  //   pos: "Concepteur Développeur d'Application Web",
+  //   name: "Le Wagon",
+  //   icon: lewagon,
+  //   duration: "Avril 2023 - Juin 2023",
+  //   title:
+  //     "Bootcamp intensif de 400 heures spécialisé Ruby on Rails et JavaScript. Développement et présentation de 'Referral Safe' (certificateur d'expérience professionnelle) en 2 semaines lors du Demoday Twitch. Certification niveau 6 obtenue pour rejoindre une communauté tech et structurer mes compétences autodidactes.",
+  //   animation: "seatedIdle",
+  // },
   {
-    title: "Student Developer",
-    company_name: "Le Wagon",
-    icon: lewagon,
-    iconBg: "#E50F05",
-    date: "Avril 2023 - Juin 2023",
-    points: [
-      "Formation intensive de 400 heures pour apprendre à développer tout type d'application web de A à Z",
-      "Après avoir pitché l'idée de 'Referral Safe' devant mon groupe, création d'un 'certificateur d'expérience professionnelle' en 2 semaines chrono, puis présentation du projet sur Twitch",
-      "Apprentissage de Ruby on Rails, JS stimulus et Git",
-    ],
-  },
-  {
-    title: "Stage de 3 mois - Développeur Full-Stack",
-    company_name: "Innovans",
+    id: 1,
+    pos: "Stage Développeur Full-Stack",
+    name: "Innovans",
     icon: innovans,
-    iconBg: "white",
-    date: "Juillet 2023 - Octobre 2023",
-    points: [
-      "Développement et maintenance d'une application web utilisant les technologies HTML, CSS, JavaScript, PHP et MySQL",
-      "Collaboration étroite avec une équipe de développeurs pour assurer la livraison des fonctionnalités dans les délais impartis",
-      "Optimisation des performances de l'application en identifiant et en résolvant les problèmes de code et de base de données",
-      "Travaux sur 6 applications webs au total sur les 3 mois de stage",
+    duration: "Juillet 2023 - Octobre 2023",
+    title:
+      "Développement et maintenance de 6 applications web (PHP/MySQL/JS). Optimisation backend et résolution de problèmes critiques en base de données.",
+    animation: "fight",
+    testimonial: {
+      author: "Carl, CEO d'Innovans",
+      text: "Titouan nous a permi de résoudre des problèmes qu'on trainait depuis des mois en quelques semaines.",
+    },
+    skills: [
+      { name: "PHP", level: 85 },
+      { name: "MySQL", level: 75 },
+      { name: "JavaScript", level: 80 },
     ],
   },
   {
-    title: "Stage de 6 mois - Développeur Front-end",
-    company_name: "Kessel Media",
+    id: 2,
+    pos: "Stage Web Marketer-Développeur Front-end",
+    name: "Kessel Media",
     icon: kessel,
-    iconBg: "white",
-    date: "Novembre 2023 - Mai 2024",
-    points: [
-      "Apprentissage des bonnes pratiques pour construire une application scalable",
-      "Développement et maintenance d'une application web utilisée par plus de 500 000 utilisateurs",
-      "Maîtrise de Vue.js et du framework Nuxt 3",
+    duration: "Novembre 2023 - Mai 2024",
+    title:
+      "Développement de fonctionnalités pour plateforme +500k utilisateurs. Apprentissage des bonnes pratiques Vue.js/Nuxt 3 pour applications scalables.",
+    animation: "burpee",
+    testimonial: "",
+    skills: [
+      { name: "Nuxt 3", level: 90 },
+      { name: "Vue 2 & Vue 3", level: 90 },
+      { name: "TypeScript", level: 85 },
+      { name: "CMS", level: 80 },
     ],
   },
   {
-    title: "Freelance Développeur Front-end",
-    company_name: "Auto-Entrepreneur",
+    id: 3,
+    pos: "Freelance Développeur Front-end",
+    name: "Kessel Media",
     icon: kessel,
-    iconBg: "white",
-    date: "Mai 2024 - Août 2024",
-    points: [
-      "Développement de la nouvelle version du parcours d'abonnement des utilisateurs",
-      "Refonte des pages articles",
-      "Maintenance du CMS et mise à jour du dashboard des auteurs",
+    duration: "Mai 2024 - Août 2024",
+    title:
+      "Refonte V2 en Nuxt 3 : conception et développement du parcours d'abonnement complet. Refonte pages articles et maintenance CMS. Focus scalabilité.",
+    animation: "workingOnDevice",
+    testimonial: {
+      author: "Alexis Pibrac, CTO de Kessel Media",
+      text: "Titouan a démontré sa capacité à apprendre et à travailler rapidement, contribuant ainsi à l'évolution rapide de la plateforme de Kessel !",
+    },
+    skills: [
+      { name: "Nuxt 3", level: 90 },
+      { name: "Vue 2 & Vue 3", level: 90 },
+      { name: "TypeScript", level: 85 },
+      { name: "CMS", level: 80 },
     ],
   },
   {
-    title: "Freelance Developer",
-    company_name: "Auto-Entrepreneur",
+    id: 4,
+    pos: "Freelance Développeur Full-Stack",
+    name: "Auto-Entrepreneur",
     icon: titouan,
-    iconBg: "#5d78f9",
-    date: "Novembre 2023 - Aujourd'hui",
-    points: [
-      "Développement de Nestor App en projet entreprenarial dans le framework Next JS, gestion de toute la partie informatique sur le projet start-up.",
-      "Travaux sur Cityrent en Vanilla JS (application de location de véhicules) : développement de nouvelles fonctionnalités, maintenance et optimisation de l'application",
+    duration: "Novembre 2023 - Aujourd'hui",
+    title:
+      "Développement de MVP, dashboards et apps cross-platform. Créateur de Nestor (Next.js), SaaS déployé dans +20 restaurants parisiens gérant +2 000 véhicules/jour. Maintenance City Rent.",
+    animation: "rumbaDancing",
+    testimonial: {
+      author: "Samuel Doutriaux, Co-fondateur de Nestor",
+      text: "J'ai parlé de mon idée d'app de voiturier à Titouan, et en quelques semaines il a développé un MVP fonctionnel qui a impressionné nos premiers clients !",
+    },
+    skills: [
+      { name: "Next.js 13-16", level: 100 },
+      { name: "Node.js", level: 88 },
+      { name: "Flutter", level: 85 },
+      { name: "Supabase, Mango DB, AWS", level: 90 },
     ],
   },
 ];
@@ -283,4 +309,19 @@ const malt = {
   image: maltLogo,
 };
 
-export { services, technologies, experiences, projects, aboutSection, malt };
+const socialsLinks = {
+  linkedin: "https://www.linkedin.com/in/titouan-hirsch",
+  github: "https://github.com/titou974",
+  instagram: "https://www.instagram.com/bobodigital_/",
+  tiktok: "https://www.tiktok.com/@bobodigital_",
+};
+
+export {
+  services,
+  technologies,
+  experiences,
+  projects,
+  aboutSection,
+  malt,
+  socialsLinks,
+};
