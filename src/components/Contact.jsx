@@ -1,12 +1,10 @@
-import { lazy, Suspense } from "react";
+import { Suspense } from "react";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import Malt from "./Malt";
 import Divider from "./Divider";
-
-// Lazy load heavy components
-const ContactForm = lazy(() => import("./ContactForm"));
-const SocialLinks = lazy(() => import("./SocialLinks"));
+import ContactForm from "./ContactForm";
+import SocialLinks from "./SocialLinks";
 
 const Contact = () => {
   return (
