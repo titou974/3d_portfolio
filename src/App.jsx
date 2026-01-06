@@ -2,13 +2,13 @@ import { BrowserRouter } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import Video from "./components/Video";
+import StarsCanvas from "./components/canvas/Stars";
 
 // Lazy load heavy components
 const Contact = lazy(() => import("./components/Contact"));
 const Experience = lazy(() => import("./components/Experience"));
 const Works = lazy(() => import("./components/Works"));
-// const StarsCanvas = lazy(() => import("./components/StarsCanvas"));
-// const Video = lazy(() => import("./components/Video"));
 
 // Loading fallback component
 const SectionLoader = () => (
@@ -27,14 +27,11 @@ const App = () => {
           <Hero />
         </div>
 
-        {/* Lazy load everything below the fold */}
         <Suspense fallback={<SectionLoader />}>
           <Works />
         </Suspense>
-        {/*
-        <Suspense fallback={<SectionLoader />}>
-          <Video />
-        </Suspense> */}
+
+        <Video />
 
         <Suspense fallback={<SectionLoader />}>
           <Experience />
@@ -44,9 +41,7 @@ const App = () => {
           <Suspense fallback={<SectionLoader />}>
             <Contact />
           </Suspense>
-          {/* <Suspense fallback={<SectionLoader />}>
-            <StarsCanvas />
-          </Suspense> */}
+          <StarsCanvas />
         </div>
       </div>
     </BrowserRouter>

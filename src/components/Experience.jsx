@@ -202,9 +202,9 @@ const Experience = () => {
             {experiences.map((item, index) => (
               <motion.div
                 key={index}
-                onClick={() => handleExperienceClick(index)}
-                onMouseEnter={() => handleExperienceHover(index)}
-                onMouseLeave={handleExperienceLeave}
+                // onClick={() => handleExperienceClick(index)}
+                // onMouseEnter={() => handleExperienceHover(index)}
+                // onMouseLeave={handleExperienceLeave}
                 className={`work-content_container group-hover:work-content_container_selected group ${
                   selectedIndex === index && "work-content_container_selected"
                 }`}

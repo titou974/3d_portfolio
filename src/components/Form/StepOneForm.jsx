@@ -2,6 +2,7 @@ import { Button, Calendar, Select, SelectItem } from "@heroui/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { hoursSlotsInFrench } from "../../constants";
 import { fadeIn } from "../../utils/motion";
+import { today, getLocalTimeZone } from "@internationalized/date";
 
 export default function StepOneForm({ form, setForm }) {
   const handleSubmit = (e) => {
@@ -35,6 +36,7 @@ export default function StepOneForm({ form, setForm }) {
         locale="fr-FR"
         value={form.date}
         onChange={(date) => setForm({ ...form, date: date })}
+        minValue={today(getLocalTimeZone())}
       />
 
       <Select
