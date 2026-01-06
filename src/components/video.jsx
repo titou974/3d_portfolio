@@ -27,16 +27,12 @@ const Video = () => {
   return (
     <div>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} dark:text-stone-500`}>
-          Apprenez-en à travers
-        </p>
-        <h2 className={`${styles.sectionHeadText} dark:text-stone-700`}>
-          Mes Vidéos.
-        </h2>
+        <p className={`${styles.sectionSubText}`}>Apprenez-en à travers</p>
+        <h2 className={`${styles.sectionHeadText}`}>Mes Vidéos.</h2>
       </motion.div>
       <div className="mt-8 flex flex-wrap gap-7 justify-center items-center">
         <div className="bg-tertiary p-5 rounded-xl sm:w-[400px] w-full space-y-4 h-full">
-          <p className="text-[24px] font-bold">Instagram</p>
+          <p className="text-[24px] font-bold text-base-title">Instagram</p>
           <div
             style={{
               display: "flex",
@@ -52,7 +48,7 @@ const Video = () => {
           </div>
         </div>
         <div className="bg-tertiary p-5 rounded-xl sm:w-[400px] w-full space-y-4 h-full">
-          <p className="text-[24px] font-bold">Tiktok</p>
+          <p className="text-[24px] font-bold text-base-title">Tiktok</p>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <TikTokEmbed
               url="https://www.tiktok.com/@bobodigital_/video/7589361251256388886"
@@ -62,7 +58,7 @@ const Video = () => {
           </div>
         </div>
         <div className="bg-tertiary p-5 rounded-xl sm:w-[400px] w-full space-y-4 h-full">
-          <p className="text-[24px] font-bold">Youtube</p>
+          <p className="text-[24px] font-bold text-base-title">Youtube</p>
           <div
             style={{
               display: "flex",

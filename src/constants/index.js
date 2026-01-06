@@ -305,7 +305,7 @@ const aboutSection = {
 const malt = {
   subtitle: "Embauchez-moi sur",
   title: "Malt",
-  description: "Vous pouvez me proposez votre projet/mission sur Malt",
+  description: "Vous pouvez me proposez votre projet/mission sur",
   image: maltLogo,
 };
 
@@ -315,6 +315,17 @@ const socialsLinks = {
   instagram: "https://www.instagram.com/bobodigital_/",
   tiktok: "https://www.tiktok.com/@bobodigital_",
 };
+
+export const hoursSlotsInFrench = [
+  { key: "cat", label: "09:00 - 09:30" },
+  { key: "dog", label: "10:00 - 10:30" },
+  { key: "rabbit", label: "11:00 - 11:30" },
+  { key: "hamster", label: "14:00 - 14:30" },
+  { key: "parrot", label: "15:00 - 15:30" },
+  { key: "spider", label: "16:00 - 16:30" },
+  { key: "goldfish", label: "17:00 - 17:30" },
+  { key: "turtle", label: "18:00 - 18:30" },
+];
 
 export {
   services,

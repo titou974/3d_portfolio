@@ -63,10 +63,8 @@ const ProjectCard = ({
           </div>
         </div>
         <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px] dark:text-white">
-            {description}
-          </p>
+          <h3 className="text-base-title font-bold text-[24px]">{name}</h3>
+          <p className="mt-2 text-base-content text-[14px]">{description}</p>
         </div>
 
         <div className="mt-4 flex flex-wrap gap-2">
@@ -85,17 +83,13 @@ const Works = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} dark:text-stone-500`}>
-          Voici mes
-        </p>
-        <h2 className={`${styles.sectionHeadText} dark:text-stone-700`}>
-          Projets.
-        </h2>
+        <p className={`${styles.sectionSubText}`}>Voici mes</p>
+        <h2 className={`${styles.sectionHeadText}`}>Projets.</h2>
       </motion.div>
       <div className="w-full flex">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className="mt-3 text-secondary dark:text-stone-500"
+          className="mt-3 text-base-content"
         >
           Chacun de ces projets représente une étape importante de ma
           progression en tant que développeur full-stack, mettant en évidence

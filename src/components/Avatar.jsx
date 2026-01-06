@@ -31,7 +31,7 @@ export default function Avatar() {
           scale: 1,
           speed: 450,
         }}
-        className="w-16 sm:w-24 h-16 sm:h-24 rounded-full overflow-hidden border-4 border-primary dark:border-[#1d1836] bg-white bg-[url(/src/assets/titoudark.jpeg)] dark:bg-[url(/src/assets/titoulight.jpeg)] bg-cover bg-no-repeat bg-center cursor-pointer transition-all duration-300"
+        className="w-16 sm:w-24 h-16 sm:h-24 rounded-full overflow-hidden border-4 dark:border-primary border-[#1d1836] bg-white dark:bg-[url(/src/assets/titoudark.jpeg)] bg-[url(/src/assets/titoulight.jpeg)] bg-cover bg-no-repeat bg-center cursor-pointer transition-all duration-300"
       >
         <AnimatePresence>
           {isHovered && (

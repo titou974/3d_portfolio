@@ -19,7 +19,7 @@ const SkillBar = ({ skill, level, delay = 0 }) => {
       {/* Barre de progression */}
       <div className="w-full h-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
         <motion.div
-          className="h-full bg-linear-to-r from-primary to-purple-600 rounded-full"
+          className="h-full bg-linear-to-r from-primary dark:to-purple-600 to-[#ffbd07] rounded-full"
           initial={{ width: 0 }}
           animate={{ width: `${level}%` }}
           transition={{

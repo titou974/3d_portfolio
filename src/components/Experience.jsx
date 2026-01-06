@@ -67,7 +67,7 @@ const Experience = () => {
         console.log("Auto-playing to index:", nextIndex);
         return nextIndex;
       });
-    }, 8000);
+    }, 6000);
 
     return () => clearInterval(interval);
   }, [isAutoPlay]);
@@ -91,7 +91,7 @@ const Experience = () => {
     }
     pauseTimeoutRef.current = setTimeout(() => {
       setIsAutoPlay(true);
-    }, 2000);
+    }, 200);
   };
 
   const handleExperienceClick = (index) => {
@@ -113,15 +113,11 @@ const Experience = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} dark:text-stone-500`}>
-          Découvrez mes
-        </p>
-        <h2 className={`${styles.sectionHeadText} dark:text-stone-700`}>
-          Expériences.
-        </h2>
+        <p className={`${styles.sectionSubText}`}>Découvrez mes</p>
+        <h2 className={`${styles.sectionHeadText}`}>Expériences.</h2>
       </motion.div>
       <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
-        <div className="w-full col-span-2 md:col-span-1 bg-tertiary rounded-lg h-120 md:h-[732px] relative">
+        <div className="w-full col-span-2 md:col-span-1 bg-tertiary rounded-2xl h-120 md:h-[732px] relative">
           <div className="absolute top-4 left-1/2 transform -translate-x-1/2 w-11/12 md:w-3/4 z-10">
             <AnimatePresence mode="wait">
               <motion.div
@@ -171,12 +167,12 @@ const Experience = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 50 }}
                 transition={{ duration: 0.4 }}
-                className="absolute bottom-5 left-1/2 transform -translate-x-1/2 bg-background/90 dark:bg-background/80 p-4 rounded-lg w-11/12 md:w-3/4 border-primary border-1 z-10"
+                className="absolute bottom-5 left-1/2 transform -translate-x-1/2 dark:bg-background/90  p-4 rounded-2xl w-11/12 md:w-3/4 border-primary border-1 z-10"
               >
-                <p className="text-sm italic text-foreground mb-2">
+                <p className="text-sm italic text-base-content mb-2">
                   "{testimonial.text}"
                 </p>
-                <p className="text-xs font-bold text-foreground text-right">
+                <p className="text-xs font-bold text-base-title text-right">
                   - {testimonial.author}
                 </p>
               </motion.div>
@@ -187,12 +183,12 @@ const Experience = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={toggleAutoPlay}
-              className="bg-background/80 backdrop-blur-sm p-2 rounded-full hover:bg-background transition-colors shadow-lg"
+              className="bg-background/80 hover:bg-background backdrop-blur-sm p-2 rounded-full transition-colors shadow-lg"
               title={isAutoPlay ? "Pause auto-play" : "Resume auto-play"}
             >
               {isAutoPlay ? (
                 <svg
-                  className="w-5 h-5 text-foreground"
+                  className="w-5 h-5 text-black dark:text-foreground "
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -200,7 +196,7 @@ const Experience = () => {
                 </svg>
               ) : (
                 <svg
-                  className="w-5 h-5 text-foreground"
+                  className="w-5 h-5 text-black dark:text-foreground"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -218,7 +214,7 @@ const Experience = () => {
                 onClick={() => handleExperienceClick(index)}
                 onMouseEnter={() => handleExperienceHover(index)}
                 onMouseLeave={handleExperienceLeave}
-                className={`work-content_container group-hover:work-content_container_selected ${
+                className={`work-content_container group-hover:work-content_container_selected group ${
                   selectedIndex === index && "work-content_container_selected"
                 }`}
                 whileHover={{ x: 5 }}
@@ -243,13 +239,13 @@ const Experience = () => {
                   />
                 </div>
                 <div className="sm:p-5 px-2.5 py-5">
-                  <p className="font-bold text-foreground">{item.name}</p>
-                  <p className="text-sm text-foreground/80 mb-5">
+                  <p className="font-bold text-base-title">{item.name}</p>
+                  <p className="text-sm text-secondary mb-5">
                     {item.pos} -- <span>{item.duration}</span>
                   </p>
                   <p
-                    className={`transition-all ease-in-out duration-500 text-sm text-secondary group-hover:text-foreground ${
-                      selectedIndex === index && "text-foreground!"
+                    className={`transition-all ease-in-out duration-500 text-sm text-base-content/60 group-hover:text-base-content ${
+                      selectedIndex === index && "text-base-content!"
                     }`}
                   >
                     {item.title}
