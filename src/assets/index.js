@@ -1,6 +1,4 @@
-import logo from "./t.png";
-import backend from "./back-end.png";
-import mobile from "./mobile-app.png";
+import logo from "./t.webp";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
@@ -18,28 +16,24 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 import postgresql from "./tech/postgresql.png";
-import codecademy from "./company/codecademy.png";
 import lewagon from "./company/lewagon.png";
-import agency from "./company/agency.png";
 import logolight from "./tviolet.png";
 import menulight from "./menulight.svg";
 import closelight from "./closelight.svg";
 import swipe from "./swipe.gif";
-import referralsafe from "./referralsafe.png";
-import inprocess from "./inprocess.png";
-import taskcompletor from "./taskcompletor.png";
-import nestorapp from "./nestorapp.png";
-import innovans from "./innovans.png";
-import titouan from "./titoudark.jpeg";
-import kessel from "./kessel.png";
-import kesselmedia from "./kesselmedia.png";
-import maltLogo from "./malt.png";
+import referralsafe from "./referralsafe.webp";
+import inprocess from "./inprocess.webp";
+import taskcompletor from "./taskcompletor.webp";
+import nestorapp from "./nestorapp.webp";
+import innovans from "./innovans.webp";
+import titouan from "./titoudark.webp";
+import kessel from "./kessel.webp";
+import kesselmedia from "./kesselmedia.webp";
+import maltLogo from "./malt.webp";
 import wedivepreview from "./wedivepreview.png";
 
 export {
   logo,
-  backend,
-  mobile,
   github,
   menu,
   close,
@@ -56,7 +50,6 @@ export {
   tailwind,
   typescript,
   threejs,
-  codecademy,
   lewagon,
   postgresql,
   logolight,
@@ -65,7 +58,6 @@ export {
   swipe,
   referralsafe,
   inprocess,
-  agency,
   nestorapp,
   taskcompletor,
   titouan,

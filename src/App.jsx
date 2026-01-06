@@ -19,7 +19,7 @@ const App = () => {
     <BrowserRouter>
       <div className="relative z-0 bg-background">
         {/* Hero section loads immediately - critical content */}
-        <div className="dark:bg-[url(/src/assets/tsnight.png)] bg-[url(/src/assets/hero-bg-light.png)] dark:bg-cover bg-no-repeat bg-center bg-white">
+        <div className="dark:bg-[url(/src/assets/tsnight.webp)] bg-[url(/src/assets/hero-bg-light.webp)] dark:bg-cover bg-no-repeat bg-center bg-white">
           <Navbar />
           <Hero />
         </div>

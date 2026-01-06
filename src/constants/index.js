@@ -1,6 +1,4 @@
 import {
-  mobile,
-  backend,
   javascript,
   html,
   css,
@@ -37,16 +35,7 @@ export const navLinks = [
   },
 ];
 
-const services = [
-  {
-    title: "Mobile Developer",
-    icon: mobile,
-  },
-  {
-    title: "Backend Developer",
-    icon: backend,
-  },
-];
+const services = [];
 
 const technologies = [
   {
