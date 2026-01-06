@@ -1,7 +1,6 @@
 import {
   mobile,
   backend,
-  web,
   javascript,
   html,
   css,
@@ -11,7 +10,6 @@ import {
   figma,
   threejs,
   rails,
-  lewagon,
   postgresql,
   referralsafe,
   taskcompletor,
@@ -21,7 +19,6 @@ import {
   kessel,
   kesselmedia,
   maltLogo,
-  cherryWebsite,
   wedivepreview,
 } from "../assets";
 
@@ -41,10 +38,6 @@ export const navLinks = [
 ];
 
 const services = [
-  {
-    title: "Frontend Developer",
-    icon: web,
-  },
   {
     title: "Mobile Developer",
     icon: mobile,

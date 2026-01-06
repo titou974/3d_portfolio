@@ -1,7 +1,6 @@
 import logo from "./t.png";
 import backend from "./back-end.png";
 import mobile from "./mobile-app.png";
-import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
@@ -28,7 +27,6 @@ import closelight from "./closelight.svg";
 import swipe from "./swipe.gif";
 import referralsafe from "./referralsafe.png";
 import inprocess from "./inprocess.png";
-import hacking from "./hacking.gif";
 import taskcompletor from "./taskcompletor.png";
 import nestorapp from "./nestorapp.png";
 import innovans from "./innovans.png";
@@ -36,15 +34,12 @@ import titouan from "./titoudark.jpeg";
 import kessel from "./kessel.png";
 import kesselmedia from "./kesselmedia.png";
 import maltLogo from "./malt.png";
-import cherry from "./cherry.png";
-import cherryWebsite from "./cherryWebsite.png";
 import wedivepreview from "./wedivepreview.png";
 
 export {
   logo,
   backend,
   mobile,
-  web,
   github,
   menu,
   close,
@@ -71,7 +66,6 @@ export {
   referralsafe,
   inprocess,
   agency,
-  hacking,
   nestorapp,
   taskcompletor,
   titouan,
@@ -79,7 +73,5 @@ export {
   kessel,
   kesselmedia,
   maltLogo,
-  cherry,
-  cherryWebsite,
   wedivepreview,
 };
