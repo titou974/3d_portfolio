@@ -10,14 +10,6 @@ import { OrbitControls } from "@react-three/drei";
 import SkillBar from "./SkillBar";
 import Bobo from "./Bobo";
 
-const defaultSkills = [
-  { name: "React.js", level: 95 },
-  { name: "Three.js", level: 85 },
-  { name: "Node.js", level: 80 },
-  { name: "TypeScript", level: 90 },
-  { name: "Tailwind CSS", level: 92 },
-];
-
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
