@@ -2,7 +2,7 @@ import { BrowserRouter } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import Video from "./components/Video";
+// import Video from "./components/Video";
 import StarsCanvas from "./components/canvas/Stars";
 
 // Lazy load heavy components
@@ -31,7 +31,7 @@ const App = () => {
           <Works />
         </Suspense>
 
-        <Video />
+        {/* <Video /> */}
 
         <Suspense fallback={<SectionLoader />}>
           <Experience />
