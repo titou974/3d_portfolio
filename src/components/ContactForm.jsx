@@ -39,7 +39,7 @@ export default function ContactForm() {
           >
             <Typewriter
               words={[
-                `Bonjour ${form.name}, votre email a bien était envoyé. Je reviens vers vous au plus vite !`,
+                `Mme/M${form.name}, votre email a bien était reçu. Je reviens vers vous au plus vite !`,
               ]}
               cursor
               cursorStyle="_"
