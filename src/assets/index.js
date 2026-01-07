@@ -31,6 +31,14 @@ import kessel from "./kessel.webp";
 import kesselmedia from "./kesselmedia.webp";
 import maltLogo from "./malt.webp";
 import wedivepreview from "./wedivepreview.png";
+import laptopMockup from "./mockuplaptop.webp";
+import iphoneMockup from "./iphonemockup.webp";
+import kesselmediaLaptop from "./kesselmedialaptop.webp";
+import kesselmediaPhone from "./kesselmediaphone.webp";
+import kesselmedia2Laptop from "./kesselmedia2laptop.webp";
+import kesselmedia2Phone from "./kesselmedia2phone.webp";
+import nestorPhone from "./nestorphone.webp";
+import wediveLaptop from "./wedivelaptop.webp";
 
 export {
   logo,
@@ -66,4 +74,12 @@ export {
   kesselmedia,
   maltLogo,
   wedivepreview,
+  laptopMockup,
+  iphoneMockup,
+  kesselmediaLaptop,
+  kesselmediaPhone,
+  kesselmedia2Phone,
+  kesselmedia2Laptop,
+  nestorPhone,
+  wediveLaptop,
 };

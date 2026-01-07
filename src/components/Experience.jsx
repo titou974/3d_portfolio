@@ -1,12 +1,13 @@
 import { motion, AnimatePresence } from "framer-motion";
-import "react-vertical-timeline-component/style.min.css";
 import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 import { useState, useEffect, useRef } from "react";
 import SkillBar from "./SkillBar";
+import { Switch } from "@heroui/react";
 import MeCanva from "./canvas/MeCanva";
+import { iphoneMockup, laptopMockup, kesselmedia } from "../assets";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -31,7 +32,11 @@ const Experience = () => {
   const [animationName, setAnimationName] = useState("seatedIdle");
   const [testimonial, setTestimonial] = useState(null);
   const [currentSkills, setCurrentSkills] = useState(null);
-
+  const [designPreviews, setDesignPreviews] = useState({
+    phonePreview: null,
+    laptopPreview: null,
+  });
+  const [activateModel3D, setActivateModel3D] = useState(false);
   const pauseTimeoutRef = useRef(null);
 
   const selectExperience = (index) => {
@@ -40,6 +45,10 @@ const Experience = () => {
     setAnimationName(experience.animation || "seatedIdle");
     setTestimonial(experience.testimonial || null);
     setCurrentSkills(experience.skills || null);
+    setDesignPreviews({
+      phonePreview: experience.phonePreview || null,
+      laptopPreview: experience.laptopPreview || null,
+    });
   };
 
   useEffect(() => {
@@ -133,7 +142,63 @@ const Experience = () => {
               </motion.div>
             </AnimatePresence>
           </div>
-          {/* <MeCanva animationName={animationName} /> */}
+          {activateModel3D ? (
+            <MeCanva animationName={animationName} />
+          ) : (
+            <div className="flex justify-center md:flex-col items-center gap-8 md:gap-4 mt-34 md:mt-32">
+              {designPreviews.phonePreview && (
+                <motion.div
+                  className="relative w-20"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                  key={`phone-${selectedIndex}`}
+                >
+                  <img
+                    src={iphoneMockup}
+                    alt="mockup iphone"
+                    className="relative z-20 w-full h-auto"
+                  />
+                  <img
+                    src={designPreviews.phonePreview}
+                    alt="phone preview"
+                    className="absolute top-[3%] left-[8%] w-[84%] h-[94%] object-cover rounded-[8%] z-10"
+                  />
+                </motion.div>
+              )}
+              {designPreviews.laptopPreview && (
+                <motion.div
+                  className="relative w-46"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                  key={`laptop-${selectedIndex}`}
+                >
+                  <img
+                    src={laptopMockup}
+                    alt="mockup laptop"
+                    className="relative z-20 w-full h-auto"
+                  />
+                  <img
+                    src={designPreviews.laptopPreview}
+                    alt="laptop preview"
+                    className="absolute top-[6%] left-[13%] w-[74%] h-[78%] object-cover rounded-sm z-10"
+                  />
+                </motion.div>
+              )}
+            </div>
+          )}
+          <div className="hidden lg:block absolute bottom-56 left-1/2 transform -translate-x-1/2 w-11/12 md:w-3/4 z-10">
+            <Switch
+              isSelected={activateModel3D}
+              onValueChange={setActivateModel3D}
+              size="sm"
+            >
+              Activer l'Avatar 3D
+            </Switch>
+          </div>
           <AnimatePresence mode="wait">
             {testimonial && (
               <motion.div
@@ -153,33 +218,6 @@ const Experience = () => {
               </motion.div>
             )}
           </AnimatePresence>
-          <div className="absolute top-4 right-4 z-20 flex gap-2">
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={toggleAutoPlay}
-              className="bg-background/80 hover:bg-background backdrop-blur-sm p-2 rounded-full transition-colors shadow-lg"
-              title={isAutoPlay ? "Pause auto-play" : "Resume auto-play"}
-            >
-              {isAutoPlay ? (
-                <svg
-                  className="w-5 h-5 text-black dark:text-foreground "
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M5 4h3v12H5V4zm7 0h3v12h-3V4z" />
-                </svg>
-              ) : (
-                <svg
-                  className="w-5 h-5 text-black dark:text-foreground"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
-                </svg>
-              )}
-            </motion.button>
-          </div>
         </div>
         <div className="work-content md:max-h-[732px] overflow-y-auto col-span-2">
           <div className="sm:py-10 py-5 sm:px-5 px-2.5">

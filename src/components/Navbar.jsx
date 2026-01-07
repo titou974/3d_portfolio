@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logo, logolight, menu, close, menulight, closelight } from "../assets";
+import { menu, close, menulight, closelight } from "../assets";
+import { Avatar } from "@heroui/react";
 
 const Navbar = () => {
   const [theme, setTheme] = useState("dark");
@@ -52,11 +53,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img
-            src={theme !== "dark" ? logolight : logo}
-            alt="logo"
-            className="w-9 h-9 object-contain"
-          />
+          <div className="border-primary bg-background dark:bg-[url(/src/assets/titoudark.webp)] bg-[url(/src/assets/titoulight.webp)] bg-cover bg-no-repeat bg-center cursor-pointer transition-all duration-300 w-8 h-8 rounded-full ring-2 ring-primary"></div>
           <p className="hidden xs:block text-white dark:text-stone-700 text-[18px] sm:text-[12px] md:text-[18px] font-bold cursor-pointer flex">
             Titouan Hirsch
           </p>

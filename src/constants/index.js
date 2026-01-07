@@ -18,6 +18,12 @@ import {
   kesselmedia,
   maltLogo,
   wedivepreview,
+  kesselmediaLaptop,
+  kesselmediaPhone,
+  kesselmedia2Laptop,
+  kesselmedia2Phone,
+  wediveLaptop,
+  nestorPhone,
 } from "../assets";
 
 export const navLinks = [
@@ -81,21 +87,13 @@ const technologies = [
 ];
 
 const experiences = [
-  // {
-  //   id: 1,
-  //   pos: "Concepteur Développeur d'Application Web",
-  //   name: "Le Wagon",
-  //   icon: lewagon,
-  //   duration: "Avril 2023 - Juin 2023",
-  //   title:
-  //     "Bootcamp intensif de 400 heures spécialisé Ruby on Rails et JavaScript. Développement et présentation de 'Referral Safe' (certificateur d'expérience professionnelle) en 2 semaines lors du Demoday Twitch. Certification niveau 6 obtenue pour rejoindre une communauté tech et structurer mes compétences autodidactes.",
-  //   animation: "seatedIdle",
-  // },
   {
     id: 1,
     pos: "Stage Développeur Full-Stack",
     name: "Innovans",
     icon: innovans,
+    phonePreview: null,
+    laptopPreview: null,
     duration: "Juillet 2023 - Octobre 2023",
     title:
       "Développement et maintenance de 6 applications web (PHP/MySQL/JS). Optimisation backend et résolution de problèmes critiques en base de données.",
@@ -114,6 +112,8 @@ const experiences = [
     id: 2,
     pos: "Stage Web Marketer-Développeur Front-end",
     name: "Kessel Media",
+    phonePreview: kesselmediaPhone,
+    laptopPreview: kesselmediaLaptop,
     icon: kessel,
     duration: "Novembre 2023 - Mai 2024",
     title:
@@ -132,6 +132,8 @@ const experiences = [
     pos: "Freelance Développeur Front-end",
     name: "Kessel Media",
     icon: kessel,
+    phonePreview: kesselmedia2Phone,
+    laptopPreview: kesselmedia2Laptop,
     duration: "Mai 2024 - Août 2024",
     title:
       "Refonte V2 en Nuxt 3 : conception et développement du parcours d'abonnement complet. Refonte pages articles et maintenance CMS. Focus scalabilité.",
@@ -152,6 +154,8 @@ const experiences = [
     pos: "Freelance Développeur Full-Stack",
     name: "Auto-Entrepreneur",
     icon: titouan,
+    phonePreview: nestorPhone,
+    laptopPreview: wediveLaptop,
     duration: "Novembre 2023 - Aujourd'hui",
     title:
       "Développement de MVP, dashboards et apps cross-platform. Créateur de Nestor (Next.js), SaaS déployé dans +20 restaurants parisiens gérant +2 000 véhicules/jour. Maintenance City Rent.",

@@ -6,8 +6,9 @@ const SocialLinks = () => {
           href="https://www.instagram.com/bobodigital_/"
           rel="noreferrer"
           target="_blank"
+          aria-label="Visite ma page Instagram"
         >
-          <button className="card1">
+          <button className="card1" aria-label="Instagram">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0,0,256,256"
@@ -41,8 +42,9 @@ const SocialLinks = () => {
           href="https://www.youtube.com/channel/UCYCQLb-prEegC7dhCzxxEUw"
           rel="noreferrer"
           target="_blank"
+          aria-label="Suis mes vidéos sur Youtube"
         >
-          <button className="card2">
+          <button className="card2" aria-label="Youtube">
             <svg
               className="youtube"
               height="30px"
@@ -72,8 +74,13 @@ const SocialLinks = () => {
         </a>
       </div>
       <div className="down">
-        <a href="https://github.com/titou974" rel="noreferrer" target="_blank">
-          <button className="card3">
+        <a
+          href="https://github.com/titou974"
+          rel="noreferrer"
+          target="_blank"
+          aria-label="Découvre mon Github"
+        >
+          <button className="card3" aria-label="Github">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 30 30"
@@ -89,8 +96,9 @@ const SocialLinks = () => {
           href="https://discordapp.com/users/titou974"
           rel="noreferrer"
           target="_blank"
+          aria-label="Contacte-moi sur Discord"
         >
-          <button className="card4">
+          <button className="card4" aria-label="Discord">
             <svg
               height="30px"
               width="30px"
