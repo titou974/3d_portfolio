@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import Preloader from "./Preloader";
 import { Typewriter } from "react-simple-typewriter";
 import Avatar from "./Avatar";
 import { socialsLinks } from "../constants";
@@ -8,7 +7,6 @@ import { socialsLinks } from "../constants";
 const Hero = () => {
   return (
     <>
-      <Preloader />
       <section className="relative w-full h-screen">
         <div
           className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}

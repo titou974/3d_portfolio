@@ -4,11 +4,9 @@ import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
-import { Suspense, useState, useEffect, useRef } from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+import { useState, useEffect, useRef } from "react";
 import SkillBar from "./SkillBar";
-import Bobo from "./Bobo";
+import MeCanva from "./canvas/MeCanva";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -135,21 +133,7 @@ const Experience = () => {
               </motion.div>
             </AnimatePresence>
           </div>
-          <Canvas>
-            <ambientLight intensity={7} />
-            <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-            <directionalLight position={[10, 10, 10]} intensity={1} />
-            <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} />
-            <Suspense fallback={null}>
-              <Bobo
-                position-y={-1.4}
-                scale={2.2}
-                animationName={animationName}
-              />
-            </Suspense>
-          </Canvas>
-
-          {/* Testimonial */}
+          {/* <MeCanva animationName={animationName} /> */}
           <AnimatePresence mode="wait">
             {testimonial && (
               <motion.div

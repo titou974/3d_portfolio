@@ -10,15 +10,4 @@ export default defineConfig({
       "three-nodes": "three/examples/jsm/nodes",
     },
   },
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks(id) {
-          if (id.includes("three")) {
-            return "three";
-          }
-        },
-      },
-    },
-  },
 });

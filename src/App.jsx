@@ -7,6 +7,7 @@ import StarsCanvas from "./components/canvas/Stars";
 import Works from "./components/Works";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
+import Preloader from "./components/Preloader";
 
 const SectionLoader = () => (
   <div className="flex items-center justify-center min-h-[200px]">
@@ -17,8 +18,9 @@ const SectionLoader = () => (
 const App = () => {
   return (
     <BrowserRouter>
+      <Preloader />
+
       <div className="relative z-0 bg-background">
-        {/* Hero section loads immediately - critical content */}
         <div className="dark:bg-[url(/src/assets/tsnight.webp)] bg-[url(/src/assets/hero-bg-light.webp)] dark:bg-cover bg-no-repeat bg-center bg-white">
           <Navbar />
           <Hero />
