@@ -147,46 +147,40 @@ const Experience = () => {
           ) : (
             <div className="flex justify-center md:flex-col items-center gap-8 md:gap-4 mt-34 md:mt-32">
               {designPreviews.phonePreview && (
-                <motion.div
-                  className="relative w-20"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.5 }}
-                  key={`phone-${selectedIndex}`}
-                >
+                <div className="relative w-20" key={`phone-${selectedIndex}`}>
                   <img
                     src={iphoneMockup}
                     alt="mockup iphone"
                     className="relative z-20 w-full h-auto"
                   />
-                  <img
+                  <motion.img
                     src={designPreviews.phonePreview}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.5 }}
                     alt="phone preview"
                     className="absolute top-[3%] left-[8%] w-[84%] h-[94%] object-cover rounded-[8%] z-10"
                   />
-                </motion.div>
+                </div>
               )}
               {designPreviews.laptopPreview && (
-                <motion.div
-                  className="relative w-46"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.5 }}
-                  key={`laptop-${selectedIndex}`}
-                >
+                <div className="relative w-46" key={`laptop-${selectedIndex}`}>
                   <img
                     src={laptopMockup}
                     alt="mockup laptop"
                     className="relative z-20 w-full h-auto"
                   />
-                  <img
+                  <motion.img
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.5 }}
                     src={designPreviews.laptopPreview}
                     alt="laptop preview"
                     className="absolute top-[6%] left-[13%] w-[74%] h-[78%] object-cover rounded-sm z-10"
                   />
-                </motion.div>
+                </div>
               )}
             </div>
           )}

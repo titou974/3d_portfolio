@@ -24,6 +24,8 @@ import {
   kesselmedia2Phone,
   wediveLaptop,
   nestorPhone,
+  jobquest,
+  contributeToIdeas,
 } from "../assets";
 
 export const navLinks = [
@@ -92,8 +94,8 @@ const experiences = [
     pos: "Stage Développeur Full-Stack",
     name: "Innovans",
     icon: innovans,
-    phonePreview: null,
-    laptopPreview: null,
+    phonePreview: jobquest,
+    laptopPreview: contributeToIdeas,
     duration: "Juillet 2023 - Octobre 2023",
     title:
       "Développement et maintenance de 6 applications web (PHP/MySQL/JS). Optimisation backend et résolution de problèmes critiques en base de données.",
@@ -119,7 +121,10 @@ const experiences = [
     title:
       "Développement de fonctionnalités pour plateforme +500k utilisateurs. Apprentissage des bonnes pratiques Vue.js/Nuxt 3 pour applications scalables.",
     animation: "burpee",
-    testimonial: "",
+    testimonial: {
+      author: "Adrien Labastire, CEO de Kessel Media",
+      text: "On est fier de ton travail, on te laisse partir en remote où tu veux !",
+    },
     skills: [
       { name: "Nuxt 3", level: 90 },
       { name: "Vue 2 & Vue 3", level: 90 },

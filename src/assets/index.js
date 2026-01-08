@@ -39,6 +39,8 @@ import kesselmedia2Laptop from "./kesselmedia2laptop.webp";
 import kesselmedia2Phone from "./kesselmedia2phone.webp";
 import nestorPhone from "./nestorphone.webp";
 import wediveLaptop from "./wedivelaptop.webp";
+import jobquest from "./jobquest.webp";
+import contributeToIdeas from "./contributetoideas.webp";
 
 export {
   logo,
@@ -82,4 +84,6 @@ export {
   kesselmedia2Laptop,
   nestorPhone,
   wediveLaptop,
+  jobquest,
+  contributeToIdeas,
 };
