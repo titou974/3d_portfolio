@@ -8,6 +8,7 @@ import Works from "./components/Works";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Preloader from "./components/Preloader";
+import "../src/i18n";
 
 const SectionLoader = () => (
   <div className="flex items-center justify-center min-h-[200px]">

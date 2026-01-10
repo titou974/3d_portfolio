@@ -28,18 +28,19 @@ import {
   contributeToIdeas,
 } from "../assets";
 
+// Navigation links with translation keys
 export const navLinks = [
   {
     id: "work",
-    title: "Travaux",
+    titleKey: "nav.work",
   },
   {
-    id: "about",
-    title: "À Propos",
+    id: "experiences",
+    titleKey: "nav.experiences",
   },
   {
     id: "contact",
-    title: "Contact",
+    titleKey: "nav.contact",
   },
 ];
 
@@ -88,21 +89,21 @@ const technologies = [
   },
 ];
 
-const experiences = [
+// Experiences with translation keys
+export const experiences = [
   {
     id: 1,
-    pos: "Stage Développeur Full-Stack",
+    posKey: "experiences.innovans.position",
     name: "Innovans",
     icon: innovans,
     phonePreview: jobquest,
     laptopPreview: contributeToIdeas,
-    duration: "Juillet 2023 - Octobre 2023",
-    title:
-      "Développement et maintenance de 6 applications web (PHP/MySQL/JS). Optimisation backend et résolution de problèmes critiques en base de données.",
+    durationKey: "experiences.innovans.duration",
+    titleKey: "experiences.innovans.title",
     animation: "fight",
     testimonial: {
-      author: "Carl, CEO d'Innovans",
-      text: "Titouan nous a permi de résoudre des problèmes qu'on trainait depuis des mois en quelques semaines.",
+      authorKey: "experiences.innovans.testimonial.author",
+      textKey: "experiences.innovans.testimonial.text",
     },
     skills: [
       { name: "PHP", level: 85 },
@@ -112,18 +113,17 @@ const experiences = [
   },
   {
     id: 2,
-    pos: "Stage Web Marketer-Développeur Front-end",
+    posKey: "experiences.kesselStage.position",
     name: "Kessel Media",
     phonePreview: kesselmediaPhone,
     laptopPreview: kesselmediaLaptop,
     icon: kessel,
-    duration: "Novembre 2023 - Mai 2024",
-    title:
-      "Développement de fonctionnalités pour plateforme +500k utilisateurs. Apprentissage des bonnes pratiques Vue.js/Nuxt 3 pour applications scalables.",
+    durationKey: "experiences.kesselStage.duration",
+    titleKey: "experiences.kesselStage.title",
     animation: "burpee",
     testimonial: {
-      author: "Adrien Labastire, CEO de Kessel Media",
-      text: "On est fier de ton travail, on te laisse partir en remote où tu veux !",
+      authorKey: "experiences.kesselStage.testimonial.author",
+      textKey: "experiences.kesselStage.testimonial.text",
     },
     skills: [
       { name: "Nuxt 3", level: 90 },
@@ -134,18 +134,17 @@ const experiences = [
   },
   {
     id: 3,
-    pos: "Freelance Développeur Front-end",
+    posKey: "experiences.kesselFreelance.position",
     name: "Kessel Media",
     icon: kessel,
     phonePreview: kesselmedia2Phone,
     laptopPreview: kesselmedia2Laptop,
-    duration: "Mai 2024 - Août 2024",
-    title:
-      "Refonte V2 en Nuxt 3 : conception et développement du parcours d'abonnement complet. Refonte pages articles et maintenance CMS. Focus scalabilité.",
+    durationKey: "experiences.kesselFreelance.duration",
+    titleKey: "experiences.kesselFreelance.title",
     animation: "workingOnDevice",
     testimonial: {
-      author: "Alexis Pibrac, CTO de Kessel Media",
-      text: "Titouan a démontré sa capacité à apprendre et à travailler rapidement, contribuant ainsi à l'évolution rapide de la plateforme de Kessel !",
+      authorKey: "experiences.kesselFreelance.testimonial.author",
+      textKey: "experiences.kesselFreelance.testimonial.text",
     },
     skills: [
       { name: "Nuxt 3", level: 90 },
@@ -156,18 +155,17 @@ const experiences = [
   },
   {
     id: 4,
-    pos: "Freelance Développeur Full-Stack",
+    posKey: "experiences.autoEntrepreneur.position",
     name: "Auto-Entrepreneur",
     icon: titouan,
     phonePreview: nestorPhone,
     laptopPreview: wediveLaptop,
-    duration: "Novembre 2023 - Aujourd'hui",
-    title:
-      "Développement de MVP, dashboards et apps cross-platform. Créateur de Nestor (Next.js), SaaS déployé dans +20 restaurants parisiens gérant +2 000 véhicules/jour. Maintenance City Rent.",
+    durationKey: "experiences.autoEntrepreneur.duration",
+    titleKey: "experiences.autoEntrepreneur.title",
     animation: "rumbaDancing",
     testimonial: {
-      author: "Samuel Doutriaux, Co-fondateur de Nestor",
-      text: "J'ai parlé de mon idée d'app de voiturier à Titouan, et en quelques semaines il a développé un MVP fonctionnel qui a impressionné nos premiers clients !",
+      authorKey: "experiences.autoEntrepreneur.testimonial.author",
+      textKey: "experiences.autoEntrepreneur.testimonial.text",
     },
     skills: [
       { name: "Next.js 13-16", level: 100 },
@@ -178,39 +176,39 @@ const experiences = [
   },
 ];
 
-const projects = [
+// Projects with translation keys
+export const projects = [
   {
-    name: "WeDive",
-    description:
-      "Cette idée vient du Coeur 🩵. Une application mobile de partage de spots de plongée et de pêche, réunissant une communauté de passionnés de la mer. Enregistrez vos sessions de plongée et partagez les photos/vidéos de vos aventures. Le tout dans le respect de l’environnement et avec un engagement pour sa préservation.",
+    nameKey: "projects.wedive.name",
+    descriptionKey: "projects.wedive.description",
     tags: [
       {
-        name: "Flutter",
+        nameKey: "tags.flutter",
         color: "blue-text-gradient",
       },
       {
-        name: "Firebase",
+        nameKey: "tags.firebase",
         color: "green-text-gradient",
       },
     ],
     image: wedivepreview,
     inprocess: true,
+    inProcessLabelKey: "projects.wedive.inProcessLabel",
   },
   {
-    name: "Kessel Media",
-    description:
-      "Surnommé le \"YouTube de la Newsletter\", c'est le média de la newsletter qui compte maintenant plus de 500 000 utilisateurs actifs. J'ai participé à la refonte de Kessel et à la mise en place d'une architecture de code scalable.",
+    nameKey: "projects.kesselMedia.name",
+    descriptionKey: "projects.kesselMedia.description",
     tags: [
       {
-        name: "nuxt3/vuejs",
+        nameKey: "tags.nuxt3",
         color: "blue-text-gradient",
       },
       {
-        name: "typescript",
+        nameKey: "tags.typescript",
         color: "green-text-gradient",
       },
       {
-        name: "cms",
+        nameKey: "tags.cms",
         color: "pink-text-gradient",
       },
     ],
@@ -219,20 +217,19 @@ const projects = [
     website_link: "https://www.kessel.media/",
   },
   {
-    name: "Nestor App",
-    description:
-      "Projet entreprenarial actuel. Application web pour les entreprises de voiturier qui leur permet de récolter des statistiques sur les performances de leurs travailleurs (temps, lieu..) et la création de tickets digitaux pour les clients ",
+    nameKey: "projects.nestorApp.name",
+    descriptionKey: "projects.nestorApp.description",
     tags: [
       {
-        name: "nextjs",
+        nameKey: "tags.nextjs",
         color: "blue-text-gradient",
       },
       {
-        name: "nodejs",
+        nameKey: "tags.nodejs",
         color: "green-text-gradient",
       },
       {
-        name: "supabase",
+        nameKey: "tags.supabase",
         color: "pink-text-gradient",
       },
     ],
@@ -242,20 +239,19 @@ const projects = [
     website_link: "https://valetappv1.vercel.app/",
   },
   {
-    name: "Task Completor",
-    description:
-      "Une application web basé sur l'API de Open AI GPT 4. Outil baser sur l'IA pour compléter vos tâches du quotidien telles que des lettres de motivations, des présentations, des emails et des messages.",
+    nameKey: "projects.taskCompletor.name",
+    descriptionKey: "projects.taskCompletor.description",
     tags: [
       {
-        name: "nextjs",
+        nameKey: "tags.nextjs",
         color: "blue-text-gradient",
       },
       {
-        name: "nodejs",
+        nameKey: "tags.nodejs",
         color: "green-text-gradient",
       },
       {
-        name: "gpt4api",
+        nameKey: "tags.gpt4api",
         color: "pink-text-gradient",
       },
     ],
@@ -265,20 +261,19 @@ const projects = [
     website_link: "https://www.taskcompletor.app/",
   },
   {
-    name: "Referral Safe",
-    description:
-      "Projet Wagon réalisé en 2 semaines. Certificateur d'expérience professionnelle où les employés peuvent valider leurs expériences antérieures et compétences acquises par le biais de leurs employeurs.",
+    nameKey: "projects.referralSafe.name",
+    descriptionKey: "projects.referralSafe.description",
     tags: [
       {
-        name: "rails",
+        nameKey: "tags.rails",
         color: "blue-text-gradient",
       },
       {
-        name: "postgresql",
+        nameKey: "tags.postgresql",
         color: "green-text-gradient",
       },
       {
-        name: "stimulusjs",
+        nameKey: "tags.stimulusjs",
         color: "pink-text-gradient",
       },
     ],
@@ -288,19 +283,21 @@ const projects = [
   },
 ];
 
-const aboutSection = {
-  subtitle: "Et...",
-  title: "À Propos.",
+// About section with translation keys
+export const aboutSection = {
+  subtitleKey: "about.subtitle",
+  titleKey: "about.title",
 };
 
-const malt = {
-  subtitle: "Embauchez-moi sur",
-  title: "Malt",
-  description: "Vous pouvez me proposez votre projet/mission sur",
+// Malt with translation keys
+export const malt = {
+  subtitleKey: "malt.subtitle",
+  titleKey: "malt.title",
+  descriptionKey: "malt.description",
   image: maltLogo,
 };
 
-const socialsLinks = {
+export const socialsLinks = {
   linkedin: "https://www.linkedin.com/in/titouan-hirsch",
   github: "https://github.com/titou974",
   instagram: "https://www.instagram.com/bobodigital_/",
@@ -318,12 +315,4 @@ export const hoursSlotsInFrench = [
   { key: "turtle", label: "18:00 - 18:30" },
 ];
 
-export {
-  services,
-  technologies,
-  experiences,
-  projects,
-  aboutSection,
-  malt,
-  socialsLinks,
-};
+export { services, technologies };

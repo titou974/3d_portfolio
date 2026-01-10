@@ -2,16 +2,18 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { malt } from "../constants/index";
 import { fadeIn, textVariant } from "../utils/motion";
+import { useTranslation } from "react-i18next";
 
 const Malt = () => {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col items-center bg-tertiary rounded-2xl p-6 max-w-3xl mx-auto gap-4">
       <motion.div variants={textVariant()} className="text-center">
         <p className={`${styles.sectionSubText} text-secondary`}>
-          {malt.description}
+          {t(malt.descriptionKey)}
         </p>
         <h2 className={`font-bold text-[24px] text-foreground`}>
-          {malt.title}
+          {t(malt.titleKey)}
         </h2>
       </motion.div>
       <motion.a

@@ -3,13 +3,15 @@ import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { menu, close, menulight, closelight } from "../assets";
-import { Avatar } from "@heroui/react";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const [theme, setTheme] = useState("dark");
   const [navbar, setNavbar] = useState(false);
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
+
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (theme === "dark") {
@@ -47,14 +49,14 @@ const Navbar = () => {
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
           to="/"
-          className="flex-1 xs:flex-none flex items-center gap-2"
+          className="flex-1 xs:flex-none flex items-center gap-4"
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);
           }}
         >
           <div className="border-primary bg-background dark:bg-[url(/src/assets/titoudark.webp)] bg-[url(/src/assets/titoulight.webp)] bg-cover bg-no-repeat bg-center cursor-pointer transition-all duration-300 w-8 h-8 rounded-full ring-2 ring-primary"></div>
-          <p className="hidden xs:block text-white dark:text-stone-700 text-[18px] sm:text-[12px] md:text-[18px] font-bold cursor-pointer flex">
+          <p className="hidden xs:block text-foreground text-xl sm:text-[12px] md:text-[18px] font-bold cursor-pointer md:flex">
             Titouan Hirsch
           </p>
         </Link>
@@ -81,9 +83,9 @@ const Navbar = () => {
             <li
               key={link.id}
               className={`text-base-content hover:text-foreground sm:text-[12px] md:text-[18px] font-medium cursor-pointer `}
-              onClick={() => setActive(link.title)}
+              onClick={() => setActive(link.titleKey)}
             >
-              <a href={`#${link.id}`}>{link.title}</a>
+              <a href={`#${link.id}`}>{t(link.titleKey)}</a>
             </li>
           ))}
         </ul>

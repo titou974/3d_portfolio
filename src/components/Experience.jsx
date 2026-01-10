@@ -8,6 +8,7 @@ import SkillBar from "./SkillBar";
 import { Switch } from "@heroui/react";
 import MeCanva from "./canvas/MeCanva";
 import { iphoneMockup, laptopMockup, kesselmedia } from "../assets";
+import { useTranslation } from "react-i18next";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -38,6 +39,8 @@ const Experience = () => {
   });
   const [activateModel3D, setActivateModel3D] = useState(false);
   const pauseTimeoutRef = useRef(null);
+
+  const { t } = useTranslation();
 
   const selectExperience = (index) => {
     setSelectedIndex(index);
@@ -111,8 +114,12 @@ const Experience = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText}`}>Découvrez mes</p>
-        <h2 className={`${styles.sectionHeadText}`}>Expériences.</h2>
+        <p className={`${styles.sectionSubText}`}>
+          {t("experiences.subtitle")}
+        </p>
+        <h2 className={`${styles.sectionHeadText}`}>
+          {t("experiences.title")}
+        </h2>
       </motion.div>
       <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
         <div className="w-full col-span-2 md:col-span-1 bg-tertiary rounded-2xl h-120 md:h-[732px] relative">
@@ -190,13 +197,13 @@ const Experience = () => {
               onValueChange={setActivateModel3D}
               size="sm"
             >
-              Activer l'Avatar 3D
+              {t("experiences.activate3DModel")}
             </Switch>
           </div>
           <AnimatePresence mode="wait">
             {testimonial && (
               <motion.div
-                key={testimonial.author}
+                key={t(testimonial.authorKey)}
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 50 }}
@@ -204,10 +211,10 @@ const Experience = () => {
                 className="absolute bottom-5 left-1/2 transform -translate-x-1/2 dark:bg-background/90  p-4 rounded-2xl w-11/12 md:w-3/4 border-primary border-1 z-10"
               >
                 <p className="text-sm italic text-base-content mb-2">
-                  "{testimonial.text}"
+                  "{t(testimonial.textKey)}"
                 </p>
                 <p className="text-xs font-bold text-base-title text-right">
-                  - {testimonial.author}
+                  - {t(testimonial.authorKey)}
                 </p>
               </motion.div>
             )}
@@ -246,16 +253,16 @@ const Experience = () => {
                   />
                 </div>
                 <div className="sm:p-5 px-2.5 py-5">
-                  <p className="font-bold text-base-title">{item.name}</p>
+                  <p className="font-bold text-base-title">{t(item.name)}</p>
                   <p className="text-sm text-secondary mb-5">
-                    {item.pos} -- <span>{item.duration}</span>
+                    {t(item.posKey)} -- <span>{t(item.durationKey)}</span>
                   </p>
                   <p
                     className={`transition-all ease-in-out duration-500 text-sm text-base-content/60 group-hover:text-base-content ${
                       selectedIndex === index && "text-base-content!"
                     }`}
                   >
-                    {item.title}
+                    {t(item.titleKey)}
                   </p>
                 </div>
               </motion.div>
@@ -267,4 +274,4 @@ const Experience = () => {
   );
 };
 
-export default SectionWrapper(Experience, "");
+export default SectionWrapper(Experience, "experiences");

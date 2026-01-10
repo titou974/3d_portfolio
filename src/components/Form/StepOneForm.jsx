@@ -1,16 +1,22 @@
 import { Button, Calendar, Select, SelectItem } from "@heroui/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { hoursSlotsInFrench } from "../../constants";
-import { fadeIn } from "../../utils/motion";
 import { today, getLocalTimeZone } from "@internationalized/date";
+import { useTranslation } from "react-i18next";
 
 export default function StepOneForm({ form, setForm }) {
+  const { t } = useTranslation();
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (!form.date.day || !form.slot) {
-      console.log("Please select a date and time slot.", form.date, form.slot);
-      alert("Veuillez sélectionner une date et un créneau");
+      addToast({
+        title: t("contactForm.completeInput.title"),
+        description: t("contactForm.completeInput.description"),
+        color: "danger",
+        variant: "flat",
+      });
       return;
     }
 
@@ -32,7 +38,7 @@ export default function StepOneForm({ form, setForm }) {
       className="flex flex-col gap-6 text-left items-center"
     >
       <Calendar
-        aria-label="Date (Controlled)"
+        aria-label={t("contactForm.stepOne.calendarLabel")}
         locale="fr-FR"
         value={form.date}
         onChange={(date) => setForm({ ...form, date: date })}
@@ -41,9 +47,9 @@ export default function StepOneForm({ form, setForm }) {
 
       <Select
         className="max-w-xs"
-        label="Sélectionnez un créneau"
+        label={t("contactForm.stepOne.selectLabel")}
         isDisabled={!form.date?.day}
-        placeholder="Choisir un horaire"
+        placeholder={t("contactForm.stepOne.selectPlaceholder")}
         selectedKeys={form.slot ? [form.slot] : []}
         onSelectionChange={handleSlotChange}
         endContent={<i className="fa-solid fa-clock"></i>}
@@ -52,6 +58,7 @@ export default function StepOneForm({ form, setForm }) {
           <SelectItem key={slot.key}>{slot.label}</SelectItem>
         ))}
       </Select>
+
       <AnimatePresence mode="wait">
         {!form.date && !form.slot && (
           <motion.div
@@ -63,10 +70,11 @@ export default function StepOneForm({ form, setForm }) {
           >
             <i className="fa-solid fa-info-circle text-base-content"></i>
             <p className="text-sm text-base-content">
-              Veuillez sélectionner un jour et un créneau horaire
+              {t("contactForm.stepOne.infoMessage")}
             </p>
           </motion.div>
         )}
+
         {form.date && !form.slot && (
           <motion.div
             className="flex items-center gap-2"
@@ -77,11 +85,15 @@ export default function StepOneForm({ form, setForm }) {
           >
             <i className="fa-solid fa-check-circle text-base-content"></i>
             <p className="text-sm text-base-content">
-              Notre rendez vous est planifié le {form.date.day}/
-              {form.date.month}/{form.date.year} à ...
+              {t("contactForm.stepOne.dateSelected", {
+                day: form.date.day,
+                month: form.date.month,
+                year: form.date.year,
+              })}
             </p>
           </motion.div>
         )}
+
         {form.slot && (
           <motion.div
             className="flex items-center gap-2"
@@ -92,13 +104,18 @@ export default function StepOneForm({ form, setForm }) {
           >
             <i className="fa-solid fa-check-circle text-green-500"></i>
             <p className="text-sm text-base-content">
-              Notre rendez vous est planifié le {form.date.day}/
-              {form.date.month}/{form.date.year} sur le créneau de&nbsp;
-              {hoursSlotsInFrench.find((slot) => slot.key === form.slot).label}
+              {t("contactForm.stepOne.fullSelection", {
+                day: form.date.day,
+                month: form.date.month,
+                year: form.date.year,
+                slot: hoursSlotsInFrench.find((slot) => slot.key === form.slot)
+                  .label,
+              })}
             </p>
           </motion.div>
         )}
       </AnimatePresence>
+
       <Button
         type="submit"
         color="primary"
@@ -106,7 +123,7 @@ export default function StepOneForm({ form, setForm }) {
         isDisabled={!form.date || !form.slot}
         endContent={<i className="fa-solid fa-arrow-right"></i>}
       >
-        Suivant
+        {t("contactForm.stepOne.nextButton")}
       </Button>
     </motion.form>
   );

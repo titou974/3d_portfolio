@@ -9,6 +9,7 @@ import StepThreeForm from "./Form/StepThreeForm";
 import { Alert } from "@heroui/react";
 import { hoursSlotsInFrench } from "../constants";
 import { Typewriter } from "react-simple-typewriter";
+import { useTranslation } from "react-i18next";
 
 export default function ContactForm() {
   const [form, setForm] = useState({
@@ -20,6 +21,8 @@ export default function ContactForm() {
     formStep: 1,
   });
 
+  const { t } = useTranslation();
+
   return (
     <motion.div
       variants={slideIn("left", "tween", 0.2, 1)}
@@ -27,11 +30,11 @@ export default function ContactForm() {
     >
       <div className="space-y-2">
         <h3 className="font-bold text-[24px] text-base-title">
-          Planifier un rendez-vous avez moi.
+          {t("contactForm.title")}
         </h3>
         <p className={styles.sectionSubText}>
-          {form.formStep === 1 && "Réserver un créneau 1/2"}
-          {form.formStep === 2 && "Expliquez-moi votre besoin 2/2"}
+          {form.formStep === 1 && t("contactForm.step1")}
+          {form.formStep === 2 && t("contactForm.step2")}
         </p>
         {form.formStep === 3 && (
           <span
@@ -39,7 +42,7 @@ export default function ContactForm() {
           >
             <Typewriter
               words={[
-                `Mme/M ${form.name}, votre email a bien était reçu. Je reviens vers vous au plus vite !`,
+                t("contactForm.confirmationMessage", { name: form.name }),
               ]}
               cursor
               cursorStyle="_"
@@ -50,11 +53,13 @@ export default function ContactForm() {
         {form.formStep === 2 && (
           <Alert
             color="primary"
-            title={`Notre rendez-vous est planifié pour le ${form.date?.day}/${
-              form.date?.month
-            }/${form.date?.year} sur le créneau de ${
-              hoursSlotsInFrench.find((slot) => slot.key === form.slot).label
-            }`}
+            title={t("contactForm.appointmentAlert", {
+              day: form.date?.day,
+              month: form.date?.month,
+              year: form.date?.year,
+              slot: hoursSlotsInFrench.find((slot) => slot.key === form.slot)
+                .label,
+            })}
             className="max-w-xs text-left mx-auto"
           />
         )}

@@ -1,10 +1,13 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { Typewriter } from "react-simple-typewriter";
+import { useTranslation } from "react-i18next";
 import Avatar from "./Avatar";
 import { socialsLinks } from "../constants";
 
 const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <section className="relative w-full h-screen">
@@ -19,7 +22,7 @@ const Hero = () => {
             <Avatar />
             <div className="space-y-2 sm:space-y-1">
               <h1 className={`${styles.heroHeadText}`}>
-                Bonjour, je suis{" "}
+                {t("hero.greeting")}{" "}
                 <span className="text-primary">
                   <a
                     href={socialsLinks.linkedin}
@@ -31,7 +34,7 @@ const Hero = () => {
                   </a>
                   {" / "}
                   <a
-                    href={socialsLinks.tiktok} // ou ton lien Instagram
+                    href={socialsLinks.tiktok}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:underline"
@@ -43,10 +46,10 @@ const Hero = () => {
               <span className={`${styles.heroSubText} mt-2`}>
                 <Typewriter
                   words={[
-                    "Toc toc ! Qui va là ?",
-                    "Cher voyageur, bienvenue sur mon portfolio!",
-                    "Prenez le temps de découvrir chaque détail de ce site fait avec le cœur. En somme !...",
-                    "Je crée des applications mobiles et des sites internet.",
+                    t("hero.typewriter.line1"),
+                    t("hero.typewriter.line2"),
+                    t("hero.typewriter.line3"),
+                    t("hero.typewriter.line4"),
                   ]}
                   cursor
                   cursorStyle="_"
@@ -59,7 +62,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
-          <a href="#work" aria-label="Scroll à la section Projets">
+          <a href="#work" aria-label={t("hero.scrollLabel")}>
             <div className="w-[35px] h-[64px] rounded-3xl border-4 border-primary hover:border-foreground flex justify-center items-start p-2 group transition-colors ease-in-out duration-500">
               <motion.div
                 animate={{

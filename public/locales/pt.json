@@ -1,0 +1,158 @@
+{
+  "preloader": {
+    "desktop": {
+      "part1": "A caminho",
+      "part2": "do Portfólio",
+      "part3": "de Titouan..."
+    },
+    "mobile": {
+      "part1": "Bem-vindo.",
+      "part2": "Welcome.",
+      "part3": "ようこそ."
+    }
+  },
+  "hero": {
+    "greeting": "Olá, eu sou",
+    "typewriter": {
+      "line1": "Toc toc! Quem é?",
+      "line2": "Caro viajante, bem-vindo ao meu portfólio!",
+      "line3": "Reserve um tempo para descobrir cada detalhe deste site feito com carinho. Em resumo...",
+      "line4": "Eu crio aplicativos móveis e sites."
+    },
+    "scrollLabel": "Rolar para a seção Projetos"
+  },
+  "nav": {
+    "work": "Trabalhos",
+    "experiences": "Experiências",
+    "contact": "Contato"
+  },
+  "about": {
+    "subtitle": "E...",
+    "title": "Sobre."
+  },
+  "malt": {
+    "subtitle": "Contrate-me no",
+    "title": "Malt",
+    "description": "Você pode me propor seu projeto/missão no"
+  },
+  "experiences": {
+    "subtitle": "Descubra minhas",
+    "title": "Experiências.",
+    "activate3DModel": "Ativar Avatar 3D",
+    "innovans": {
+      "position": "Estagiário Desenvolvedor Full-Stack",
+      "duration": "Julho 2023 - Outubro 2023",
+      "title": "Desenvolvimento e manutenção de 6 aplicações web (PHP/MySQL/JS). Otimização backend e resolução de problemas críticos em banco de dados.",
+      "testimonial": {
+        "author": "Carl, CEO da Innovans",
+        "text": "Titouan nos ajudou a resolver problemas que arrastávamos há meses em apenas algumas semanas."
+      }
+    },
+    "kesselStage": {
+      "position": "Estagiário Web Marketer-Desenvolvedor Frontend",
+      "duration": "Novembro 2023 - Maio 2024",
+      "title": "Desenvolvimento de funcionalidades para plataforma com +500k usuários. Aprendizado de boas práticas Vue.js/Nuxt 3 para aplicações escaláveis.",
+      "testimonial": {
+        "author": "Adrien Labastire, CEO da Kessel Media",
+        "text": "Estamos orgulhosos do seu trabalho, vamos deixar você trabalhar remotamente onde quiser!"
+      }
+    },
+    "kesselFreelance": {
+      "position": "Desenvolvedor Frontend Freelance",
+      "duration": "Maio 2024 - Agosto 2024",
+      "title": "Reformulação V2 em Nuxt 3: design e desenvolvimento do percurso completo de assinatura. Reformulação de páginas de artigos e manutenção CMS. Foco em escalabilidade.",
+      "testimonial": {
+        "author": "Alexis Pibrac, CTO da Kessel Media",
+        "text": "Titouan demonstrou sua capacidade de aprender e trabalhar rapidamente, contribuindo para a rápida evolução da plataforma da Kessel!"
+      }
+    },
+    "autoEntrepreneur": {
+      "position": "Desenvolvedor Full-Stack Freelance",
+      "duration": "Novembro 2023 - Presente",
+      "title": "Desenvolvimento de MVPs, dashboards e apps multiplataforma. Criador do Nestor (Next.js), SaaS implantado em +20 restaurantes parisienses gerenciando +2.000 veículos/dia. Manutenção City Rent.",
+      "testimonial": {
+        "author": "Samuel Doutriaux, Cofundador do Nestor",
+        "text": "Contei a Titouan sobre minha ideia de app de manobrista, e em poucas semanas ele desenvolveu um MVP funcional que impressionou nossos primeiros clientes!"
+      }
+    }
+  },
+  "projects": {
+    "subtitle": "Aqui estão meus",
+    "title": "Projetos.",
+    "description": "Cada um destes projetos representa uma etapa importante na minha progressão como desenvolvedor full-stack, destacando minhas habilidades e compromisso com o aprendizado contínuo. Os projetos realizados durante minha formação ou minhas missões demonstram minha capacidade de aplicar conceitos e habilidades adquiridas em ambientes estruturados, enquanto meus projetos pessoais mostram minha criatividade e paixão por explorar novas ideias.",
+    "wedive": {
+      "name": "WeDive",
+      "description": "Esta ideia vem do Coração 🩵. Um aplicativo móvel para compartilhar pontos de mergulho e pesca, reunindo uma comunidade de entusiastas do mar. Registre suas sessões de mergulho e compartilhe fotos/vídeos de suas aventuras. Tudo respeitando o meio ambiente e com compromisso com sua preservação.",
+      "inProcessLabel": "Em desenvolvimento"
+    },
+    "kesselMedia": {
+      "name": "Kessel Media",
+      "description": "Apelidado de \"YouTube das Newsletters\", é a mídia de newsletter que agora tem mais de 500.000 usuários ativos. Participei da reformulação da Kessel e implementação de uma arquitetura de código escalável."
+    },
+    "nestorApp": {
+      "name": "Nestor App",
+      "description": "Projeto empresarial atual. Aplicativo web para empresas de manobrista que permite coletar estatísticas sobre o desempenho de seus trabalhadores (tempo, localização..) e criar tickets digitais para os clientes."
+    },
+    "taskCompletor": {
+      "name": "Task Completor",
+      "description": "Um aplicativo web baseado na API Open AI GPT 4. Ferramenta baseada em IA para completar suas tarefas diárias, como cartas de motivação, apresentações, e-mails e mensagens."
+    },
+    "referralSafe": {
+      "name": "Referral Safe",
+      "description": "Projeto Wagon realizado em 2 semanas. Certificador de experiência profissional onde os funcionários podem validar suas experiências anteriores e habilidades adquiridas através de seus empregadores."
+    }
+  },
+  "tags": {
+    "flutter": "Flutter",
+    "firebase": "Firebase",
+    "nuxt3": "nuxt3/vuejs",
+    "typescript": "typescript",
+    "cms": "cms",
+    "nextjs": "nextjs",
+    "nodejs": "nodejs",
+    "supabase": "supabase",
+    "gpt4api": "gpt4api",
+    "rails": "rails",
+    "postgresql": "postgresql",
+    "stimulusjs": "stimulusjs"
+  },
+  "contact": {
+    "subtitle": "Precisa de um aplicativo, um site ou conselhos...",
+    "title": "Contrate-me."
+  },
+  "contactForm": {
+    "title": "Agendar uma reunião comigo.",
+    "step1": "Reservar um horário 1/2",
+    "step2": "Explique-me sua necessidade 2/2",
+    "confirmationMessage": "Sra./Sr. {{name}}, seu e-mail foi recebido. Retornarei o mais rápido possível!",
+    "appointmentAlert": "Nossa reunião está agendada para {{day}}/{{month}}/{{year}} no horário de {{slot}}",
+    "stepOne": {
+      "calendarLabel": "Data (Controlada)",
+      "selectLabel": "Selecione um horário",
+      "selectPlaceholder": "Escolher um horário",
+      "infoMessage": "Por favor, selecione um dia e um horário",
+      "dateSelected": "Nossa reunião está agendada para {{day}}/{{month}}/{{year}} às ...",
+      "fullSelection": "Nossa reunião está agendada para {{day}}/{{month}}/{{year}} no horário de {{slot}}",
+      "nextButton": "Próximo"
+    },
+    "stepTwo": {
+      "namePlaceholder": "João Silva",
+      "nameLabel": "Digite seu nome",
+      "nameRequired": "Você deve digitar um nome",
+      "nameMinLength": "Seu nome deve ter pelo menos 3 caracteres",
+      "emailPlaceholder": "wediveapp@gmail.com",
+      "emailLabel": "Digite seu e-mail",
+      "emailError": "Por favor, digite um endereço de e-mail válido",
+      "messageLabel": "Mensagem",
+      "messageRequired": "Por favor, digite uma mensagem",
+      "messageMinLength": "Sua mensagem deve ter pelo menos 20 caracteres",
+      "messageDescription": "Digite uma descrição detalhada de sua necessidade/solicitação para que eu possa antecipar as perguntas durante nossa reunião.",
+      "messagePlaceholder": "Olá Titouan! Gostaria de agendar uma reunião com você em {{day}}/{{month}}/{{year}} no horário de {{slot}} para discutir...",
+      "submitButton": "Reservar o agendamento",
+      "successTitle": "Solicitação de agendamento enviada",
+      "successDescription": "Retornarei para confirmar nossa reunião o mais rápido possível",
+      "errorTitle": "Ocorreu um erro ao enviar o e-mail",
+      "errorDescription": "Ocorreu um erro, entre em contato diretamente em titouanhirsch@gmail.com"
+    }
+  }
+}

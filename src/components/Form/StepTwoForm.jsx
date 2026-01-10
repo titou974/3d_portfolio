@@ -3,19 +3,22 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { hoursSlotsInFrench } from "../../constants";
 import emailjs from "@emailjs/browser";
+import { useTranslation } from "react-i18next";
 
 export default function StepTwoForm({ form, setForm }) {
   const [isLoading, setIsLoading] = useState(false);
+  const { t } = useTranslation();
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (!form.name || !form.email || !form.message) {
-      console.log(
-        "Please fill in all required fields.",
-        form.name,
-        form.email,
-        form.message
-      );
+      addToast({
+        title: t("contactForm.completeInput.title"),
+        description: t("contactForm.completeInput.description"),
+        color: "danger",
+        variant: "flat",
+      });
       return;
     }
     setIsLoading(true);
@@ -37,9 +40,8 @@ export default function StepTwoForm({ form, setForm }) {
         () => {
           setIsLoading(false);
           addToast({
-            title: "Prise de rendez-vous envoyé",
-            description:
-              "Je reviens vers vous pour vous confirmer notre rendez vous au plus vite",
+            title: t("contactForm.stepTwo.successTitle"),
+            description: t("contactForm.stepTwo.successDescription"),
             color: "success",
             variant: "flat",
           });
@@ -51,9 +53,8 @@ export default function StepTwoForm({ form, setForm }) {
         (error) => {
           setIsLoading(false);
           addToast({
-            title: "Une erreur a eu lieu lors de l'envoi de l'email",
-            description:
-              "Une erreur a eu lieu, contactez-moi directement via titouanhirsch@gmail.com",
+            title: t("contactForm.stepTwo.errorTitle"),
+            description: t("contactForm.stepTwo.errorDescription"),
             color: "danger",
             variant: "flat",
           });
@@ -75,15 +76,15 @@ export default function StepTwoForm({ form, setForm }) {
       >
         <Input
           type="text"
-          placeholder="Adrien Delaverne"
-          label="Entrer votre nom"
+          placeholder={t("contactForm.stepTwo.namePlaceholder")}
+          label={t("contactForm.stepTwo.nameLabel")}
           variant="bordered"
           validate={(value) => {
             if (!value) {
-              return "Vous devez rentrer un nom";
+              return t("contactForm.stepTwo.nameRequired");
             }
             if (value.length < 3) {
-              return "Votre nom doit faire au moins 3 caractères";
+              return t("contactForm.stepTwo.nameMinLength");
             }
           }}
           value={form.name || ""}
@@ -93,9 +94,9 @@ export default function StepTwoForm({ form, setForm }) {
         />
         <Input
           type="email"
-          placeholder="wediveapp@gmail.com"
-          label="Entrer votre email"
-          errorMessage="Veuillez rentrer une adresse mail valide"
+          placeholder={t("contactForm.stepTwo.emailPlaceholder")}
+          label={t("contactForm.stepTwo.emailLabel")}
+          errorMessage={t("contactForm.stepTwo.emailError")}
           variant="bordered"
           value={form.email || ""}
           onChange={(e) => setForm({ ...form, email: e.target.value })}
@@ -105,24 +106,32 @@ export default function StepTwoForm({ form, setForm }) {
         <Textarea
           className="max-w-xs"
           variant="bordered"
-          label="Message"
+          label={t("contactForm.stepTwo.messageLabel")}
           validate={() => {
             if (!form.message) {
-              return "Veuillez rentrer un message";
+              return t("contactForm.stepTwo.messageRequired");
             }
             if (form.message.length < 20) {
-              return "Votre message doit faire au moins 20 caractères";
+              return t("contactForm.stepTwo.messageMinLength");
             }
           }}
-          description="Entrer une description précise de votre besoin/demande pour que je puisse anticiper les questions lors de notre rendez-vous."
-          placeholder="Entrez votre message ici..."
+          description={t("contactForm.stepTwo.messageDescription")}
+          placeholder={t("contactForm.stepTwo.messagePlaceholder", {
+            day: form.date.day,
+            month: form.date.month,
+            year: form.date.year,
+            slot: hoursSlotsInFrench.find((slot) => slot.key === form.slot)
+              ?.label,
+          })}
           value={
             form.message ||
-            `Bonjour Titouan ! Je voudrais caler un rendez vous avec toi le ${
-              form.date.day
-            }/${form.date.month}/${form.date.year} sur le créneau de ${
-              hoursSlotsInFrench.find((slot) => slot.key === form.slot).label
-            } pour parler de...`
+            t("contactForm.stepTwo.messagePlaceholder", {
+              day: form.date.day,
+              month: form.date.month,
+              year: form.date.year,
+              slot: hoursSlotsInFrench.find((slot) => slot.key === form.slot)
+                ?.label,
+            })
           }
           onChange={(e) => setForm({ ...form, message: e.target.value })}
           required
@@ -137,7 +146,7 @@ export default function StepTwoForm({ form, setForm }) {
           isDisabled={!form.name || !form.email || !form.message}
           endContent={<i className="fa-solid fa-arrow-right"></i>}
         >
-          Réserver le rendez-vous
+          {t("contactForm.stepTwo.submitButton")}
         </Button>
       </motion.form>
     </>

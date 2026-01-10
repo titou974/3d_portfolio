@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import { useTranslation } from "react-i18next";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import Malt from "./Malt";
@@ -7,13 +8,13 @@ import ContactForm from "./ContactForm";
 import SocialLinks from "./SocialLinks";
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="overflow-hidden center space-y-10 md:space-y-16">
       <div className="space-y-px text-center">
-        <p className={styles.sectionSubText}>
-          Besoin d'une application, d'un site ou conseils...
-        </p>
-        <h3 className={styles.sectionHeadText}>Recrutez-moi.</h3>
+        <p className={styles.sectionSubText}>{t("contact.subtitle")}</p>
+        <h3 className={styles.sectionHeadText}>{t("contact.title")}</h3>
       </div>
 
       <div className="space-y-8">
@@ -36,4 +37,4 @@ const Contact = () => {
   );
 };
 
-export default SectionWrapper(Contact, "");
+export default SectionWrapper(Contact, "contact");
