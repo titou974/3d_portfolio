@@ -4,6 +4,7 @@ import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { menu, close, menulight, closelight } from "../assets";
 import { useTranslation } from "react-i18next";
+import ScrollProgressBar from "./ScrollProgressBar";
 
 const Navbar = () => {
   const [theme, setTheme] = useState("dark");
@@ -94,7 +95,7 @@ const Navbar = () => {
             <img
               src={toggle ? close : menu}
               alt="menu"
-              className="w-[28px] h-[28px] object-contain cursor-pointer dark:text-stone-700"
+              className="w-7 h-7 object-contain cursor-pointer dark:text-stone-700"
               onClick={() => setToggle(!toggle)}
             />
           )}
@@ -102,14 +103,14 @@ const Navbar = () => {
             <img
               src={toggle ? closelight : menulight}
               alt="menu"
-              className="w-[28px] h-[28px] object-contain cursor-pointer dark:text-stone-700"
+              className="w-7 h-7 object-contain cursor-pointer dark:text-stone-700"
               onClick={() => setToggle(!toggle)}
             />
           )}
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-35 z-10 rounded-xl`}
           >
             <ul className="list-none flex justify-end items-start flex-col gap-4">
               {navLinks.map((link) => (
@@ -130,6 +131,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+      {navbar && <ScrollProgressBar navbar={navbar} />}
     </nav>
   );
 };
