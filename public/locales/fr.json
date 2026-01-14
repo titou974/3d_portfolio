@@ -22,9 +22,7 @@
     "scrollLabel": "Scroll à la section Projets"
   },
   "nav": {
-    "work": "Travaux",
-    "experiences": "Expériences",
-    "contact": "Contact"
+    "hireMe": "Recrutez-moi"
   },
   "about": {
     "subtitle": "Et...",
@@ -86,11 +84,11 @@
       "inProcessLabel": "En développement"
     },
     "kesselMedia": {
-      "name": "Kessel Media",
+      "name": "Kessel Media (+500k utilisateurs)",
       "description": "Surnommé le \"YouTube de la Newsletter\", c'est le média de la newsletter qui compte maintenant plus de 500 000 utilisateurs actifs. J'ai participé à la refonte de Kessel et à la mise en place d'une architecture de code scalable."
     },
     "nestorApp": {
-      "name": "Nestor App",
+      "name": "Nestor App (utilisé quotidiennement par +20 entreprises)",
       "description": "Projet entreprenarial actuel. Application web pour les entreprises de voiturier qui leur permet de récolter des statistiques sur les performances de leurs travailleurs (temps, lieu..) et la création de tickets digitaux pour les clients."
     },
     "taskCompletor": {
@@ -163,7 +161,7 @@
     "title": "4 Langues",
     "subtitle": "Je peux communiquer en",
     "languageDescriptionCard": {
-      "title": "Mes compétences pour travailler à l'international 🌍",
+      "title": "Un développeur international 🌍",
       "description": "Le voyage constitue une des mes passions. Mon échange universitaire et mon travail de développeur en remote m'ont permit de voyager et d'étendre mes compétences en communication. Je peux alors communiquer professionellement dans ces langues."
     },
     "france": {

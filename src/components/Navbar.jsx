@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { styles } from "../styles";
-import { navLinks } from "../constants";
-import { menu, close, menulight, closelight } from "../assets";
 import { useTranslation } from "react-i18next";
 import ScrollProgressBar from "./ScrollProgressBar";
+import { Button } from "@heroui/react";
 
 const Navbar = () => {
   const [theme, setTheme] = useState("dark");
@@ -50,7 +49,7 @@ const Navbar = () => {
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
           to="/"
-          className="flex-1 xs:flex-none flex items-center gap-4"
+          className="md:flex-1 flex-none flex items-center gap-4"
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);
@@ -61,9 +60,9 @@ const Navbar = () => {
             Titouan Hirsch
           </p>
         </Link>
-        <div className="justify-center items-center mx-3 flex xs:flex-1 xs:ms-16 xs:w-full md:w-1/2 sm:ms-0 sm:me-0 ">
+        <div className="md:justify-center items-center flex flex-1 w-1/2 ms-4 md:mx-0 ">
           <i
-            className={`dark:text-primary text-stone-500 fa-solid fa-moon hover:text-black mr-3 ms-1 xs: fa-lg sm:fa-xl`}
+            className={`dark:text-primary text-stone-500 fa-solid fa-moon hover:text-black mr-2 md:mr-3 ms-1 fa-md md:fa-xl`}
           ></i>
           <input
             className="container_toggle"
@@ -76,59 +75,21 @@ const Navbar = () => {
             Toggle
           </label>
           <i
-            className={`fa-solid fa-sun dark:text-secondary text-foreground/80 ms-3 xs: fa-lg sm:fa-xl`}
+            className={`fa-solid fa-sun dark:text-secondary text-foreground/80 ms-2 md:ms-3 fa-md md:fa-xl`}
           ></i>
         </div>
-        <ul className="list-none hidden sm:flex flex-row gap-10">
-          {navLinks.map((link) => (
-            <li
-              key={link.id}
-              className={`text-base-content hover:text-foreground sm:text-[12px] md:text-[18px] font-medium cursor-pointer `}
-              onClick={() => setActive(link.titleKey)}
+        <div className="flex flex-1 justify-end">
+          <a href="#contact" asChild>
+            <Button
+              size="sm"
+              color="primary"
+              endContent={
+                <i className="fa-solid fa-arrow-right-to-bracket"></i>
+              }
             >
-              <a href={`#${link.id}`}>{t(link.titleKey)}</a>
-            </li>
-          ))}
-        </ul>
-        <div className="sm:hidden flex flex-1 justify-end items-center">
-          {theme !== "dark" && (
-            <img
-              src={toggle ? close : menu}
-              alt="menu"
-              className="w-7 h-7 object-contain cursor-pointer dark:text-stone-700"
-              onClick={() => setToggle(!toggle)}
-            />
-          )}
-          {theme === "dark" && (
-            <img
-              src={toggle ? closelight : menulight}
-              alt="menu"
-              className="w-7 h-7 object-contain cursor-pointer dark:text-stone-700"
-              onClick={() => setToggle(!toggle)}
-            />
-          )}
-          <div
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-35 z-10 rounded-xl`}
-          >
-            <ul className="list-none flex justify-end items-start flex-col gap-4">
-              {navLinks.map((link) => (
-                <li
-                  key={link.id}
-                  className={`${
-                    active === link.title ? "text-white" : "text-secondary"
-                  } font-poppins font-medium cursor-pointer text-[16px]`}
-                  onClick={() => {
-                    setActive(link.title);
-                    setToggle(!toggle);
-                  }}
-                >
-                  <a href={`#${link.id}`}>{link.title}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
+              {t("nav.hireMe")}
+            </Button>
+          </a>
         </div>
       </div>
       {navbar && <ScrollProgressBar navbar={navbar} />}

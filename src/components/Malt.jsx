@@ -3,7 +3,7 @@ import { styles } from "../styles";
 import { malt } from "../constants/index";
 import { fadeIn, textVariant } from "../utils/motion";
 import { useTranslation } from "react-i18next";
-
+import { Button } from "@heroui/react";
 const Malt = () => {
   const { t } = useTranslation();
   return (
@@ -20,11 +20,21 @@ const Malt = () => {
         href="https://www.malt.fr/profile/titouanhirsch"
         variants={fadeIn("", "", 0.1, 1)}
         target="_blank"
+        asChild
         rel="noreferrer"
-        className="flex items-center gap-2 w-fit border-[#fc5e57] p-4 rounded-md font-bold text-white bg-[#fc5e57] transition-all hover:bg-white hover:text-[#fc5e57] text-center"
       >
-        Voir mon profil Malt
-        <img src={malt.image} alt="malt" className="w-8 h-8 object-contain" />
+        <Button
+          endContent={
+            <img
+              src={malt.image}
+              alt="malt"
+              className="w-8 h-8 object-contain"
+            />
+          }
+          className="bg-[#fc5e57]"
+        >
+          Voir mon profil Malt
+        </Button>
       </motion.a>
     </div>
   );

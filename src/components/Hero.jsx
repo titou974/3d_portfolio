@@ -62,7 +62,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
-          <a href="#work" aria-label={t("hero.scrollLabel")}>
+          <a href="#video" aria-label={t("hero.scrollLabel")}>
             <div className="w-[35px] h-[64px] rounded-3xl border-4 border-primary hover:border-foreground flex justify-center items-start p-2 group transition-colors ease-in-out duration-500">
               <motion.div
                 animate={{

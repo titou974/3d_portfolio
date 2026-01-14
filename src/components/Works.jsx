@@ -6,6 +6,7 @@ import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { Button } from "@heroui/react";
 
 const ProjectCard = ({
   index,
@@ -35,18 +36,27 @@ const ProjectCard = ({
             alt={name}
             className="w-full h-full object-cover rounded-2xl"
           />
-          <a
-            href={website_link}
-            target="_blank"
-            rel="noreferrer"
-            className={`text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-primary p-4 rounded-md font-bold text-white ${
-              inprocess
-                ? "bg-primary/60"
-                : "bg-primary hover:bg-white hover:text-primary"
-            } transition-all`}
-          >
-            {inprocess ? <p>En construction...</p> : <p>Voir le site</p>}
-          </a>
+          {website_link ? (
+            <a
+              href={website_link}
+              target="_blank"
+              rel="noreferrer"
+              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+            >
+              <Button color="primary" variant="shadow" isDisabled={inprocess}>
+                {inprocess ? <p>En construction...</p> : <p>Voir le site</p>}
+              </Button>
+            </a>
+          ) : (
+            <Button
+              color="primary"
+              variant="shadow"
+              isDisabled
+              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-80"
+            >
+              En construction...
+            </Button>
+          )}
           <div className="absolute bottom-44 inset-0 flex items-center justify-end m-3 card-img_hover">
             <div
               onClick={() => window.open(source_code_link, "_blank")}

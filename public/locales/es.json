@@ -22,9 +22,7 @@
     "scrollLabel": "Desplazarse a la sección Proyectos"
   },
   "nav": {
-    "work": "Trabajos",
-    "experiences": "Experiencias",
-    "contact": "Contacto"
+    "hireMe": "Recrutez-moi"
   },
   "about": {
     "subtitle": "Y...",

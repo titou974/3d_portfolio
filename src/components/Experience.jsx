@@ -57,6 +57,7 @@ const Experience = () => {
   useEffect(() => {
     selectExperience(0);
   }, []);
+
   useEffect(() => {
     if (!isAutoPlay) {
       setAnimationName("seatedIdle");
@@ -78,6 +79,9 @@ const Experience = () => {
   }, [selectedIndex]);
 
   const handleExperienceHover = (index) => {
+    if (activateModel3D) {
+      return;
+    }
     if (pauseTimeoutRef.current) {
       clearTimeout(pauseTimeoutRef.current);
     }
@@ -86,7 +90,9 @@ const Experience = () => {
   };
 
   const handleExperienceLeave = () => {
-    setAnimationName("seatedIdle");
+    if (activateModel3D) {
+      return;
+    }
     if (pauseTimeoutRef.current) {
       clearTimeout(pauseTimeoutRef.current);
     }
@@ -96,19 +102,14 @@ const Experience = () => {
   };
 
   const handleExperienceClick = (index) => {
+    if (activateModel3D) {
+      return;
+    }
     if (pauseTimeoutRef.current) {
       clearTimeout(pauseTimeoutRef.current);
     }
     setIsAutoPlay(false);
     setSelectedIndex(index);
-  };
-
-  const toggleAutoPlay = () => {
-    setAnimationName("seatedIdle");
-    if (pauseTimeoutRef.current) {
-      clearTimeout(pauseTimeoutRef.current);
-    }
-    setIsAutoPlay(!isAutoPlay);
   };
 
   return (
@@ -185,7 +186,7 @@ const Experience = () => {
                     transition={{ duration: 0.5 }}
                     src={designPreviews.laptopPreview}
                     alt="laptop preview"
-                    className="absolute top-[6%] left-[13%] w-[74%] h-[78%] object-cover rounded-sm z-10"
+                    className="absolute top-[7%] left-[15%] w-[70%] h-[62%] object-cover rounded-sm z-10"
                   />
                 </div>
               )}
@@ -225,9 +226,9 @@ const Experience = () => {
             {experiences.map((item, index) => (
               <motion.div
                 key={index}
-                // onClick={() => handleExperienceClick(index)}
-                // onMouseEnter={() => handleExperienceHover(index)}
-                // onMouseLeave={handleExperienceLeave}
+                onClick={() => handleExperienceClick(index)}
+                onMouseEnter={() => handleExperienceHover(index)}
+                onMouseLeave={handleExperienceLeave}
                 className={`work-content_container group-hover:work-content_container_selected group ${
                   selectedIndex === index && "work-content_container_selected"
                 }`}

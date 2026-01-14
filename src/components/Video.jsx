@@ -70,9 +70,9 @@ const Video = () => {
           height="390"
           src="https://www.youtube.com/embed/36Ym36JvfhU?si=sHcLhmOCJnp4dYS2"
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
         <blockquote
           className="instagram-media !rounded-2xl w-full row-span-2 max-h-[390px]"
