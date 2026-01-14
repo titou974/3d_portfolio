@@ -13,7 +13,7 @@ export default function ScrollProgressBar({ navbar: boolean }) {
       className={`absolute bottom-0 left-0 right-0 h-1 bg-gray-200/20 z-50`}
     >
       <motion.div
-        className={`h-full bg-linear-to-r from-secondary to-primary shadow-lg shadow-primary/50 origin-left`}
+        className={`h-full bg-linear-to-r from-primary dark:to-purple-600 to-[#ffbd07]  shadow-lg shadow-primary/50 origin-left`}
         style={{
           scaleX,
           transformOrigin: "0% 0%",

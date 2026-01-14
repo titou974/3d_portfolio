@@ -19,7 +19,8 @@ export default function Avatar() {
   }, [isHovered]);
 
   return (
-    <div
+    <a
+      href="#contact"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className="relative inline-block"
@@ -48,6 +49,6 @@ export default function Avatar() {
           )}
         </AnimatePresence>
       </Tilt>
-    </div>
+    </a>
   );
 }

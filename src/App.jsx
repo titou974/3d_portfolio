@@ -9,6 +9,8 @@ import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Preloader from "./components/Preloader";
 import "../src/i18n";
+import Languages from "./components/Languages";
+import Video from "./components/Video";
 
 const SectionLoader = () => (
   <div className="flex items-center justify-center min-h-[200px]">
@@ -26,13 +28,10 @@ const App = () => {
           <Navbar />
           <Hero />
         </div>
-
-        <Works />
-
-        {/* <Video /> */}
-
+        <Video />
         <Experience />
-
+        <Languages />
+        <Works />
         <div className="relative z-0">
           <Suspense fallback={<SectionLoader />}>
             <Contact />

@@ -158,5 +158,29 @@
       "errorTitle": "Une erreur a eu lieu lors de l'envoi de l'email",
       "errorDescription": "Une erreur a eu lieu, contactez-moi directement via titouanhirsch@gmail.com"
     }
+  },
+  "languages": {
+    "title": "4 Langues",
+    "subtitle": "Je peux communiquer en",
+    "languageDescriptionCard": {
+      "title": "Mes compétences pour travailler à l'international 🌍",
+      "description": "Le voyage constitue une des mes passions. Mon échange universitaire et mon travail de développeur en remote m'ont permit de voyager et d'étendre mes compétences en communication. Je peux alors communiquer professionellement dans ces langues."
+    },
+    "france": {
+      "name": "Français",
+      "description": "Je suis français de nationalité et d'origine, c'est donc ma langue maternel. Oui j'adore les baguettes et le vin."
+    },
+    "us": {
+      "name": "Anglais",
+      "description": "Ayant suivi un cursus de 5 ans avec des cours intégralement en anglais et des profs étrangers, je n'ai pas eu le choix que d'apprendre à parler anglais couramment pour valider mes études, et communiquer avec mes premiers amis étrangers en échange dans mon université à Paris."
+    },
+    "espagnol": {
+      "name": "Espagnol",
+      "description": "J'ai fait mes 6 derniers mois de cours en échange à Bogota (Colombie) dans l'université Externado. Cette échange et le cadre latino-hispanique dans lequel j'ai baigné pendant 6 mois sans arrêt, m'ont permit de développer un niveau d'espagnol courant et communiquer facilement avec n'importe quelle hispanique."
+    },
+    "portugal": {
+      "name": "Portugais (Brésil)",
+      "description": "Je suis en plein apprentissage du portugais, vivant actuellement à Sao Paulo après avoir terminé mes études en Colombie, j'ai fait le choix de déménager vivre à Sao Paulo (Brésil) pour y trouver du travail, et rajouter une 4ème langue à mon arc."
+    }
   }
 }

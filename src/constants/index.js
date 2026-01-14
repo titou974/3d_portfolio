@@ -26,6 +26,10 @@ import {
   nestorPhone,
   jobquest,
   contributeToIdeas,
+  france,
+  us,
+  portugal,
+  espagne,
 } from "../assets";
 
 // Navigation links with translation keys
@@ -313,6 +317,33 @@ export const hoursSlotsInFrench = [
   { key: "spider", label: "16:00 - 16:30" },
   { key: "goldfish", label: "17:00 - 17:30" },
   { key: "turtle", label: "18:00 - 18:30" },
+];
+
+export const languages = [
+  {
+    name: "languages.france.name",
+    description: "languages.france.description",
+    image: france,
+    audioRecord: "",
+  },
+  {
+    name: "languages.us.name",
+    description: "languages.us.description",
+    image: us,
+    audioRecord: "",
+  },
+  {
+    name: "languages.espagnol.name",
+    description: "languages.espagnol.description",
+    image: espagne,
+    audioRecord: "",
+  },
+  {
+    name: "languages.portugal.name",
+    description: "languages.portugal.description",
+    image: portugal,
+    audioRecord: "",
+  },
 ];
 
 export { services, technologies };

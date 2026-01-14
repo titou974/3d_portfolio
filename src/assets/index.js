@@ -41,6 +41,10 @@ import nestorPhone from "./nestorphone.webp";
 import wediveLaptop from "./wedivelaptop.webp";
 import jobquest from "./jobquest.webp";
 import contributeToIdeas from "./contributetoideas.webp";
+import france from "./france.webp";
+import espagne from "./espagne.webp";
+import us from "./us.webp";
+import portugal from "./portugal.webp";
 
 export {
   logo,
@@ -86,4 +90,8 @@ export {
   wediveLaptop,
   jobquest,
   contributeToIdeas,
+  france,
+  espagne,
+  us,
+  portugal,
 };
