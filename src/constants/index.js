@@ -30,6 +30,16 @@ import {
   us,
   portugal,
   espagne,
+  workInBogota,
+  workInCasablanca,
+  workInParis,
+  workInParis2,
+  workInParis3,
+  workInReunion,
+  workInReunion2,
+  workInSaoPaulo,
+  workInTanger,
+  inprocess,
 } from "../assets";
 
 // Navigation links with translation keys
@@ -93,7 +103,6 @@ const technologies = [
   },
 ];
 
-// Experiences with translation keys
 export const experiences = [
   {
     id: 1,
@@ -180,7 +189,6 @@ export const experiences = [
   },
 ];
 
-// Projects with translation keys
 export const projects = [
   {
     nameKey: "projects.wedive.name",
@@ -197,6 +205,7 @@ export const projects = [
     ],
     image: wedivepreview,
     inprocess: true,
+    source_code_link: "https://github.com/titou974/wedive",
     inProcessLabelKey: "projects.wedive.inProcessLabel",
   },
   {
@@ -239,8 +248,8 @@ export const projects = [
     ],
     image: nestorapp,
     inprocess: false,
-    source_code_link: "https://github.com/titou974/valetappv1",
-    website_link: "https://valetappv1.vercel.app/",
+    source_code_link: "https://github.com/titou974/nestorappv2",
+    website_link: "https://nestorapp.app/newticket?site=petittest",
   },
   {
     nameKey: "projects.taskCompletor.name",
@@ -282,8 +291,8 @@ export const projects = [
       },
     ],
     image: referralsafe,
+    inprocess: false,
     source_code_link: "https://github.com/titou974/referral-safe",
-    website_link: "https://referralsafeapp-156a896d1d00.herokuapp.com/",
   },
 ];
 
@@ -318,6 +327,50 @@ export const hoursSlotsInFrench = [
   { key: "goldfish", label: "17:00 - 17:30" },
   { key: "turtle", label: "18:00 - 18:30" },
 ];
+
+export const workInTheWorldCarousel = [
+  {
+    src: workInBogota,
+    legend: "Bogota - Colombie (2025)",
+  },
+  {
+    src: workInParis,
+    legend: "Paris - France (2023)",
+  },
+  {
+    src: workInReunion,
+    legend: "Réunion - France Outre Mer (2024)",
+  },
+  {
+    src: workInCasablanca,
+    legend: "Casablanca - Maroc (2024)",
+  },
+  {
+    src: workInSaoPaulo,
+    legend: "Sao Paulo - Brésil",
+  },
+  {
+    src: workInParis2,
+    legend: "Paris - France (2023)",
+  },
+  {
+    src: workInReunion2,
+    legend: "Réunion - France Outre Mer (2024)",
+  },
+  {
+    src: workInTanger,
+    legend: "Tanger - Maroc (2024)",
+  },
+  {
+    src: workInParis3,
+    legend: "Paris - France (2022)",
+  },
+];
+
+export const carouselOptions = {
+  dragFree: true,
+  loop: true,
+};
 
 export const languages = [
   {

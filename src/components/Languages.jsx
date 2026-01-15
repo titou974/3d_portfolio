@@ -5,6 +5,8 @@ import Tilt from "react-parallax-tilt";
 import { textVariant, fadeIn } from "../utils/motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
+import InfiniteCarousel from "./InfiniteCarousel";
+import { workInTheWorldCarousel, carouselOptions } from "../constants";
 
 function Languages() {
   const { t } = useTranslation();
@@ -25,16 +27,20 @@ function Languages() {
               scale: 1,
               speed: 450,
             }}
-            className="w-full bg-tertiary p-5 pb-12 rounded-2xl h-full relative"
+            className="w-full bg-tertiary p-5 pb-12 rounded-2xl h-full relative space-y-8"
           >
-            <div className="mt-5">
+            <div className="mt-5 space-y-2">
               <h3 className="text-base-title font-bold text-[24px]">
                 {t("languages.languageDescriptionCard.title")}
               </h3>
-              <p className="mt-2 text-base-content text-[14px]">
+              <p className="text-base-content text-[14px]">
                 {t("languages.languageDescriptionCard.description")}
               </p>
             </div>
+            <InfiniteCarousel
+              options={carouselOptions}
+              slides={workInTheWorldCarousel}
+            />
           </Tilt>
         </motion.div>
         {languages.map((language, index) => (

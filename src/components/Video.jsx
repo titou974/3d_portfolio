@@ -3,8 +3,10 @@ import { textVariant, fadeIn } from "../utils/motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 const Video = () => {
+  const { t } = useTranslation();
   useEffect(() => {
     // Load TikTok embed script
     const existingTikTokScript = document.querySelector(
@@ -44,9 +46,15 @@ const Video = () => {
   return (
     <div>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText}`}>Apprenez-en à travers</p>
-        <h2 className={`${styles.sectionHeadText}`}>Mes Vidéos.</h2>
+        <p className={`${styles.sectionSubText}`}>{t("video.subtitle")}</p>
+        <h2 className={`${styles.sectionHeadText}`}>{t("video.title")}</h2>
       </motion.div>
+      <motion.p
+        variants={fadeIn("", "", 0.1, 1)}
+        className="mt-2 text-base-content"
+      >
+        {t("video.description")}
+      </motion.p>
       <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
         <blockquote
           className="tiktok-embed !rounded-2xl my-0! max-h-fit"

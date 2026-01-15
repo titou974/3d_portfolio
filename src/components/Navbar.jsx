@@ -79,7 +79,7 @@ const Navbar = () => {
           ></i>
         </div>
         <div className="flex flex-1 justify-end">
-          <a href="#contact" asChild>
+          <a href="#contact">
             <Button
               size="sm"
               color="primary"

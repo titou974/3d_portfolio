@@ -43,10 +43,19 @@ const ProjectCard = ({
               rel="noreferrer"
               className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
             >
-              <Button color="primary" variant="shadow" isDisabled={inprocess}>
-                {inprocess ? <p>En construction...</p> : <p>Voir le site</p>}
+              <Button color="primary" variant="shadow">
+                {t("projects.seeWebsite")}
               </Button>
             </a>
+          ) : inprocess ? (
+            <Button
+              color="primary"
+              variant="shadow"
+              isDisabled
+              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-80"
+            >
+              {t("projects.inProcess")}
+            </Button>
           ) : (
             <Button
               color="primary"
@@ -54,25 +63,26 @@ const ProjectCard = ({
               isDisabled
               className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-80"
             >
-              En construction...
+              {t("projects.offline")}
             </Button>
           )}
           <div className="absolute bottom-44 inset-0 flex items-center justify-end m-3 card-img_hover">
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-            >
-              {inprocess === true && (
-                <i className="fa-solid fa-gear object-contain text-white"></i>
-              )}
-              {inprocess !== true && (
+            {!!source_code_link ? (
+              <div
+                onClick={() => window.open(source_code_link, "_blank")}
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+              >
                 <img
                   src={github}
                   alt="github"
                   className="w-1/2 h-1/2 object-contain"
                 />
-              )}
-            </div>
+              </div>
+            ) : (
+              <div className="black-gradient p-2 rounded-full text-xs">
+                {t("projects.privateRepo")}
+              </div>
+            )}
           </div>
         </div>
         <div className="mt-5">
@@ -100,14 +110,12 @@ const Works = () => {
         <p className={`${styles.sectionSubText}`}>{t("projects.subtitle")}</p>
         <h2 className={`${styles.sectionHeadText}`}>{t("projects.title")}</h2>
       </motion.div>
-      <div className="w-full flex">
-        <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
-          className="mt-3 text-base-content"
-        >
-          {t("projects.description")}
-        </motion.p>
-      </div>
+      <motion.p
+        variants={fadeIn("", "", 0.1, 1)}
+        className="mt-2 text-base-content"
+      >
+        {t("projects.description")}
+      </motion.p>
 
       <div className="mt-8 flex flex-wrap gap-7 justify-center">
         {projects.map((project, index) => (

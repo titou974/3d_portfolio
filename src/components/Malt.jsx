@@ -20,7 +20,6 @@ const Malt = () => {
         href="https://www.malt.fr/profile/titouanhirsch"
         variants={fadeIn("", "", 0.1, 1)}
         target="_blank"
-        asChild
         rel="noreferrer"
       >
         <Button

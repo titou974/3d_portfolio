@@ -30,8 +30,8 @@ const App = () => {
         </div>
         <Video />
         <Experience />
-        <Languages />
         <Works />
+        <Languages />
         <div className="relative z-0">
           <Suspense fallback={<SectionLoader />}>
             <Contact />

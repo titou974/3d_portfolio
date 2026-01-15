@@ -7,6 +7,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 @import "./utils/theme.css";
 @import "./utils/experience.css";
+@import "./utils/embla.css";
 
 * {
   box-sizing: border-box;
@@ -305,34 +306,6 @@ button {
   transform: translateX(-100%);
 }
 
-@media (min-width: 450px) {
-  .switch-mode {
-    width: 60px;
-    height: 30px;
-  }
-
-  .switch-mode:after {
-    width: 22px;
-    height: 22px;
-    top: 3.6px;
-    left: 4px;
-  }
-}
-
-@media (min-width: 640px) {
-  .switch-mode {
-    width: 40px;
-    height: 20px;
-  }
-
-  .switch-mode:after {
-    width: 10px;
-    height: 10px;
-    top: 5px;
-    left: 4px;
-  }
-}
-
 @media (min-width: 768px) {
   .switch-mode {
     width: 60px;
@@ -428,7 +401,6 @@ button {
 .main {
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
   padding: 2em 0;
   margin-top: 20px;
 }
@@ -447,7 +419,7 @@ button {
   justify-content: center;
 }
 
-.card1 {
+.card3 {
   width: 90px;
   height: 90px;
   outline: none;
@@ -461,13 +433,13 @@ button {
 }
 
 .instagram {
-  top: 40%;
+  bottom: 40%;
   left: 40%;
   fill: #cc39a4;
   position: absolute;
 }
 
-.card2 {
+.card4 {
   width: 90px;
   height: 90px;
   outline: none;
@@ -481,13 +453,13 @@ button {
 }
 
 .youtube {
-  top: 40%;
+  bottom: 40%;
   right: 40%;
   position: absolute;
   fill: #f61c0d;
 }
 
-.card3 {
+.card1 {
   width: 90px;
   height: 90px;
   outline: none;
@@ -502,11 +474,11 @@ button {
 
 .github {
   position: absolute;
-  bottom: 40%;
+  top: 40%;
   left: 40%;
 }
 
-.card4 {
+.card2 {
   width: 90px;
   height: 90px;
   outline: none;
@@ -519,10 +491,10 @@ button {
   position: relative;
 }
 
-.discord {
-  fill: #8c9eff;
+.linkedin {
+  fill: #0288d1;
   position: absolute;
-  bottom: 40%;
+  top: 40%;
   right: 40%;
 }
 
@@ -559,9 +531,9 @@ button {
 .card4:hover {
   cursor: pointer;
   scale: 1.1;
-  background-color: #8c9eff;
+  background-color: #0288d1;
 }
 
-.card4:hover .discord {
+.card4:hover .linkedin {
   fill: white;
 }

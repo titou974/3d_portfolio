@@ -45,7 +45,15 @@ import france from "./france.webp";
 import espagne from "./espagne.webp";
 import us from "./us.webp";
 import portugal from "./portugal.webp";
-
+import workInBogota from "./workInTheWorld/workbogota.webp";
+import workInCasablanca from "./workInTheWorld/workcasablanca.webp";
+import workInSaoPaulo from "./workInTheWorld/worksaopaulo.webp";
+import workInTanger from "./workInTheWorld/worktanger.webp";
+import workInReunion from "./workInTheWorld/workreunion.webp";
+import workInReunion2 from "./workInTheWorld/workreunion2.webp";
+import workInParis from "./workInTheWorld/workparis.webp";
+import workInParis2 from "./workInTheWorld/workparis2.webp";
+import workInParis3 from "./workInTheWorld/workparis3.webp";
 export {
   logo,
   github,
@@ -94,4 +102,13 @@ export {
   espagne,
   us,
   portugal,
+  workInBogota,
+  workInCasablanca,
+  workInParis,
+  workInParis2,
+  workInParis3,
+  workInReunion,
+  workInReunion2,
+  workInSaoPaulo,
+  workInTanger,
 };
