@@ -22,7 +22,12 @@
     "scrollLabel": "Rolar para a seção Projetos"
   },
   "nav": {
-    "hireMe": "Recrutez-moi"
+    "hireMe": "Contrate-me"
+  },
+  "video": {
+    "subtitle": "Aprenda através dos",
+    "title": "Meus Vídeos.",
+    "description": "Da criança filmando suas partidas de Minecraft ao criador de conteúdo tech: círculo completo. Há 2 meses, 2 vídeos/semana misturando tutoriais dev e documentando minha jornada de criação de aplicativos (processo, desafios, soluções). Objetivo: tornar acessível em francês o que não era. Minha visão 2026: expansão multilíngue (ES/PT) para a América do Sul."
   },
   "about": {
     "subtitle": "E...",
@@ -77,23 +82,26 @@
   "projects": {
     "subtitle": "Aqui estão meus",
     "title": "Projetos.",
-    "description": "Cada um destes projetos representa uma etapa importante na minha progressão como desenvolvedor full-stack, destacando minhas habilidades e compromisso com o aprendizado contínuo. Os projetos realizados durante minha formação ou minhas missões demonstram minha capacidade de aplicar conceitos e habilidades adquiridas em ambientes estruturados, enquanto meus projetos pessoais mostram minha criatividade e paixão por explorar novas ideias.",
+    "description": "Dos meus primeiros projetos pessoais ao Nestor App (SaaS usado diariamente por +20 restaurantes parisienses), cada projeto marca uma etapa na minha progressão. Minha experiência na Kessel Media (+500k usuários) me fez evoluir para o nível Júnior ensinando-me princípios de escalabilidade e arquitetura para aplicações de alto tráfego. Hoje como freelancer, trago minha expertise React/Next.js para startups e plataformas exigentes.",
+    "privateRepo": "Repo privado",
+    "seeWebsite": "Ver site",
+    "inProcess": "Em desenvolvimento...",
+    "offline": "O site está offline...",
     "wedive": {
       "name": "WeDive",
-      "description": "Esta ideia vem do Coração 🩵. Um aplicativo móvel para compartilhar pontos de mergulho e pesca, reunindo uma comunidade de entusiastas do mar. Registre suas sessões de mergulho e compartilhe fotos/vídeos de suas aventuras. Tudo respeitando o meio ambiente e com compromisso com sua preservação.",
-      "inProcessLabel": "Em desenvolvimento"
+      "description": "Esta ideia vem do Coração 🩵. Um aplicativo móvel para compartilhar pontos de mergulho e pesca, reunindo uma comunidade de entusiastas do mar. Registre suas sessões de mergulho e compartilhe fotos/vídeos de suas aventuras. Tudo respeitando o meio ambiente e com compromisso com sua preservação."
     },
     "kesselMedia": {
-      "name": "Kessel Media",
-      "description": "Apelidado de \"YouTube das Newsletters\", é a mídia de newsletter que agora tem mais de 500.000 usuários ativos. Participei da reformulação da Kessel e implementação de uma arquitetura de código escalável."
+      "name": "Kessel Media (+500k usuários)",
+      "description": "Apelidado de \"YouTube dos Boletins\", é a mídia de boletins que agora tem mais de 500.000 usuários ativos. Participei da reformulação da Kessel e da implementação de uma arquitetura de código escalável."
     },
     "nestorApp": {
-      "name": "Nestor App",
-      "description": "Projeto empresarial atual. Aplicativo web para empresas de manobrista que permite coletar estatísticas sobre o desempenho de seus trabalhadores (tempo, localização..) e criar tickets digitais para os clientes."
+      "name": "Nestor App (usado diariamente por +20 empresas)",
+      "description": "Projeto empresarial atual. Aplicação web para empresas de manobrista que lhes permite coletar estatísticas sobre o desempenho de seus trabalhadores (tempo, localização...) e criar tickets digitais para os clientes."
     },
     "taskCompletor": {
       "name": "Task Completor",
-      "description": "Um aplicativo web baseado na API Open AI GPT 4. Ferramenta baseada em IA para completar suas tarefas diárias, como cartas de motivação, apresentações, e-mails e mensagens."
+      "description": "Uma aplicação web baseada na API do Open AI GPT 4. Ferramenta baseada em IA para completar suas tarefas diárias como cartas de apresentação, apresentações, e-mails e mensagens."
     },
     "referralSafe": {
       "name": "Referral Safe",
@@ -122,13 +130,17 @@
     "title": "Agendar uma reunião comigo.",
     "step1": "Reservar um horário 1/2",
     "step2": "Explique-me sua necessidade 2/2",
-    "confirmationMessage": "Sra./Sr. {{name}}, seu e-mail foi recebido. Retornarei o mais rápido possível!",
+    "confirmationMessage": "Sra./Sr. {{name}}, seu e-mail foi recebido. Entrarei em contato o mais rápido possível!",
     "appointmentAlert": "Nossa reunião está agendada para {{day}}/{{month}}/{{year}} no horário de {{slot}}",
+    "completeInput": {
+      "title": "Campos incompletos",
+      "description": "Por favor preencha todos os campos obrigatórios"
+    },
     "stepOne": {
       "calendarLabel": "Data (Controlada)",
       "selectLabel": "Selecione um horário",
       "selectPlaceholder": "Escolher um horário",
-      "infoMessage": "Por favor, selecione um dia e um horário",
+      "infoMessage": "Por favor selecione um dia e um horário",
       "dateSelected": "Nossa reunião está agendada para {{day}}/{{month}}/{{year}} às ...",
       "fullSelection": "Nossa reunião está agendada para {{day}}/{{month}}/{{year}} no horário de {{slot}}",
       "nextButton": "Próximo"
@@ -136,21 +148,45 @@
     "stepTwo": {
       "namePlaceholder": "João Silva",
       "nameLabel": "Digite seu nome",
-      "nameRequired": "Você deve digitar um nome",
+      "nameRequired": "Você deve inserir um nome",
       "nameMinLength": "Seu nome deve ter pelo menos 3 caracteres",
       "emailPlaceholder": "wediveapp@gmail.com",
       "emailLabel": "Digite seu e-mail",
-      "emailError": "Por favor, digite um endereço de e-mail válido",
+      "emailError": "Por favor insira um endereço de e-mail válido",
       "messageLabel": "Mensagem",
-      "messageRequired": "Por favor, digite uma mensagem",
+      "messageRequired": "Por favor insira uma mensagem",
       "messageMinLength": "Sua mensagem deve ter pelo menos 20 caracteres",
       "messageDescription": "Digite uma descrição detalhada de sua necessidade/solicitação para que eu possa antecipar as perguntas durante nossa reunião.",
       "messagePlaceholder": "Olá Titouan! Gostaria de agendar uma reunião com você em {{day}}/{{month}}/{{year}} no horário de {{slot}} para discutir...",
-      "submitButton": "Reservar o agendamento",
-      "successTitle": "Solicitação de agendamento enviada",
-      "successDescription": "Retornarei para confirmar nossa reunião o mais rápido possível",
+      "submitButton": "Reservar a consulta",
+      "successTitle": "Solicitação de consulta enviada",
+      "successDescription": "Entrarei em contato para confirmar nossa reunião o mais rápido possível",
       "errorTitle": "Ocorreu um erro ao enviar o e-mail",
       "errorDescription": "Ocorreu um erro, entre em contato diretamente em titouanhirsch@gmail.com"
+    }
+  },
+  "languages": {
+    "title": "4 Idiomas",
+    "subtitle": "Posso me comunicar em",
+    "languageDescriptionCard": {
+      "title": "Um desenvolvedor internacional 🌍",
+      "description": "Viajar é uma das minhas paixões. Meu intercâmbio universitário e meu trabalho como desenvolvedor remoto me permitiram viajar e expandir minhas habilidades de comunicação."
+    },
+    "france": {
+      "name": "Francês",
+      "description": "Sou francês de nacionalidade e origem, então é minha língua materna. Sim, adoro baguetes e vinho."
+    },
+    "us": {
+      "name": "Inglês",
+      "description": "Tendo seguido um currículo de 5 anos com aulas totalmente em inglês e professores estrangeiros, não tive escolha senão aprender a falar inglês fluentemente para validar meus estudos e me comunicar com meus primeiros amigos estrangeiros durante meu intercâmbio em minha universidade em Paris."
+    },
+    "espagnol": {
+      "name": "Espanhol",
+      "description": "Fiz meus últimos 6 meses de aulas em intercâmbio em Bogotá (Colômbia) na universidade Externado. Este intercâmbio e o ambiente latino-hispânico no qual estive imerso por 6 meses sem parar, me permitiram desenvolver um nível fluente de espanhol e me comunicar facilmente com qualquer falante de espanhol."
+    },
+    "portugal": {
+      "name": "Português (Brasil)",
+      "description": "Estou atualmente aprendendo português, morando atualmente em São Paulo depois de terminar meus estudos na Colômbia, tomei a decisão de me mudar para São Paulo (Brasil) para encontrar trabalho lá e adicionar um quarto idioma ao meu arco."
     }
   }
 }

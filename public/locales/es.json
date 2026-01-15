@@ -2,7 +2,7 @@
   "preloader": {
     "desktop": {
       "part1": "En camino",
-      "part2": "hacia el Portfolio",
+      "part2": "hacia el Portafolio",
       "part3": "de Titouan..."
     },
     "mobile": {
@@ -22,7 +22,12 @@
     "scrollLabel": "Desplazarse a la sección Proyectos"
   },
   "nav": {
-    "hireMe": "Recrutez-moi"
+    "hireMe": "Contrátame"
+  },
+  "video": {
+    "subtitle": "Aprende a través de",
+    "title": "Mis Videos.",
+    "description": "Del niño filmando sus partidas de Minecraft al creador de contenido tech: círculo completo. Desde hace 2 meses, 2 videos/semana mezclando tutoriales dev y documentando mi camino de creación de aplicaciones (proceso, desafíos, soluciones). Objetivo: hacer accesible en francés lo que no lo era. Mi visión 2026: expansión multilingüe (ES/PT) hacia América del Sur."
   },
   "about": {
     "subtitle": "Y...",
@@ -77,19 +82,22 @@
   "projects": {
     "subtitle": "Aquí están mis",
     "title": "Proyectos.",
-    "description": "Cada uno de estos proyectos representa un paso importante en mi progresión como desarrollador full-stack, destacando mis habilidades y compromiso con el aprendizaje continuo. Los proyectos realizados durante mi formación o mis misiones demuestran mi capacidad de aplicar conceptos y habilidades adquiridas en entornos estructurados, mientras que mis proyectos personales muestran mi creatividad y pasión por explorar nuevas ideas.",
+    "description": "De mis primeros proyectos personales a Nestor App (SaaS usado diariamente por +20 restaurantes parisinos), cada proyecto marca un paso en mi progresión. Mi experiencia en Kessel Media (+500k usuarios) me hizo evolucionar al nivel Junior enseñándome principios de escalabilidad y arquitectura para aplicaciones de alto tráfico. Hoy como freelance, aporto mi experiencia React/Next.js a startups y plataformas exigentes.",
+    "privateRepo": "Repo privado",
+    "seeWebsite": "Ver sitio",
+    "inProcess": "En desarrollo...",
+    "offline": "El sitio está fuera de línea...",
     "wedive": {
       "name": "WeDive",
-      "description": "Esta idea viene del Corazón 🩵. Una aplicación móvil para compartir lugares de buceo y pesca, reuniendo una comunidad de entusiastas del mar. Registra tus sesiones de buceo y comparte fotos/videos de tus aventuras. Todo respetando el medio ambiente y con un compromiso con su preservación.",
-      "inProcessLabel": "En desarrollo"
+      "description": "Esta idea viene del Corazón 🩵. Una aplicación móvil para compartir lugares de buceo y pesca, reuniendo una comunidad de entusiastas del mar. Registra tus sesiones de buceo y comparte fotos/videos de tus aventuras. Todo respetando el medio ambiente y con un compromiso con su preservación."
     },
     "kesselMedia": {
-      "name": "Kessel Media",
+      "name": "Kessel Media (+500k usuarios)",
       "description": "Apodado el \"YouTube de los Boletines\", es el medio de boletines que ahora cuenta con más de 500,000 usuarios activos. Participé en el rediseño de Kessel y la implementación de una arquitectura de código escalable."
     },
     "nestorApp": {
-      "name": "Nestor App",
-      "description": "Proyecto empresarial actual. Aplicación web para empresas de valet que les permite recopilar estadísticas sobre el rendimiento de sus trabajadores (tiempo, ubicación..) y crear tickets digitales para los clientes."
+      "name": "Nestor App (usado diariamente por +20 empresas)",
+      "description": "Proyecto empresarial actual. Aplicación web para empresas de valet que les permite recopilar estadísticas sobre el rendimiento de sus trabajadores (tiempo, ubicación...) y crear tickets digitales para los clientes."
     },
     "taskCompletor": {
       "name": "Task Completor",
@@ -124,6 +132,10 @@
     "step2": "Explícame tu necesidad 2/2",
     "confirmationMessage": "Sra./Sr. {{name}}, su correo electrónico ha sido recibido. ¡Me pondré en contacto con usted lo antes posible!",
     "appointmentAlert": "Nuestra reunión está programada para el {{day}}/{{month}}/{{year}} en la franja horaria de {{slot}}",
+    "completeInput": {
+      "title": "Campos incompletos",
+      "description": "Por favor complete todos los campos obligatorios"
+    },
     "stepOne": {
       "calendarLabel": "Fecha (Controlada)",
       "selectLabel": "Seleccione una franja horaria",
@@ -151,6 +163,30 @@
       "successDescription": "Me pondré en contacto con usted para confirmar nuestra reunión lo antes posible",
       "errorTitle": "Ocurrió un error al enviar el correo electrónico",
       "errorDescription": "Ocurrió un error, contácteme directamente en titouanhirsch@gmail.com"
+    }
+  },
+  "languages": {
+    "title": "4 Idiomas",
+    "subtitle": "Puedo comunicarme en",
+    "languageDescriptionCard": {
+      "title": "Un desarrollador internacional 🌍",
+      "description": "El viaje es una de mis pasiones. Mi intercambio universitario y mi trabajo como desarrollador remoto me permitieron viajar y expandir mis habilidades de comunicación."
+    },
+    "france": {
+      "name": "Francés",
+      "description": "Soy francés de nacionalidad y origen, por lo que es mi lengua materna. Sí, me encantan las baguettes y el vino."
+    },
+    "us": {
+      "name": "Inglés",
+      "description": "Habiendo seguido un plan de estudios de 5 años con cursos completamente en inglés y profesores extranjeros, no tuve más opción que aprender a hablar inglés con fluidez para validar mis estudios y comunicarme con mis primeros amigos extranjeros durante mi intercambio en mi universidad en París."
+    },
+    "espagnol": {
+      "name": "Español",
+      "description": "Hice mis últimos 6 meses de cursos en intercambio en Bogotá (Colombia) en la universidad Externado. Este intercambio y el ambiente latino-hispano en el que estuve inmerso durante 6 meses sin parar, me permitieron desarrollar un nivel fluido de español y comunicarme fácilmente con cualquier hispanohablante."
+    },
+    "portugal": {
+      "name": "Portugués (Brasil)",
+      "description": "Actualmente estoy aprendiendo portugués, viviendo actualmente en Sao Paulo después de terminar mis estudios en Colombia, tomé la decisión de mudarme a Sao Paulo (Brasil) para encontrar trabajo allí y agregar un cuarto idioma a mi arco."
     }
   }
 }

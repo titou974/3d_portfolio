@@ -1,104 +1,111 @@
 {
   "preloader": {
     "desktop": {
-      "part1": "En route",
-      "part2": "vers le Portfolio",
-      "part3": "de Titouan..."
+      "part1": "On the way",
+      "part2": "to Titouan's",
+      "part3": "Portfolio..."
     },
     "mobile": {
-      "part1": "Bienvenue.",
-      "part2": "Welcome.",
+      "part1": "Welcome.",
+      "part2": "Bienvenue.",
       "part3": "ようこそ."
     }
   },
   "hero": {
-    "greeting": "Bonjour, je suis",
+    "greeting": "Hello, I'm",
     "typewriter": {
-      "line1": "Toc toc ! Qui va là ?",
-      "line2": "Cher voyageur, bienvenue sur mon portfolio!",
-      "line3": "Prenez le temps de découvrir chaque détail de ce site fait avec le cœur. En somme !...",
-      "line4": "Je crée des applications mobiles et des sites internet."
+      "line1": "Knock knock! Who's there?",
+      "line2": "Dear traveler, welcome to my portfolio!",
+      "line3": "Take the time to discover every detail of this site made with heart. In short!...",
+      "line4": "I create mobile apps and websites."
     },
-    "scrollLabel": "Scroll à la section Projets"
+    "scrollLabel": "Scroll to Projects section"
   },
   "nav": {
-    "hireMe": "Recrutez-moi"
+    "hireMe": "Hire me"
+  },
+  "video": {
+    "subtitle": "Learn through",
+    "title": "My Videos.",
+    "description": "From the kid filming his Minecraft games to tech content creator: full circle. For 2 months, 2 videos/week mixing dev tutorials and documenting my app creation journey (process, challenges, solutions). Goal: make accessible in French what wasn't before. My 2026 vision: multilingual expansion (ES/PT) to South America."
   },
   "about": {
-    "subtitle": "Et...",
-    "title": "À Propos."
+    "subtitle": "And...",
+    "title": "About."
   },
   "malt": {
-    "subtitle": "Embauchez-moi sur",
+    "subtitle": "Hire me on",
     "title": "Malt",
-    "description": "Vous pouvez me proposez votre projet/mission sur"
+    "description": "You can propose your project/mission on"
   },
   "experiences": {
     "subtitle": "Discover my",
     "title": "Experiences.",
     "activate3DModel": "Activate 3D Avatar",
     "innovans": {
-      "position": "Stage Développeur Full-Stack",
-      "duration": "Juillet 2023 - Octobre 2023",
-      "title": "Développement et maintenance de 6 applications web (PHP/MySQL/JS). Optimisation backend et résolution de problèmes critiques en base de données.",
+      "position": "Full-Stack Developer Intern",
+      "duration": "July 2023 - October 2023",
+      "title": "Development and maintenance of 6 web applications (PHP/MySQL/JS). Backend optimization and resolution of critical database issues.",
       "testimonial": {
-        "author": "Carl, CEO d'Innovans",
-        "text": "Titouan nous a permi de résoudre des problèmes qu'on trainait depuis des mois en quelques semaines."
+        "author": "Carl, CEO of Innovans",
+        "text": "Titouan helped us solve problems we'd been dragging for months in just a few weeks."
       }
     },
     "kesselStage": {
-      "position": "Stage Web Marketer-Développeur Front-end",
-      "duration": "Novembre 2023 - Mai 2024",
-      "title": "Développement de fonctionnalités pour plateforme +500k utilisateurs. Apprentissage des bonnes pratiques Vue.js/Nuxt 3 pour applications scalables.",
+      "position": "Web Marketer-Frontend Developer Intern",
+      "duration": "November 2023 - May 2024",
+      "title": "Feature development for +500k users platform. Learning Vue.js/Nuxt 3 best practices for scalable applications.",
       "testimonial": {
-        "author": "Adrien Labastire, CEO de Kessel Media",
-        "text": "On est fier de ton travail, on te laisse partir en remote où tu veux !"
+        "author": "Adrien Labastire, CEO of Kessel Media",
+        "text": "We're proud of your work, we're letting you go remote wherever you want!"
       }
     },
     "kesselFreelance": {
-      "position": "Freelance Développeur Front-end",
-      "duration": "Mai 2024 - Août 2024",
-      "title": "Refonte V2 en Nuxt 3 : conception et développement du parcours d'abonnement complet. Refonte pages articles et maintenance CMS. Focus scalabilité.",
+      "position": "Freelance Frontend Developer",
+      "duration": "May 2024 - August 2024",
+      "title": "V2 redesign in Nuxt 3: design and development of complete subscription flow. Article pages redesign and CMS maintenance. Focus on scalability.",
       "testimonial": {
-        "author": "Alexis Pibrac, CTO de Kessel Media",
-        "text": "Titouan a démontré sa capacité à apprendre et à travailler rapidement, contribuant ainsi à l'évolution rapide de la plateforme de Kessel !"
+        "author": "Alexis Pibrac, CTO of Kessel Media",
+        "text": "Titouan demonstrated his ability to learn and work quickly, contributing to Kessel's platform rapid evolution!"
       }
     },
     "autoEntrepreneur": {
-      "position": "Freelance Développeur Full-Stack",
-      "duration": "Novembre 2023 - Aujourd'hui",
-      "title": "Développement de MVP, dashboards et apps cross-platform. Créateur de Nestor (Next.js), SaaS déployé dans +20 restaurants parisiens gérant +2 000 véhicules/jour. Maintenance City Rent.",
+      "position": "Freelance Full-Stack Developer",
+      "duration": "November 2023 - Present",
+      "title": "MVP development, dashboards and cross-platform apps. Creator of Nestor (Next.js), SaaS deployed in +20 Parisian restaurants managing +2,000 vehicles/day. City Rent maintenance.",
       "testimonial": {
-        "author": "Samuel Doutriaux, Co-fondateur de Nestor",
-        "text": "J'ai parlé de mon idée d'app de voiturier à Titouan, et en quelques semaines il a développé un MVP fonctionnel qui a impressionné nos premiers clients !"
+        "author": "Samuel Doutriaux, Co-founder of Nestor",
+        "text": "I told Titouan about my valet app idea, and within weeks he developed a functional MVP that impressed our first clients!"
       }
     }
   },
   "projects": {
     "subtitle": "Here are my",
     "title": "Projects.",
-    "description": "Each of these projects represents an important step in my progression as a full-stack developer, highlighting my skills and commitment to continuous learning. Projects completed during my training or missions demonstrate my ability to apply concepts and skills acquired in structured environments, while my personal projects showcase my creativity and passion for exploring new ideas.",
-    "viewSite": "View site",
+    "description": "From my first personal projects to Nestor App (SaaS used daily by +20 Parisian restaurants), each project marks a step in my progression. My experience at Kessel Media (+500k users) evolved me to Junior level by teaching me scalability and architecture principles for high-traffic applications. Today as a freelancer, I bring my React/Next.js expertise to startups and demanding platforms.",
+    "privateRepo": "Private repo",
+    "seeWebsite": "View site",
+    "inProcess": "In development...",
+    "offline": "Site is offline...",
     "wedive": {
       "name": "WeDive",
-      "description": "Cette idée vient du Coeur 🩵. Une application mobile de partage de spots de plongée et de pêche, réunissant une communauté de passionnés de la mer. Enregistrez vos sessions de plongée et partagez les photos/vidéos de vos aventures. Le tout dans le respect de l'environnement et avec un engagement pour sa préservation.",
-      "inProcessLabel": "En développement"
+      "description": "This idea comes from the Heart 🩵. A mobile app for sharing diving and fishing spots, bringing together a community of sea enthusiasts. Record your diving sessions and share photos/videos of your adventures. All while respecting the environment and with a commitment to its preservation."
     },
     "kesselMedia": {
-      "name": "Kessel Media",
-      "description": "Surnommé le \"YouTube de la Newsletter\", c'est le média de la newsletter qui compte maintenant plus de 500 000 utilisateurs actifs. J'ai participé à la refonte de Kessel et à la mise en place d'une architecture de code scalable."
+      "name": "Kessel Media (+500k users)",
+      "description": "Nicknamed the \"YouTube of Newsletters\", it's the newsletter media that now has over 500,000 active users. I participated in Kessel's redesign and the implementation of a scalable code architecture."
     },
     "nestorApp": {
-      "name": "Nestor App",
-      "description": "Projet entreprenarial actuel. Application web pour les entreprises de voiturier qui leur permet de récolter des statistiques sur les performances de leurs travailleurs (temps, lieu..) et la création de tickets digitaux pour les clients."
+      "name": "Nestor App (used daily by +20 companies)",
+      "description": "Current entrepreneurial project. Web application for valet companies that allows them to collect statistics on their workers' performance (time, location...) and create digital tickets for customers."
     },
     "taskCompletor": {
       "name": "Task Completor",
-      "description": "Une application web basé sur l'API de Open AI GPT 4. Outil baser sur l'IA pour compléter vos tâches du quotidien telles que des lettres de motivations, des présentations, des emails et des messages."
+      "description": "A web application based on Open AI GPT 4 API. AI-based tool to complete your daily tasks such as cover letters, presentations, emails and messages."
     },
     "referralSafe": {
       "name": "Referral Safe",
-      "description": "Projet Wagon réalisé en 2 semaines. Certificateur d'expérience professionnelle où les employés peuvent valider leurs expériences antérieures et compétences acquises par le biais de leurs employeurs."
+      "description": "Wagon project completed in 2 weeks. Professional experience certifier where employees can validate their previous experiences and acquired skills through their employers."
     }
   },
   "tags": {
@@ -125,6 +132,10 @@
     "step2": "Tell me about your needs 2/2",
     "confirmationMessage": "Ms/Mr {{name}}, your email has been received. I'll get back to you as soon as possible!",
     "appointmentAlert": "Our meeting is scheduled for {{month}}/{{day}}/{{year}} during the {{slot}} time slot",
+    "completeInput": {
+      "title": "Incomplete fields",
+      "description": "Please fill in all required fields"
+    },
     "stepOne": {
       "calendarLabel": "Date (Controlled)",
       "selectLabel": "Select a time slot",
@@ -152,6 +163,30 @@
       "successDescription": "I'll get back to you to confirm our meeting as soon as possible",
       "errorTitle": "An error occurred while sending the email",
       "errorDescription": "An error occurred, please contact me directly at titouanhirsch@gmail.com"
+    }
+  },
+  "languages": {
+    "title": "4 Languages",
+    "subtitle": "I can communicate in",
+    "languageDescriptionCard": {
+      "title": "An international developer 🌍",
+      "description": "Travel is one of my passions. My university exchange and my remote developer work allowed me to travel and expand my communication skills."
+    },
+    "france": {
+      "name": "French",
+      "description": "I'm French by nationality and origin, so it's my mother tongue. Yes, I love baguettes and wine."
+    },
+    "us": {
+      "name": "English",
+      "description": "Having followed a 5-year curriculum with courses entirely in English and foreign teachers, I had no choice but to learn to speak English fluently to validate my studies, and communicate with my first foreign friends during my exchange at my university in Paris."
+    },
+    "espagnol": {
+      "name": "Spanish",
+      "description": "I did my last 6 months of courses on exchange in Bogota (Colombia) at Externado University. This exchange and the Latino-Hispanic environment in which I was immersed for 6 months non-stop, allowed me to develop a fluent level of Spanish and communicate easily with any Spanish speaker."
+    },
+    "portugal": {
+      "name": "Portuguese (Brazil)",
+      "description": "I'm currently learning Portuguese, currently living in Sao Paulo after finishing my studies in Colombia, I made the choice to move to Sao Paulo (Brazil) to find work there, and add a 4th language to my bow."
     }
   }
 }
