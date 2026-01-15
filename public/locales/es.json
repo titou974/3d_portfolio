@@ -15,9 +15,9 @@
     "greeting": "Hola, soy",
     "typewriter": {
       "line1": "¡Toc toc! ¿Quién es?",
-      "line2": "¡Querido viajero, bienvenido a mi portafolio!",
-      "line3": "Tómate el tiempo para descubrir cada detalle de este sitio hecho con el corazón. En resumen...",
-      "line4": "Creo aplicaciones móviles y sitios web."
+      "line2": "Un dev francés explorando oportunidades en Latinoamérica. 🌎",
+      "line3": "Después de 6 meses en Bogotá, ahora en São Paulo buscando nuevos desafíos.",
+      "line4": "React • Next.js • React Native • Flutter ¿Hablamos?"
     },
     "scrollLabel": "Desplazarse a la sección Proyectos"
   },
@@ -127,7 +127,7 @@
     "title": "Contrátame."
   },
   "contactForm": {
-    "title": "Programar una reunión conmigo.",
+    "title": "Agenda una videollamada conmigo.",
     "step1": "Reservar una franja horaria 1/2",
     "step2": "Explícame tu necesidad 2/2",
     "confirmationMessage": "Sra./Sr. {{name}}, su correo electrónico ha sido recibido. ¡Me pondré en contacto con usted lo antes posible!",

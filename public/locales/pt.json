@@ -15,9 +15,9 @@
     "greeting": "Olá, eu sou",
     "typewriter": {
       "line1": "Toc toc! Quem é?",
-      "line2": "Caro viajante, bem-vindo ao meu portfólio!",
-      "line3": "Reserve um tempo para descobrir cada detalhe deste site feito com carinho. Em resumo...",
-      "line4": "Eu crio aplicativos móveis e sites."
+      "line2": "Um dev francês que acabou de chegar em São Paulo!",
+      "line3": "Vim buscar novas oportunidades na maior cidade tech da América Latina.",
+      "line4": "Eu crio aplicativos móveis e sites com React, Next.js e Flutter."
     },
     "scrollLabel": "Rolar para a seção Projetos"
   },
@@ -127,7 +127,7 @@
     "title": "Contrate-me."
   },
   "contactForm": {
-    "title": "Agendar uma reunião comigo.",
+    "title": "Agende uma videochamada comigo.",
     "step1": "Reservar um horário 1/2",
     "step2": "Explique-me sua necessidade 2/2",
     "confirmationMessage": "Sra./Sr. {{name}}, seu e-mail foi recebido. Entrarei em contato o mais rápido possível!",

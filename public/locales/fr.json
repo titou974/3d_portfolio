@@ -127,7 +127,7 @@
     "title": "Recrutez-moi."
   },
   "contactForm": {
-    "title": "Planifier un rendez-vous avec moi.",
+    "title": "Planifier un rendez-vous en visio avec moi.",
     "step1": "Réserver un créneau 1/2",
     "step2": "Expliquez-moi votre besoin 2/2",
     "confirmationMessage": "Mme/M {{name}}, votre email a bien été reçu. Je reviens vers vous au plus vite !",

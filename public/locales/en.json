@@ -15,9 +15,9 @@
     "greeting": "Hello, I'm",
     "typewriter": {
       "line1": "Knock knock! Who's there?",
-      "line2": "Dear traveler, welcome to my portfolio!",
-      "line3": "Take the time to discover every detail of this site made with heart. In short!...",
-      "line4": "I create mobile apps and websites."
+      "line2": "A French developer actively seeking opportunities across the Americas.",
+      "line3": "From Bogotá to São Paulo, now exploring tech hubs in North America.",
+      "line4": "I build mobile apps and web platforms with React, Next.js & Flutter."
     },
     "scrollLabel": "Scroll to Projects section"
   },
@@ -127,7 +127,7 @@
     "title": "Hire me."
   },
   "contactForm": {
-    "title": "Schedule a meeting with me.",
+    "title": "Schedule a video call with me.",
     "step1": "Book a time slot 1/2",
     "step2": "Tell me about your needs 2/2",
     "confirmationMessage": "Ms/Mr {{name}}, your email has been received. I'll get back to you as soon as possible!",
