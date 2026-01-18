@@ -79,7 +79,7 @@ const ProjectCard = ({
                 />
               </div>
             ) : (
-              <div className="black-gradient p-2 rounded-full text-xs">
+              <div className="black-gradient p-2 rounded-full text-xs text-white">
                 {t("projects.privateRepo")}
               </div>
             )}
