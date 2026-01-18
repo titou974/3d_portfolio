@@ -24,7 +24,7 @@ const App = () => {
       <Preloader />
 
       <div className="relative z-0 bg-background">
-        <div className="dark:bg-[url(/src/assets/tsnight.webp)] bg-[url(/src/assets/hero-bg-light.webp)] dark:bg-cover bg-no-repeat bg-center bg-white">
+        <div className="dark:bg-[url(/src/assets/tsnight.webp)] bg-[url(/src/assets/hero-bg-light.webp)] bg-cover bg-no-repeat bg-center">
           <Navbar />
           <Hero />
         </div>
