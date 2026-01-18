@@ -10,7 +10,7 @@ const Video = () => {
   useEffect(() => {
     // Load TikTok embed script
     const existingTikTokScript = document.querySelector(
-      'script[src="https://www.tiktok.com/embed.js"]'
+      'script[src="https://www.tiktok.com/embed.js"]',
     );
 
     if (!existingTikTokScript) {
@@ -21,14 +21,14 @@ const Video = () => {
     } else {
       if (window.tiktokEmbed) {
         window.tiktokEmbed.lib.render(
-          document.querySelectorAll(".tiktok-embed")
+          document.querySelectorAll(".tiktok-embed"),
         );
       }
     }
 
     // Load Instagram embed script
     const existingInstagramScript = document.querySelector(
-      'script[src="//www.instagram.com/embed.js"]'
+      'script[src="//www.instagram.com/embed.js"]',
     );
 
     if (!existingInstagramScript) {
@@ -57,6 +57,7 @@ const Video = () => {
       </motion.p>
       <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
         <blockquote
+          title="tiktok_widget"
           className="tiktok-embed !rounded-2xl my-0! max-h-fit"
           cite="https://www.tiktok.com/@bobodigital_"
           data-unique-id="bobodigital_"
@@ -74,15 +75,16 @@ const Video = () => {
           </section>
         </blockquote>
         <iframe
+          title="YouTube video player"
           className="w-full rounded-2xl"
           height="390"
           src="https://www.youtube.com/embed/36Ym36JvfhU?si=sHcLhmOCJnp4dYS2"
-          title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         ></iframe>
         <blockquote
+          title="instagram_widget"
           className="instagram-media !rounded-2xl w-full row-span-2 max-h-[390px]"
           data-instgrm-captioned
           data-instgrm-permalink="https://www.instagram.com/reel/DRsermnkjSn/?utm_source=ig_embed&amp;utm_campaign=loading"

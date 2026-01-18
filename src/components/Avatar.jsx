@@ -24,6 +24,7 @@ export default function Avatar() {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className="relative inline-block"
+      aria-label="Ma photo de profil"
     >
       <Tilt
         options={{

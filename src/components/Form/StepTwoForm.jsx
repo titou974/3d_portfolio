@@ -34,7 +34,7 @@ export default function StepTwoForm({ form, setForm }) {
           to_email: "titouanhirsch@gmail.com",
           message: form.message,
         },
-        "f6XWpoT9iN-IdbY17"
+        "f6XWpoT9iN-IdbY17",
       )
       .then(
         () => {
@@ -58,8 +58,7 @@ export default function StepTwoForm({ form, setForm }) {
             color: "danger",
             variant: "flat",
           });
-          console.log(error);
-        }
+        },
       );
   };
 

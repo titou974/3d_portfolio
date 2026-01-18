@@ -54,6 +54,8 @@ import workInReunion2 from "./workInTheWorld/workreunion2.webp";
 import workInParis from "./workInTheWorld/workparis.webp";
 import workInParis2 from "./workInTheWorld/workparis2.webp";
 import workInParis3 from "./workInTheWorld/workparis3.webp";
+import qrcodeNestor from "./qrcodenestor.webp";
+
 export {
   logo,
   github,
@@ -111,4 +113,5 @@ export {
   workInReunion2,
   workInSaoPaulo,
   workInTanger,
+  qrcodeNestor,
 };

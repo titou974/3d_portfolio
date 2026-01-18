@@ -17,9 +17,9 @@ const ProjectCard = ({
   source_code_link,
   inprocess,
   website_link,
+  noSiteLinkCta,
 }) => {
   const { t } = useTranslation();
-  console.log("tags", tags);
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
@@ -36,7 +36,7 @@ const ProjectCard = ({
             alt={name}
             className="w-full h-full object-cover rounded-2xl"
           />
-          {website_link ? (
+          {noSiteLinkCta ? null : website_link ? (
             <a
               href={website_link}
               target="_blank"

@@ -44,7 +44,10 @@ function Languages() {
           </Tilt>
         </motion.div>
         {languages.map((language, index) => (
-          <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+          <motion.div
+            variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+            key={language.name}
+          >
             <Tilt
               options={{
                 max: 45,
@@ -55,6 +58,7 @@ function Languages() {
             >
               <div className="mt-5">
                 <img
+                  alt={language.name}
                   src={language.image}
                   className="w-16 h-16 rounded-full border-2"
                 ></img>

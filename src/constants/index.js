@@ -39,7 +39,7 @@ import {
   workInReunion2,
   workInSaoPaulo,
   workInTanger,
-  inprocess,
+  qrcodeNestor,
 } from "../assets";
 
 // Navigation links with translation keys
@@ -246,7 +246,8 @@ export const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: nestorapp,
+    image: qrcodeNestor,
+    noSiteLinkCta: true,
     inprocess: false,
     source_code_link: "https://github.com/titou974/nestorappv2",
     website_link: "https://nestorapp.app/newticket?site=petittest",

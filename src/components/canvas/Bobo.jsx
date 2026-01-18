@@ -13,10 +13,10 @@ export default function Bobo({ animationName = "seatedIdle", ...props }) {
   const { animations: fightAnimation } = useFBX("/avatar/fight_pose.fbx");
   const { animations: burpeeAnimation } = useFBX("/avatar/burpee.fbx");
   const { animations: workingOnDeviceAnimation } = useFBX(
-    "/avatar/working_on_device.fbx"
+    "/avatar/working_on_device.fbx",
   );
   const { animations: rumbaDancingAnimation } = useFBX(
-    "/avatar/rumba_dancing.fbx"
+    "/avatar/rumba_dancing.fbx",
   );
 
   seatedIdleAnimation[0].name = "seatedIdle";
@@ -33,11 +33,10 @@ export default function Bobo({ animationName = "seatedIdle", ...props }) {
       workingOnDeviceAnimation[0],
       rumbaDancingAnimation[0],
     ],
-    group
+    group,
   );
 
   useEffect(() => {
-    console.log("Current animation in:", animationName);
     actions[animationName]?.reset().fadeIn(0.5).play();
     return () => actions[animationName]?.fadeOut(0.5);
   }, [animationName]);

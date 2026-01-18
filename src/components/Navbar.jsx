@@ -54,6 +54,7 @@ const Navbar = () => {
             setActive("");
             window.scrollTo(0, 0);
           }}
+          aria-label="Ma photo de profil"
         >
           <div className="border-primary bg-background dark:bg-[url(/src/assets/titoudark.webp)] bg-[url(/src/assets/titoulight.webp)] bg-cover bg-no-repeat bg-center cursor-pointer transition-all duration-300 min-w-8 min-h-8 rounded-full ring-2 ring-primary"></div>
           <p className="hidden xs:block text-foreground text-xl sm:text-[12px] md:text-[18px] font-bold cursor-pointer md:flex">
@@ -81,6 +82,7 @@ const Navbar = () => {
         <div className="flex flex-1 justify-end">
           <a href="#contact">
             <Button
+              className="text-white"
               size="sm"
               color="primary"
               endContent={

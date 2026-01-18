@@ -18,7 +18,7 @@ export const useAutoplay = (emblaApi) => {
       resetOrStop();
       callback();
     },
-    [emblaApi]
+    [emblaApi],
   );
 
   const toggleAutoplay = useCallback(() => {
@@ -57,8 +57,8 @@ const InfiniteCarousel = (props) => {
     <div className="embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {slides.map((slide) => (
-            <div className="embla__slide" key={slide.legend}>
+          {slides.map((slide, index) => (
+            <div className="embla__slide" key={slide.legend + index}>
               <img
                 alt={slide.legend}
                 src={slide.src}

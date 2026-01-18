@@ -66,7 +66,6 @@ const Experience = () => {
     const interval = setInterval(() => {
       setSelectedIndex((prevIndex) => {
         const nextIndex = (prevIndex + 1) % experiences.length;
-        console.log("Auto-playing to index:", nextIndex);
         return nextIndex;
       });
     }, 6000);
